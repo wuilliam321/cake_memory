@@ -9,12 +9,6 @@ App::uses('AppModel', 'Model');
  * @property Etiqueta $Etiqueta
  */
 class Publicacione extends AppModel {
-/**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'titulo';
 
 /**
  * Validation rules

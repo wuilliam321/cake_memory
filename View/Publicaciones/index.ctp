@@ -4,6 +4,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('titulo'); ?></th>
+			<th><?php echo $this->Paginator->sort('descripcion_corta'); ?></th>
 			<th><?php echo $this->Paginator->sort('contenido'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
@@ -13,6 +14,7 @@
 	<tr>
 		<td><?php echo h($publicacione['Publicacione']['id']); ?>&nbsp;</td>
 		<td><?php echo h($publicacione['Publicacione']['titulo']); ?>&nbsp;</td>
+		<td><?php echo h($publicacione['Publicacione']['descripcion_corta']); ?>&nbsp;</td>
 		<td><?php echo h($publicacione['Publicacione']['contenido']); ?>&nbsp;</td>
 		<td><?php echo h($publicacione['Publicacione']['created']); ?>&nbsp;</td>
 		<td><?php echo h($publicacione['Publicacione']['modified']); ?>&nbsp;</td>

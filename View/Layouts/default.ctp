@@ -17,46 +17,51 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = __d('cake_dev', 'Memoria');
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
+	<head>
+		<?php echo $this->Html->charset(); ?>
+		<title>
+			<?php echo $cakeDescription ?>:
+			<?php echo $title_for_layout; ?>
+		</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		
+		<?php echo $this->Html->scriptBlock("var BASE_URL = '/mem'"); ?>
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
+		<?php echo $this->Html->meta('icon'); ?>
+		<?php echo $this->Html->script(array('jquery.min', 'config', 'skel.min', 'skel-panels.min')); ?>
+		
+		<noscript>
+			<?php echo $this->Html->css(array('skel-noscript', 'style', 'style-desktop', 'style-wide')); ?>
+		</noscript>
+		<!--[if lte IE 9]><?php echo $this->Html->css(array('ie9')); ?><![endif]-->
+		<!--[if lte IE 8]><?php echo $this->Html->script(array('html5shiv')); ?><?php echo $this->Html->css(array('ie8')); ?><![endif]-->
+		<!--[if lte IE 7]><?php echo $this->Html->css(array('ie7')); ?><![endif]-->
+		<?php
+			echo $this->fetch('meta');
+			echo $this->fetch('css');
+			echo $this->fetch('script');
+		?>
+	</head>
+	<!--
+		Note: Set the body element's class to "left-sidebar" to position the sidebar on the left.
+		Set it to "right-sidebar" to, you guessed it, position it on the right.
+	-->
+	<body class="left-sidebar">
+		<!-- Wrapper -->
+		<div id="wrapper">
 
-		echo $this->Html->css('cake.generic');
-
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
-</head>
-<body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<!-- Content -->
+				<div id="content">
+					<?php echo $this->Session->flash(); ?>
+					<?php echo $this->fetch('content'); ?>
+				</div>
+			<?php echo $this->element('sidebar'); ?>
 		</div>
-		<div id="content">
-
-			<?php echo $this->Session->flash(); ?>
-
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
-</body>
+		<?php echo $this->element('sql_dump'); ?>
+	</body>
 </html>

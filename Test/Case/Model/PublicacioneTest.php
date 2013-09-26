@@ -16,13 +16,16 @@ class PublicacioneTest extends CakeTestCase {
 		'app.publicacione',
 		'app.comentario',
 		'app.user',
-		'app.recursomultimedia',
+		'app.group',
 		'app.autore',
 		'app.unidadinvestigacione',
+		'app.instituto',
 		'app.profesione',
 		'app.otroestudio',
 		'app.otroestudiotipo',
 		'app.autores_publicacione',
+		'app.recursomultimedia',
+		'app.recursomultimediatipo',
 		'app.etiqueta',
 		'app.etiquetas_publicacione'
 	);

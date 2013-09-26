@@ -99,4 +99,20 @@ class PublicacionesController extends AppController {
 		$this->Session->setFlash(__('Publicacione was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+
+
+/**
+ * recientes method
+ *
+ * @return array
+ */
+    public function recientes() {
+        $conditions = array(
+            "order" => 'Publicacione.created DESC',
+            "limit" => '5'
+        );
+        $publicaciones = $this->Publicacione->find("all", $conditions);
+		$this->set(compact('publicaciones'));
+		return $publicaciones;
+    }
 }

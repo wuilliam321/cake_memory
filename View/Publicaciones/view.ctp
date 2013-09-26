@@ -11,6 +11,11 @@
 			<?php echo h($publicacione['Publicacione']['titulo']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Descripcion Corta'); ?></dt>
+		<dd>
+			<?php echo h($publicacione['Publicacione']['descripcion_corta']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Contenido'); ?></dt>
 		<dd>
 			<?php echo h($publicacione['Publicacione']['contenido']); ?>

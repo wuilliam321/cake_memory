@@ -5,6 +5,7 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('titulo');
+		echo $this->Form->input('descripcion_corta');
 		echo $this->Form->input('contenido');
 		echo $this->Form->input('Autore');
 		echo $this->Form->input('Etiqueta');
