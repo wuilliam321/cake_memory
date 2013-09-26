@@ -13,7 +13,7 @@
 		</dd>
 		<dt><?php echo __('Publicacione'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($etiquetasPublicacione['Publicacione']['titulo'], array('controller' => 'publicaciones', 'action' => 'view', $etiquetasPublicacione['Publicacione']['id'])); ?>
+			<?php echo $this->Html->link($etiquetasPublicacione['Publicacione']['id'], array('controller' => 'publicaciones', 'action' => 'view', $etiquetasPublicacione['Publicacione']['id'])); ?>
 			&nbsp;
 		</dd>
 	</dl>

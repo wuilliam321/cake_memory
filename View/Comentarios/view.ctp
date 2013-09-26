@@ -8,7 +8,7 @@
 		</dd>
 		<dt><?php echo __('Publicacione'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($comentario['Publicacione']['titulo'], array('controller' => 'publicaciones', 'action' => 'view', $comentario['Publicacione']['id'])); ?>
+			<?php echo $this->Html->link($comentario['Publicacione']['id'], array('controller' => 'publicaciones', 'action' => 'view', $comentario['Publicacione']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('User'); ?></dt>

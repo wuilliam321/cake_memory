@@ -31,6 +31,7 @@
 	<tr>
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Titulo'); ?></th>
+		<th><?php echo __('Descripcion Corta'); ?></th>
 		<th><?php echo __('Contenido'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
@@ -42,6 +43,7 @@
 		<tr>
 			<td><?php echo $publicacione['id']; ?></td>
 			<td><?php echo $publicacione['titulo']; ?></td>
+			<td><?php echo $publicacione['descripcion_corta']; ?></td>
 			<td><?php echo $publicacione['contenido']; ?></td>
 			<td><?php echo $publicacione['created']; ?></td>
 			<td><?php echo $publicacione['modified']; ?></td>

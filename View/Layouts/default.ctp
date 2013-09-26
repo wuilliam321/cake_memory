@@ -34,7 +34,7 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
 		<?php echo $this->Html->meta('icon'); ?>
 		<?php echo $this->Html->script(array('jquery.min', 'config', 'skel.min', 'skel-panels.min')); ?>
-		
+		<?php echo $this->Html->css(array('main')); ?>
 		<noscript>
 			<?php echo $this->Html->css(array('skel-noscript', 'style', 'style-desktop', 'style-wide')); ?>
 		</noscript>

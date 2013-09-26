@@ -31,7 +31,6 @@
 					<li><a href="#" class="link-icon24 link-icon24-4">128</a></li>
 				</ul>
 			</div>
-			<a href="#" class="image image-full"><img src="img/n33-robot-invader.jpg" alt="" /></a>
 			<?php echo $publicacione['Publicacione']['contenido']; ?>
 		</article>
     <?php endforeach; ?>

@@ -275,7 +275,7 @@
 
 		span.button
 		{
-			opacity: 0.35;
+			/*opacity: 0.35;*/
 			cursor: default;
 		}
 
@@ -412,7 +412,7 @@
 				background-color: #dadada;
 			}
 
-			.pager .pages a.active
+			.pager .pages span.active a
 			{
 				background-color: #364050;
 				background-image: url('img/bg1.png');
@@ -420,6 +420,9 @@
 				box-shadow: none;
 				text-shadow: -1px -1px 0px rgba(0,0,0,0.5);
 			}
+			
+			.pager .button a { color: #fff; text-decoration: none }
+			.pager .button.disabled { opacity: 0.35 }
 
 /*********************************************************************************/
 /* Section/Article Types                                                         */

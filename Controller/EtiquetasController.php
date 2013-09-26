@@ -6,7 +6,9 @@ App::uses('AppController', 'Controller');
  * @property Etiqueta $Etiqueta
  */
 class EtiquetasController extends AppController {
-
+	public $paginate = array(
+        'limit' => 1
+    );
 /**
  * index method
  *
