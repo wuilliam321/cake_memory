@@ -1,19 +1,20 @@
-<div class="otroestudiotipos form">
-<?php echo $this->Form->create('Otroestudiotipo'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Otroestudiotipo'); ?></legend>
-	<?php
-		echo $this->Form->input('nombre');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Html->link(__('List Otroestudiotipos'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Otroestudios'), array('controller' => 'otroestudios', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Otroestudio'), array('controller' => 'otroestudios', 'action' => 'add')); ?> </li>
-	</ul>
+<div id="content-inner" class="otroestudiotipos form is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'otroestudiotipos', 'action' => 'index')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'otroestudiotipos', 'action' => 'add'), array('class' => 'active')); ?></li>
+		</ul>
+	</div>
+	<?php echo $this->Form->create('Otroestudiotipo'); ?>
+		<fieldset>
+			<h2><?php echo __('Add Otroestudiotipo'); ?></h2>
+			<div class="input-block">
+				<?php echo $this->Form->input('nombre'); ?>
+			</div>
+		</fieldset>
+		<div class="submit-block">
+			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>
+			<?php echo $this->Html->link(__('Cancel'), array('#'), array('class' => 'cancel-btn')); ?>
+		</div>
+	<?php echo $this->Form->end(); ?>
 </div>

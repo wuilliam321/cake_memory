@@ -1,19 +1,20 @@
-<div class="groups form">
-<?php echo $this->Form->create('Group'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Group'); ?></legend>
-	<?php
-		echo $this->Form->input('name');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Html->link(__('List Groups'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
+<div id="content-inner" class="groups form is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'groups', 'action' => 'index')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'groups', 'action' => 'add'), array('class' => 'active')); ?></li>
+		</ul>
+	</div>
+	<?php echo $this->Form->create('Group'); ?>
+		<fieldset>
+			<h2><?php echo __('Add Group'); ?></h2>
+			<div class="input-block">
+				<?php echo $this->Form->input('name'); ?>
+			</div>
+		</fieldset>
+		<div class="submit-block">
+			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>
+			<?php echo $this->Html->link(__('Cancel'), array('#'), array('class' => 'cancel-btn')); ?>
+		</div>
+	<?php echo $this->Form->end(); ?>
 </div>

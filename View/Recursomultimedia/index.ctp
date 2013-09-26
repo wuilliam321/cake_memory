@@ -1,4 +1,10 @@
 <div id="content-inner" class="recursomultimedia index is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'recursomultimedia', 'action' => 'index'), array('class' => 'active')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'recursomultimedia', 'action' => 'add')); ?></li>
+		</ul>
+	</div>
 	<h2><?php echo __('Recursomultimedia'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 		<tr>
@@ -17,7 +23,7 @@
 			<?php echo $this->Html->link($recursomultimedia['Recursomultimediatipo']['nombre'], array('controller' => 'recursomultimediatipos', 'action' => 'view', $recursomultimedia['Recursomultimediatipo']['id'])); ?>
 		</td>
 				<td>
-			<?php echo $this->Html->link($recursomultimedia['Publicacione']['id'], array('controller' => 'publicaciones', 'action' => 'view', $recursomultimedia['Publicacione']['id'])); ?>
+			<?php echo $this->Html->link($recursomultimedia['Publicacione']['titulo'], array('controller' => 'publicaciones', 'action' => 'view', $recursomultimedia['Publicacione']['id'])); ?>
 		</td>
 				<td><?php echo h($recursomultimedia['Recursomultimedia']['ruta']); ?>&nbsp;</td>
 				<td><?php echo h($recursomultimedia['Recursomultimedia']['nombre']); ?>&nbsp;</td>

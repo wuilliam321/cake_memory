@@ -33,6 +33,12 @@
 	a
 	{
 		color: #c94663;
+		text-decoration: underline;
+	}
+	
+	a:hover
+	{
+		text-decoration: none;
 	}
 
 	strong, b

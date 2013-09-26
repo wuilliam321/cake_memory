@@ -1,25 +1,30 @@
-<div class="comentarios form">
-<?php echo $this->Form->create('Comentario'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Comentario'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('publicacione_id');
-		echo $this->Form->input('user_id');
-		echo $this->Form->input('texto');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Comentario.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Comentario.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Comentarios'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Publicaciones'), array('controller' => 'publicaciones', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Publicacione'), array('controller' => 'publicaciones', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
+<div id="content-inner" class="comentarios form is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'comentarios', 'action' => 'index')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'comentarios', 'action' => 'add')); ?></li>
+			<li><?php echo $this->Html->link(__('Editar'), array('controller' => 'comentarios', 'action' => 'edit', $this->request->data['Comentario']['id']), array('class' => 'active')); ?></li>
+		</ul>
+	</div>
+	<?php echo $this->Form->create('Comentario'); ?>
+		<fieldset>
+			<h2><?php echo __('Edit Comentario'); ?></h2>
+			<div class="input-block">
+				<?php echo $this->Form->input('id'); ?>
+			</div>
+			<div class="input-block">
+				<?php echo $this->Form->input('publicacione_id'); ?>
+			</div>
+			<div class="input-block">
+				<?php echo $this->Form->input('user_id'); ?>
+			</div>
+			<div class="input-block">
+				<?php echo $this->Form->input('texto'); ?>
+			</div>
+		</fieldset>
+		<div class="submit-block">
+			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>
+			<?php echo $this->Html->link(__('Cancel'), array('#'), array('class' => 'cancel-btn')); ?>
+		</div>
+	<?php echo $this->Form->end(); ?>
 </div>

@@ -1,4 +1,10 @@
 <div id="content-inner" class="comentarios index is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'comentarios', 'action' => 'index'), array('class' => 'active')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'comentarios', 'action' => 'add')); ?></li>
+		</ul>
+	</div>
 	<h2><?php echo __('Comentarios'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 		<tr>
@@ -12,7 +18,7 @@
 			<tr>
 				<td><?php echo h($comentario['Comentario']['id']); ?>&nbsp;</td>
 				<td>
-			<?php echo $this->Html->link($comentario['Publicacione']['id'], array('controller' => 'publicaciones', 'action' => 'view', $comentario['Publicacione']['id'])); ?>
+			<?php echo $this->Html->link($comentario['Publicacione']['titulo'], array('controller' => 'publicaciones', 'action' => 'view', $comentario['Publicacione']['id'])); ?>
 		</td>
 				<td>
 			<?php echo $this->Html->link($comentario['User']['username'], array('controller' => 'users', 'action' => 'view', $comentario['User']['id'])); ?>

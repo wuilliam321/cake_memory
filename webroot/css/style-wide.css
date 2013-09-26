@@ -31,7 +31,8 @@
 	{
 	}
 	
-		.is-post h2
+		.is-post h2,
+		.is-post legend
 		{
 			font-size: 3.25em;
 			line-height: 1.25em;

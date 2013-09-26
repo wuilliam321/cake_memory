@@ -1,31 +1,36 @@
-<div class="publicaciones form">
-<?php echo $this->Form->create('Publicacione'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Publicacione'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('titulo');
-		echo $this->Form->input('descripcion_corta');
-		echo $this->Form->input('contenido');
-		echo $this->Form->input('Autore');
-		echo $this->Form->input('Etiqueta');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Publicacione.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Publicacione.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Publicaciones'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Comentarios'), array('controller' => 'comentarios', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Comentario'), array('controller' => 'comentarios', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Recursomultimedia'), array('controller' => 'recursomultimedia', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Recursomultimedia'), array('controller' => 'recursomultimedia', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Autores'), array('controller' => 'autores', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Autore'), array('controller' => 'autores', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Etiquetas'), array('controller' => 'etiquetas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Etiqueta'), array('controller' => 'etiquetas', 'action' => 'add')); ?> </li>
-	</ul>
+<div id="content-inner" class="publicaciones form is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'publicaciones', 'action' => 'index')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'publicaciones', 'action' => 'add')); ?></li>
+			<li><?php echo $this->Html->link(__('Editar'), array('controller' => 'publicaciones', 'action' => 'edit', $this->request->data['Publicacione']['id']), array('class' => 'active')); ?></li>
+		</ul>
+	</div>
+	<?php echo $this->Form->create('Publicacione'); ?>
+		<fieldset>
+			<h2><?php echo __('Edit Publicacione'); ?></h2>
+			<div class="input-block">
+				<?php echo $this->Form->input('id'); ?>
+			</div>
+			<div class="input-block">
+				<?php echo $this->Form->input('titulo'); ?>
+			</div>
+			<div class="input-block">
+				<?php echo $this->Form->input('descripcion_corta'); ?>
+			</div>
+			<div class="input-block">
+				<?php echo $this->Form->input('contenido'); ?>
+			</div>
+			<div class="input-block">
+				<?php echo $this->Form->input('Autore'); ?>
+			</div>
+			<div class="input-block">
+				<?php echo $this->Form->input('Etiqueta'); ?>
+			</div>
+		</fieldset>
+		<div class="submit-block">
+			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>
+			<?php echo $this->Html->link(__('Cancel'), array('#'), array('class' => 'cancel-btn')); ?>
+		</div>
+	<?php echo $this->Form->end(); ?>
 </div>

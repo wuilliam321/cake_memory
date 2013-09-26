@@ -1,4 +1,10 @@
 <div id="content-inner" class="etiquetasPublicaciones index is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'etiquetasPublicaciones', 'action' => 'index'), array('class' => 'active')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'etiquetasPublicaciones', 'action' => 'add')); ?></li>
+		</ul>
+	</div>
 	<h2><?php echo __('Etiquetas Publicaciones'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 		<tr>
@@ -14,7 +20,7 @@
 			<?php echo $this->Html->link($etiquetasPublicacione['Etiqueta']['nombre'], array('controller' => 'etiquetas', 'action' => 'view', $etiquetasPublicacione['Etiqueta']['id'])); ?>
 		</td>
 				<td>
-			<?php echo $this->Html->link($etiquetasPublicacione['Publicacione']['id'], array('controller' => 'publicaciones', 'action' => 'view', $etiquetasPublicacione['Publicacione']['id'])); ?>
+			<?php echo $this->Html->link($etiquetasPublicacione['Publicacione']['titulo'], array('controller' => 'publicaciones', 'action' => 'view', $etiquetasPublicacione['Publicacione']['id'])); ?>
 		</td>
 				<td class="actions">
 					<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $etiquetasPublicacione['EtiquetasPublicacione']['id'])); ?>

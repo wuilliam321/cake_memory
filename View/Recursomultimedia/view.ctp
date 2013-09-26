@@ -13,7 +13,7 @@
 		</dd>
 		<dt><?php echo __('Publicacione'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($recursomultimedia['Publicacione']['id'], array('controller' => 'publicaciones', 'action' => 'view', $recursomultimedia['Publicacione']['id'])); ?>
+			<?php echo $this->Html->link($recursomultimedia['Publicacione']['titulo'], array('controller' => 'publicaciones', 'action' => 'view', $recursomultimedia['Publicacione']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Ruta'); ?></dt>

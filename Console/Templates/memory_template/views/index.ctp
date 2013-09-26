@@ -18,6 +18,12 @@
  */
 ?>
 <div id="content-inner" class="<?php echo $pluralVar; ?> index is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo "<?php echo \$this->Html->link(__('Listado'), array('controller' => '$pluralVar', 'action' => 'index'), array('class' => 'active')); ?>"; ?></li>
+			<li><?php echo "<?php echo \$this->Html->link(__('Agregar'), array('controller' => '$pluralVar', 'action' => 'add')); ?>"; ?></li>
+		</ul>
+	</div>
 	<h2><?php echo "<?php echo __('{$pluralHumanName}'); ?>"; ?></h2>
 	<table cellpadding="0" cellspacing="0">
 		<tr>

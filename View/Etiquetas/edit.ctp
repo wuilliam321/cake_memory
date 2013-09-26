@@ -1,22 +1,27 @@
-<div class="etiquetas form">
-<?php echo $this->Form->create('Etiqueta'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Etiqueta'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('nombre');
-		echo $this->Form->input('Publicacione');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Etiqueta.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Etiqueta.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Etiquetas'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Publicaciones'), array('controller' => 'publicaciones', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Publicacione'), array('controller' => 'publicaciones', 'action' => 'add')); ?> </li>
-	</ul>
+<div id="content-inner" class="etiquetas form is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'etiquetas', 'action' => 'index')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'etiquetas', 'action' => 'add')); ?></li>
+			<li><?php echo $this->Html->link(__('Editar'), array('controller' => 'etiquetas', 'action' => 'edit', $this->request->data['Etiqueta']['id']), array('class' => 'active')); ?></li>
+		</ul>
+	</div>
+	<?php echo $this->Form->create('Etiqueta'); ?>
+		<fieldset>
+			<h2><?php echo __('Edit Etiqueta'); ?></h2>
+			<div class="input-block">
+				<?php echo $this->Form->input('id'); ?>
+			</div>
+			<div class="input-block">
+				<?php echo $this->Form->input('nombre'); ?>
+			</div>
+			<div class="input-block">
+				<?php echo $this->Form->input('Publicacione'); ?>
+			</div>
+		</fieldset>
+		<div class="submit-block">
+			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>
+			<?php echo $this->Html->link(__('Cancel'), array('#'), array('class' => 'cancel-btn')); ?>
+		</div>
+	<?php echo $this->Form->end(); ?>
 </div>

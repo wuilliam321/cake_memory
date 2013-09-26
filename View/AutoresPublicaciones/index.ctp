@@ -1,4 +1,10 @@
 <div id="content-inner" class="autoresPublicaciones index is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'autoresPublicaciones', 'action' => 'index'), array('class' => 'active')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'autoresPublicaciones', 'action' => 'add')); ?></li>
+		</ul>
+	</div>
 	<h2><?php echo __('Autores Publicaciones'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 		<tr>
@@ -11,7 +17,7 @@
 			<tr>
 				<td><?php echo h($autoresPublicacione['AutoresPublicacione']['id']); ?>&nbsp;</td>
 				<td>
-			<?php echo $this->Html->link($autoresPublicacione['Publicacione']['id'], array('controller' => 'publicaciones', 'action' => 'view', $autoresPublicacione['Publicacione']['id'])); ?>
+			<?php echo $this->Html->link($autoresPublicacione['Publicacione']['titulo'], array('controller' => 'publicaciones', 'action' => 'view', $autoresPublicacione['Publicacione']['id'])); ?>
 		</td>
 				<td>
 			<?php echo $this->Html->link($autoresPublicacione['Autore']['nombres'], array('controller' => 'autores', 'action' => 'view', $autoresPublicacione['Autore']['id'])); ?>

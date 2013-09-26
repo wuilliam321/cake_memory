@@ -17,50 +17,46 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-<div class="<?php echo $pluralVar; ?> form">
-<?php echo "<?php echo \$this->Form->create('{$modelClass}'); ?>\n"; ?>
-	<fieldset>
-		<legend><?php printf("<?php echo __('%s %s'); ?>", Inflector::humanize($action), $singularHumanName); ?></legend>
+<div id="content-inner" class="<?php echo $pluralVar; ?> form is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo "<?php echo \$this->Html->link(__('Listado'), array('controller' => '$pluralVar', 'action' => 'index')); ?>"; ?></li>
+			<?php if (strpos($action, 'add') !== false) {
+				echo "<li><?php echo \$this->Html->link(__('Agregar'), array('controller' => '$pluralVar', 'action' => 'add'), array('class' => 'active')); ?></li>\n";
+			} else {
+				echo "<li><?php echo \$this->Html->link(__('Agregar'), array('controller' => '$pluralVar', 'action' => 'add')); ?></li>\n";
+				echo "\t\t\t<li><?php echo \$this->Html->link(__('Editar'), array('controller' => '$pluralVar', 'action' => 'edit', \$this->request->data['{$modelClass}']['{$primaryKey}']), array('class' => 'active')); ?></li>\n";
+			}
+			?>
+		</ul>
+	</div>
+	<?php echo "<?php echo \$this->Form->create('{$modelClass}'); ?>\n"; ?>
+		<fieldset>
+			<h2><?php printf("<?php echo __('%s %s'); ?>", Inflector::humanize($action), $singularHumanName); ?></h2>
 <?php
-		echo "\t<?php\n";
 		foreach ($fields as $field) {
 			if (strpos($action, 'add') !== false && $field == $primaryKey) {
 				continue;
 			} elseif (!in_array($field, array('created', 'modified', 'updated'))) {
-				echo "\t\techo \$this->Form->input('{$field}');\n";
+				echo "\t\t\t<div class=\"input-block\">\n";
+				echo "\t\t\t\t<?php echo \$this->Form->input('{$field}'); ?>\n";
+				echo "\t\t\t</div>\n";
 			}
 		}
 		if (!empty($associations['hasAndBelongsToMany'])) {
 			foreach ($associations['hasAndBelongsToMany'] as $assocName => $assocData) {
-				echo "\t\techo \$this->Form->input('{$assocName}');\n";
-			}
-		}
-		echo "\t?>\n";
-?>
-	</fieldset>
-<?php
-	echo "<?php echo \$this->Form->end(__('Submit')); ?>\n";
-?>
-</div>
-<div class="actions">
-	<h3><?php echo "<?php echo __('Actions'); ?>"; ?></h3>
-	<ul>
-
-<?php if (strpos($action, 'add') === false): ?>
-		<li><?php echo "<?php echo \$this->Form->postLink(__('Delete'), array('action' => 'delete', \$this->Form->value('{$modelClass}.{$primaryKey}')), null, __('Are you sure you want to delete # %s?', \$this->Form->value('{$modelClass}.{$primaryKey}'))); ?>"; ?></li>
-<?php endif; ?>
-		<li><?php echo "<?php echo \$this->Html->link(__('List " . $pluralHumanName . "'), array('action' => 'index')); ?>"; ?></li>
-<?php
-		$done = array();
-		foreach ($associations as $type => $data) {
-			foreach ($data as $alias => $details) {
-				if ($details['controller'] != $this->name && !in_array($details['controller'], $done)) {
-					echo "\t\t<li><?php echo \$this->Html->link(__('List " . Inflector::humanize($details['controller']) . "'), array('controller' => '{$details['controller']}', 'action' => 'index')); ?> </li>\n";
-					echo "\t\t<li><?php echo \$this->Html->link(__('New " . Inflector::humanize(Inflector::underscore($alias)) . "'), array('controller' => '{$details['controller']}', 'action' => 'add')); ?> </li>\n";
-					$done[] = $details['controller'];
-				}
+				echo "\t\t\t<div class=\"input-block\">\n";
+				echo "\t\t\t\t<?php echo \$this->Form->input('{$assocName}'); ?>\n";
+				echo "\t\t\t</div>\n";
 			}
 		}
 ?>
-	</ul>
+		</fieldset>
+		<div class="submit-block">
+			<?php echo "<?php echo \$this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>\n"; ?>
+			<?php echo "<?php echo \$this->Html->link(__('Cancel'), array('#'), array('class' => 'cancel-btn')); ?>\n"; ?>
+		</div>
+<?php
+	echo "\t<?php echo \$this->Form->end(); ?>\n";
+?>
 </div>

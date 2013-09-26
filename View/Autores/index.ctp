@@ -1,4 +1,10 @@
 <div id="content-inner" class="autores index is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'autores', 'action' => 'index'), array('class' => 'active')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'autores', 'action' => 'add')); ?></li>
+		</ul>
+	</div>
 	<h2><?php echo __('Autores'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 		<tr>

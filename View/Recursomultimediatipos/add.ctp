@@ -1,19 +1,20 @@
-<div class="recursomultimediatipos form">
-<?php echo $this->Form->create('Recursomultimediatipo'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Recursomultimediatipo'); ?></legend>
-	<?php
-		echo $this->Form->input('nombre');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Html->link(__('List Recursomultimediatipos'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Recursomultimedia'), array('controller' => 'recursomultimedia', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Recursomultimedia'), array('controller' => 'recursomultimedia', 'action' => 'add')); ?> </li>
-	</ul>
+<div id="content-inner" class="recursomultimediatipos form is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'recursomultimediatipos', 'action' => 'index')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'recursomultimediatipos', 'action' => 'add'), array('class' => 'active')); ?></li>
+		</ul>
+	</div>
+	<?php echo $this->Form->create('Recursomultimediatipo'); ?>
+		<fieldset>
+			<h2><?php echo __('Add Recursomultimediatipo'); ?></h2>
+			<div class="input-block">
+				<?php echo $this->Form->input('nombre'); ?>
+			</div>
+		</fieldset>
+		<div class="submit-block">
+			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>
+			<?php echo $this->Html->link(__('Cancel'), array('#'), array('class' => 'cancel-btn')); ?>
+		</div>
+	<?php echo $this->Form->end(); ?>
 </div>

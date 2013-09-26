@@ -8,7 +8,7 @@
 		</dd>
 		<dt><?php echo __('Publicacione'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($autoresPublicacione['Publicacione']['id'], array('controller' => 'publicaciones', 'action' => 'view', $autoresPublicacione['Publicacione']['id'])); ?>
+			<?php echo $this->Html->link($autoresPublicacione['Publicacione']['titulo'], array('controller' => 'publicaciones', 'action' => 'view', $autoresPublicacione['Publicacione']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Autore'); ?></dt>
