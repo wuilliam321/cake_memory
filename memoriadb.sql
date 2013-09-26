@@ -3,18 +3,12 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 26-09-2013 a las 10:23:22
+-- Tiempo de generación: 26-09-2013 a las 13:43:30
 -- Versión del servidor: 5.5.32
 -- Versión de PHP: 5.3.10-1ubuntu3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `memoriadb`
@@ -255,6 +249,7 @@ INSERT INTO `profesiones` (`id`, `nombre`) VALUES
 CREATE TABLE IF NOT EXISTS `publicaciones` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` text NOT NULL,
+  `descripcion_corta` text,
   `contenido` text NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
@@ -265,9 +260,9 @@ CREATE TABLE IF NOT EXISTS `publicaciones` (
 -- Volcado de datos para la tabla `publicaciones`
 --
 
-INSERT INTO `publicaciones` (`id`, `titulo`, `contenido`, `created`, `modified`) VALUES
-(1, 'Investigacion Sobre Inteligencia Artifical en Ratones', 'Aqui el contenido de la inteligencia artificial en los ratones, realizada en merida, por la ula', '2013-09-26 09:59:33', '2013-09-26 09:59:33'),
-(2, 'Desarrollo de aplicaciones web', 'Esto es una prueba de contenido, donde podemos ver como se crea una pagina web usando php, mysql, html y otras herramientas\r\n\r\njava script, javascript, otras cosas, web', '2013-09-26 10:05:33', '2013-09-26 10:05:33');
+INSERT INTO `publicaciones` (`id`, `titulo`, `descripcion_corta`, `contenido`, `created`, `modified`) VALUES
+(1, 'Investigacion Sobre Inteligencia Artifical en Ratones', 'Buscando nuevos horizontes', '<p>\r\n				<strong>Probando!</strong> probando enlaces <a href="http://html5up.net/striped/">Striped</a>, esto es un texto de prueba <a href="http://n33.co/">AJ</a>\r\n				Todo va de maravilla <a href="http://html5up.net/">HTML5 UP</a> luego esto hay que hacerlo correcto html, con un editor\r\n			</p>\r\n			<p>\r\n				De esta forma podemos editar todo adecuadamente </p>', '2013-08-25 09:59:33', '2013-08-25 13:28:55'),
+(2, 'Desarrollo de aplicaciones web', 'Una forma unica de ver la web', 'Esto es una prueba de contenido, donde podemos ver como se crea una pagina web usando php, mysql, html y otras herramientas\r\n\r\njava script, javascript, otras cosas, web', '2013-09-26 10:05:33', '2013-09-26 10:05:33');
 
 -- --------------------------------------------------------
 
@@ -424,7 +419,3 @@ ALTER TABLE `unidadinvestigaciones`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `fk_users_groups1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
