@@ -15,6 +15,8 @@ class Publicacione extends AppModel {
  * @var string
  */
 	public $displayField = 'titulo';
+    
+    public $actsAs = array('Search.Searchable');
 
 /**
  * Validation rules
@@ -100,7 +102,8 @@ class Publicacione extends AppModel {
 			'offset' => '',
 			'finderQuery' => '',
 			'deleteQuery' => '',
-			'insertQuery' => ''
+			'insertQuery' => '',
+            'with' => 'AutoresPublicacione'
 		),
 		'Etiqueta' => array(
 			'className' => 'Etiqueta',
@@ -115,8 +118,49 @@ class Publicacione extends AppModel {
 			'offset' => '',
 			'finderQuery' => '',
 			'deleteQuery' => '',
-			'insertQuery' => ''
+			'insertQuery' => '',
+            'with' => 'EtiquetasPublicacione'
 		)
 	);
+    
+    public $filterArgs = array(
+        'q' => array('type' => 'like', 'field' => array('Publicacione.titulo', 'Publicacione.descripcion_corta', 'Publicacione.contenido')),
+        //'contenido' => array('type' => 'like'),
+        'autor' => array('type' => 'subquery', 'method' => 'findByAutor', 'field' => 'Publicacione.id'),
+        'etiqueta' => array('type' => 'subquery', 'method' => 'findByEtiqueta', 'field' => 'Publicacione.id'),
+        'filter' => array('type' => 'query', 'method' => 'orConditions'),
+    );
+
+    public function findByAutor($data = array()) {
+        $this->AutoresPublicacione->Behaviors->attach('Containable', array('autoFields' => false));
+        $this->AutoresPublicacione->Behaviors->attach('Search.Searchable');
+        $query = $this->AutoresPublicacione->getQuery('all', array(
+            'conditions' => array('or' => array('Autore.nombres LIKE'  => '%' . $data['autor'] . '%', 'Autore.apellidos LIKE'  => '%' . $data['autor'] . '%', 'Autore.linea_investigacion LIKE'  => '%' . $data['autor'] . '%')),
+            'fields' => array('AutoresPublicacione.publicacione_id'),
+            'contain' => array('Autore')
+        ));
+        return $query;
+    }
+
+    public function findByEtiqueta($data = array()) {
+        $this->EtiquetasPublicacione->Behaviors->attach('Containable', array('autoFields' => false));
+        $this->EtiquetasPublicacione->Behaviors->attach('Search.Searchable');
+        $query = $this->EtiquetasPublicacione->getQuery('all', array(
+            'conditions' => array('Etiqueta.nombre LIKE'  => '%' . $data['etiqueta'] . '%'),
+            'fields' => array('EtiquetasPublicacione.publicacione_id'),
+            'contain' => array('Etiqueta')
+        ));
+        return $query;
+    }
+
+    public function orConditions($data = array()) {
+        $filter = $data['filter'];
+        $cond = array(
+            'OR' => array(
+                $this->alias . '.titulo LIKE' => '%' . $filter . '%',
+                $this->alias . '.contenido LIKE' => '%' . $filter . '%',
+            ));
+        return $cond;
+    }
 
 }

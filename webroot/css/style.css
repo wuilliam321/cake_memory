@@ -580,15 +580,14 @@
 			position: relative;
 			padding-right: 34px;
 		}
-		
-			.is-search form:after
+			.is-search form .input { margin: 0; padding: 0}
+			.is-search form .input:after
 			{
 				content: '';
 				display: block;
 				position: absolute;
-				top: 50%;
 				right: 4px;
-				margin-top: -12px;
+				margin-top: -31px;
 				width: 24px;
 				height: 24px;
 				background-image: url('img/sprites.png');

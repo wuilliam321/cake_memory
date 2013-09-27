@@ -29,11 +29,10 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 		</title>
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		
-		<?php echo $this->Html->scriptBlock("var BASE_URL = '/cake_memory'"); ?>
+		<?php echo $this->Html->scriptBlock("var BASE_URL = '/cake_memory';"); ?>
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
 		<?php echo $this->Html->meta('icon'); ?>
-		<?php echo $this->Html->script(array('jquery.min', 'config', 'skel.min', 'skel-panels.min')); ?>
+		<?php echo $this->Html->script(array('jquery.min', 'config', 'skel.min', 'skel-panels.min', 'jquery.highlight')); ?>
 		<?php echo $this->Html->css(array('main')); ?>
 		<noscript>
 			<?php echo $this->Html->css(array('skel-noscript', 'style', 'style-desktop', 'style-wide')); ?>
@@ -44,6 +43,17 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 		<?php
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
+			
+			$q = (isset($this->request['named']['q']) ? $this->request['named']['q'] : null);
+			$autor = (isset($this->request['named']['autor']) ? $this->request['named']['autor'] : null);
+			$etiqueta = (isset($this->request['named']['etiqueta']) ? $this->request['named']['etiqueta'] : null);
+			echo $this->Html->scriptBlock("
+				$(function () {
+					h = ['$q', '$autor', '$etiqueta'];
+					
+					$('article').highlight(h);
+				});
+			"); 
 			echo $this->fetch('script');
 		?>
 	</head>

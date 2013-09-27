@@ -6,7 +6,19 @@ App::uses('AppController', 'Controller');
  * @property Publicacione $Publicacione
  */
 class PublicacionesController extends AppController {
-
+	public $components = array('Search.Prg');
+    public $presetVars = true; // using the model configuration
+	
+	public function find() {
+        $this->Prg->commonProcess();
+		$this->paginate = array(
+			'conditions' => $this->Publicacione->parseCriteria($this->Prg->parsedParams()),
+			'limit' => 2,
+			'order' => 'Publicacione.created DESC'
+		);
+        $this->set('publicaciones', $this->paginate());
+    }
+	
 /**
  * index method
  *

@@ -26,7 +26,7 @@
         <?php echo $this->element('comentarios_recientes'); ?>
         
     <!-- Calendar -->
-        <?php echo $this->element('calendario'); ?>
+        <?php //echo $this->element('calendario'); ?>
 
     <!-- Copyright -->
         <div id="copyright">
