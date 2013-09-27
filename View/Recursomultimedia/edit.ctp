@@ -1,4 +1,4 @@
-<div id="content-inner" class="recursomultimedia form is-post">
+<div id="content-inner" class="container recursomultimedia form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'recursomultimedia', 'action' => 'index')); ?></li>
@@ -9,23 +9,23 @@
 	<?php echo $this->Form->create('Recursomultimedia'); ?>
 		<fieldset>
 			<h2><?php echo __('Edit Recursomultimedia'); ?></h2>
-			<div class="input-block">
-				<?php echo $this->Form->input('id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('recursomultimediatipo_id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('recursomultimediatipo_id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('publicacione_id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('publicacione_id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('ruta'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('ruta', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('nombre'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('nombre', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('descripcion'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('descripcion', array('class' => 'span12')); ?>
 			</div>
 		</fieldset>
 		<div class="submit-block">

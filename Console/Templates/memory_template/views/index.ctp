@@ -17,7 +17,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-<div id="content-inner" class="<?php echo $pluralVar; ?> index is-post">
+<div id="content-inner" class="container <?php echo $pluralVar; ?> index is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo "<?php echo \$this->Html->link(__('Listado'), array('controller' => '$pluralVar', 'action' => 'index'), array('class' => 'active')); ?>"; ?></li>

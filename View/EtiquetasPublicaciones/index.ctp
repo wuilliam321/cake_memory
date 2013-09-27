@@ -1,4 +1,4 @@
-<div id="content-inner" class="etiquetasPublicaciones index is-post">
+<div id="content-inner" class="container etiquetasPublicaciones index is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'etiquetasPublicaciones', 'action' => 'index'), array('class' => 'active')); ?></li>

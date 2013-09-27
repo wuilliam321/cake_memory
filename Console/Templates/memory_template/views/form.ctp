@@ -17,7 +17,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-<div id="content-inner" class="<?php echo $pluralVar; ?> form is-post">
+<div id="content-inner" class="container <?php echo $pluralVar; ?> form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo "<?php echo \$this->Html->link(__('Listado'), array('controller' => '$pluralVar', 'action' => 'index')); ?>"; ?></li>
@@ -38,15 +38,15 @@
 			if (strpos($action, 'add') !== false && $field == $primaryKey) {
 				continue;
 			} elseif (!in_array($field, array('created', 'modified', 'updated'))) {
-				echo "\t\t\t<div class=\"input-block\">\n";
-				echo "\t\t\t\t<?php echo \$this->Form->input('{$field}'); ?>\n";
+				echo "\t\t\t<div class=\"row-fluid\">\n";
+				echo "\t\t\t\t<?php echo \$this->Form->input('{$field}', array('class' => 'span12')); ?>\n";
 				echo "\t\t\t</div>\n";
 			}
 		}
 		if (!empty($associations['hasAndBelongsToMany'])) {
 			foreach ($associations['hasAndBelongsToMany'] as $assocName => $assocData) {
-				echo "\t\t\t<div class=\"input-block\">\n";
-				echo "\t\t\t\t<?php echo \$this->Form->input('{$assocName}'); ?>\n";
+				echo "\t\t\t<div class=\"row-fluid\">\n";
+				echo "\t\t\t\t<?php echo \$this->Form->input('{$assocName}', array('class' => 'span12')); ?>\n";
 				echo "\t\t\t</div>\n";
 			}
 		}

@@ -1,4 +1,4 @@
-<div id="content-inner" class="recursomultimedia view is-post">
+<div id="content-inner" class="container recursomultimedia view is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'recursomultimedia', 'action' => 'index')); ?></li>

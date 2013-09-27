@@ -32,8 +32,8 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 		<?php echo $this->Html->scriptBlock("var BASE_URL = '/cake_memory';"); ?>
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
 		<?php echo $this->Html->meta('icon'); ?>
-		<?php echo $this->Html->script(array('jquery.min', 'config', 'skel.min', 'skel-panels.min', 'jquery.highlight')); ?>
-		<?php echo $this->Html->css(array('main')); ?>
+		<?php echo $this->Html->css(array('bootstrap.min', 'bootstrap-responsive.min', 'main')); ?>
+		<?php echo $this->Html->script(array('jquery.min', 'config', 'skel.min', 'skel-panels.min', 'jquery.highlight', 'ckeditor', 'adapters/jquery', 'config_ck', 'styles', 'lang/es', 'bootstrap.min')); ?>
 		<noscript>
 			<?php echo $this->Html->css(array('skel-noscript', 'style', 'style-desktop', 'style-wide')); ?>
 		</noscript>

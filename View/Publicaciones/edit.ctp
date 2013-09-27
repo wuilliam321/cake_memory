@@ -1,4 +1,4 @@
-<div id="content-inner" class="publicaciones form is-post">
+<div id="content-inner" class="container publicaciones form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'publicaciones', 'action' => 'index')); ?></li>
@@ -9,23 +9,23 @@
 	<?php echo $this->Form->create('Publicacione'); ?>
 		<fieldset>
 			<h2><?php echo __('Edit Publicacione'); ?></h2>
-			<div class="input-block">
-				<?php echo $this->Form->input('id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('titulo'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('titulo', array('class' => 'span12', 'rows' => 1)); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('descripcion_corta'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('descripcion_corta', array('class' => 'span12', 'rows' => 1)); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('contenido'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('contenido', array('class' => 'span12 editor')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('Autore'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('Autore', array('class' => 'span12 checkbox', 'multiple' => 'checkbox')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('Etiqueta'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('Etiqueta', array('class' => 'span12 checkbox', 'multiple' => 'checkbox')); ?>
 			</div>
 		</fieldset>
 		<div class="submit-block">

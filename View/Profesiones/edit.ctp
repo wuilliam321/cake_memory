@@ -1,4 +1,4 @@
-<div id="content-inner" class="profesiones form is-post">
+<div id="content-inner" class="container profesiones form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'profesiones', 'action' => 'index')); ?></li>
@@ -9,11 +9,11 @@
 	<?php echo $this->Form->create('Profesione'); ?>
 		<fieldset>
 			<h2><?php echo __('Edit Profesione'); ?></h2>
-			<div class="input-block">
-				<?php echo $this->Form->input('id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('nombre'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('nombre', array('class' => 'span12')); ?>
 			</div>
 		</fieldset>
 		<div class="submit-block">

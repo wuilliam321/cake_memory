@@ -1,4 +1,4 @@
-<div id="content-inner" class="groups form is-post">
+<div id="content-inner" class="container groups form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'groups', 'action' => 'index')); ?></li>
@@ -9,11 +9,11 @@
 	<?php echo $this->Form->create('Group'); ?>
 		<fieldset>
 			<h2><?php echo __('Edit Group'); ?></h2>
-			<div class="input-block">
-				<?php echo $this->Form->input('id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('name'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('name', array('class' => 'span12')); ?>
 			</div>
 		</fieldset>
 		<div class="submit-block">

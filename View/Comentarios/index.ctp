@@ -1,4 +1,4 @@
-<div id="content-inner" class="comentarios index is-post">
+<div id="content-inner" class="container comentarios index is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'comentarios', 'action' => 'index'), array('class' => 'active')); ?></li>

@@ -1,4 +1,4 @@
-<div id="content-inner" class="autoresPublicaciones form is-post">
+<div id="content-inner" class="container autoresPublicaciones form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'autoresPublicaciones', 'action' => 'index')); ?></li>
@@ -8,11 +8,11 @@
 	<?php echo $this->Form->create('AutoresPublicacione'); ?>
 		<fieldset>
 			<h2><?php echo __('Add Autores Publicacione'); ?></h2>
-			<div class="input-block">
-				<?php echo $this->Form->input('publicacione_id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('publicacione_id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('autore_id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('autore_id', array('class' => 'span12')); ?>
 			</div>
 		</fieldset>
 		<div class="submit-block">

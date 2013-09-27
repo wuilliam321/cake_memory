@@ -1,4 +1,4 @@
-<div id="content-inner" class="otroestudiotipos form is-post">
+<div id="content-inner" class="container otroestudiotipos form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'otroestudiotipos', 'action' => 'index')); ?></li>
@@ -8,8 +8,8 @@
 	<?php echo $this->Form->create('Otroestudiotipo'); ?>
 		<fieldset>
 			<h2><?php echo __('Add Otroestudiotipo'); ?></h2>
-			<div class="input-block">
-				<?php echo $this->Form->input('nombre'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('nombre', array('class' => 'span12')); ?>
 			</div>
 		</fieldset>
 		<div class="submit-block">

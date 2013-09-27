@@ -1,4 +1,4 @@
-<div id="content-inner" class="autores form is-post">
+<div id="content-inner" class="container autores form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'autores', 'action' => 'index')); ?></li>
@@ -9,44 +9,44 @@
 	<?php echo $this->Form->create('Autore'); ?>
 		<fieldset>
 			<h2><?php echo __('Edit Autore'); ?></h2>
-			<div class="input-block">
-				<?php echo $this->Form->input('id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('user_id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('user_id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('unidadinvestigacione_id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('unidadinvestigacione_id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('profesione_id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('profesione_id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('nombres'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('nombres', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('apellidos'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('apellidos', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('email_primario'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('email_primario', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('telefono_primario'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('telefono_primario', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('email_secundario'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('email_secundario', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('telefono_secundario'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('telefono_secundario', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('telefono_otro'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('telefono_otro', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('linea_investigacion'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('linea_investigacion', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('Publicacione'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('Publicacione', array('class' => 'span12')); ?>
 			</div>
 		</fieldset>
 		<div class="submit-block">

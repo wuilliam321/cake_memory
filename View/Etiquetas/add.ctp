@@ -1,4 +1,4 @@
-<div id="content-inner" class="etiquetas form is-post">
+<div id="content-inner" class="container etiquetas form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'etiquetas', 'action' => 'index')); ?></li>
@@ -8,11 +8,11 @@
 	<?php echo $this->Form->create('Etiqueta'); ?>
 		<fieldset>
 			<h2><?php echo __('Add Etiqueta'); ?></h2>
-			<div class="input-block">
-				<?php echo $this->Form->input('nombre'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('nombre', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('Publicacione'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('Publicacione', array('class' => 'span12')); ?>
 			</div>
 		</fieldset>
 		<div class="submit-block">

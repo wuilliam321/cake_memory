@@ -1,4 +1,4 @@
-<div id="content-inner" class="users form is-post">
+<div id="content-inner" class="container users form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'users', 'action' => 'index')); ?></li>
@@ -9,17 +9,17 @@
 	<?php echo $this->Form->create('User'); ?>
 		<fieldset>
 			<h2><?php echo __('Edit User'); ?></h2>
-			<div class="input-block">
-				<?php echo $this->Form->input('id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('group_id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('group_id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('username'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('username', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('password'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('password', array('class' => 'span12')); ?>
 			</div>
 		</fieldset>
 		<div class="submit-block">

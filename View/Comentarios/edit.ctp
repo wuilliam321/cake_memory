@@ -1,4 +1,4 @@
-<div id="content-inner" class="comentarios form is-post">
+<div id="content-inner" class="container comentarios form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'comentarios', 'action' => 'index')); ?></li>
@@ -9,17 +9,17 @@
 	<?php echo $this->Form->create('Comentario'); ?>
 		<fieldset>
 			<h2><?php echo __('Edit Comentario'); ?></h2>
-			<div class="input-block">
-				<?php echo $this->Form->input('id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('publicacione_id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('publicacione_id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('user_id'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('user_id', array('class' => 'span12')); ?>
 			</div>
-			<div class="input-block">
-				<?php echo $this->Form->input('texto'); ?>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('texto', array('class' => 'span12')); ?>
 			</div>
 		</fieldset>
 		<div class="submit-block">

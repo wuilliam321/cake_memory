@@ -1,4 +1,4 @@
-<div id="content-inner" class="groups view is-post">
+<div id="content-inner" class="container groups view is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'groups', 'action' => 'index')); ?></li>
