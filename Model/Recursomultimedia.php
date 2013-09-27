@@ -7,12 +7,6 @@ App::uses('AppModel', 'Model');
  * @property Publicacione $Publicacione
  */
 class Recursomultimedia extends AppModel {
-/**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'nombre';
 
 /**
  * Use table
@@ -20,6 +14,13 @@ class Recursomultimedia extends AppModel {
  * @var mixed False or table name
  */
 	public $useTable = 'recursomultimedias';
+
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'nombre';
 
 /**
  * Validation rules

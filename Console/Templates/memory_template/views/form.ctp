@@ -54,7 +54,7 @@
 		</fieldset>
 		<div class="submit-block">
 			<?php echo "<?php echo \$this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>\n"; ?>
-			<?php echo "<?php echo \$this->Html->link(__('Cancel'), array('#'), array('class' => 'cancel-btn')); ?>\n"; ?>
+			<?php echo "<?php echo \$this->Html->link(__('Cancel'), array('controller' => '$pluralVar', 'action' => 'index'), array('class' => 'cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>\n"; ?>
 		</div>
 <?php
 	echo "\t<?php echo \$this->Form->end(); ?>\n";

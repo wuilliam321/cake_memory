@@ -17,7 +17,7 @@
 		</fieldset>
 		<div class="submit-block">
 			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>
-			<?php echo $this->Html->link(__('Cancel'), array('#'), array('class' => 'cancel-btn')); ?>
+			<?php echo $this->Html->link(__('Cancel'), array('controller' => 'autoresPublicaciones', 'action' => 'index'), array('class' => 'cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>
 		</div>
 	<?php echo $this->Form->end(); ?>
 </div>

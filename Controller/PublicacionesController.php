@@ -14,6 +14,10 @@ class PublicacionesController extends AppController {
  */
 	public function index() {
 		$this->Publicacione->recursive = 0;
+		$this->paginate = array(
+			'limit' => 2,
+			'order' => 'Publicacione.created DESC'
+		);
 		$this->set('publicaciones', $this->paginate());
 	}
 
@@ -106,13 +110,14 @@ class PublicacionesController extends AppController {
  *
  * @return array
  */
-    public function recientes() {
-        $conditions = array(
-            "order" => 'Publicacione.created DESC',
-            "limit" => '5'
-        );
-        $publicaciones = $this->Publicacione->find("all", $conditions);
+	public function recientes() {
+		$this->Publicacione->recursive = 0;
+		$this->paginate = array(
+			'limit' => 2,
+			'order' => 'Publicacione.created DESC'
+		);
+		$publicaciones = $this->paginate();
 		$this->set(compact('publicaciones'));
 		return $publicaciones;
-    }
+	}
 }

@@ -1,5 +1,14 @@
-<div class="recursomultimedia view">
-<h2><?php echo __('Recursomultimedia'); ?></h2>
+<div id="content-inner" class="recursomultimedia view is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'recursomultimedia', 'action' => 'index')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'recursomultimedia', 'action' => 'add')); ?></li>
+			<li><?php echo $this->Html->link(__('Editar'), array('controller' => 'recursomultimedia', 'action' => 'edit', $recursomultimedia['Recursomultimedia']['id'])); ?></li>
+			<li><?php echo $this->Html->link(__('Ver'), array('controller' => 'recursomultimedia', 'action' => 'view', $recursomultimedia['Recursomultimedia']['id']), array('class' => 'active')); ?></li>
+			<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $recursomultimedia['Recursomultimedia']['id']), null, __('¿Está seguro(a) que desea eliminar este registro?')); ?></li>
+		</ul>
+	</div>
+		<h2><?php echo __('Recursomultimedia'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>
@@ -32,17 +41,4 @@
 			&nbsp;
 		</dd>
 	</dl>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Recursomultimedia'), array('action' => 'edit', $recursomultimedia['Recursomultimedia']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Recursomultimedia'), array('action' => 'delete', $recursomultimedia['Recursomultimedia']['id']), null, __('Are you sure you want to delete # %s?', $recursomultimedia['Recursomultimedia']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Recursomultimedia'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Recursomultimedia'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Recursomultimediatipos'), array('controller' => 'recursomultimediatipos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Recursomultimediatipo'), array('controller' => 'recursomultimediatipos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Publicaciones'), array('controller' => 'publicaciones', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Publicacione'), array('controller' => 'publicaciones', 'action' => 'add')); ?> </li>
-	</ul>
 </div>

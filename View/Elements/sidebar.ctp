@@ -9,10 +9,10 @@
     <!-- Nav -->
         <nav id="nav">
             <ul>
-                <li<?php echo ($this->request['controller'] == 'publicaciones') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Publicaciones'), array('controller' => 'publicaciones', 'action' => 'recientes')); ?></li>
+                <li<?php echo ($this->request['controller'] == 'publicaciones') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Publicaciones'), array('controller' => 'publicaciones', 'action' => 'index')); ?></li>
                 <li<?php echo ($this->request['controller'] == 'institutos') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Institutos'), array('controller' => 'institutos', 'action' => 'index')); ?></li>
                 <li<?php echo ($this->request['controller'] == 'autores') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Autores'), array('controller' => 'autores', 'action' => 'index')); ?></li>
-                <li<?php echo ($this->request['controller'] == 'recursomultimedias') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Recursos Multimedios'), array('controller' => 'recursomultimedias', 'action' => 'index')); ?></li>
+                <li<?php echo ($this->request['controller'] == 'recursomultimedia') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Recursos Multimedios'), array('controller' => 'recursomultimedia', 'action' => 'index')); ?></li>
             </ul>
         </nav>
         

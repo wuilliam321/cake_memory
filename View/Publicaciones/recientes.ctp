@@ -1,6 +1,10 @@
-<div id="content-inner">
-	<!-- Post -->
-    <?php foreach($publicaciones as $publicacione): ?>
+<div id="content-inner" class="publicaciones index is-post">
+	<div class="top-menu">
+		<ul>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'publicaciones', 'action' => 'add')); ?></li>
+		</ul>
+	</div>
+	<?php foreach($publicaciones as $publicacione): ?>
 		<article class="is-post is-post-excerpt">
 			<header>
 				<!--
@@ -33,19 +37,22 @@
 			</div>
 			<?php echo $publicacione['Publicacione']['contenido']; ?>
 		</article>
-    <?php endforeach; ?>
-
-	<!-- Pager -->
+	<?php endforeach; ?>
+	
+	<div class="paging-block">
+		<p>
+			<?php
+				echo $this->Paginator->counter(array(
+					'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+				));
+			?>
+		</p>
 		<div class="pager">
-			<!--<a href="#" class="button previous">Previous Page</a>-->
+			<?php echo $this->Paginator->prev(__('Anterior'), array('class' => 'button previous'), null, array('class' => 'button previous disabled')); ?>
 			<div class="pages">
-				<a href="#" class="active">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<span>&hellip;</span>
-				<a href="#">20</a>
+				<?php echo $this->Paginator->numbers(array('separator' => '', 'currentClass' => 'active', 'currentTag' => 'a', 'tag' => 'span')); ?>
 			</div>
-			<a href="#" class="button next">Next Page</a>
+			<?php echo $this->Paginator->next(__('Siguiente'), array('class' => 'button next'), null, array('class' => 'button next disabled')); ?>
 		</div>
+	</div>
 </div>
