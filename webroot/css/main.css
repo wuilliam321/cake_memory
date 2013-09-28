@@ -1,3 +1,7 @@
+small {
+	font-size:80%;
+}
+.is-post label { font-weight:bold}
 #header {
 	background-color:#2B2B2B;
 	padding-left:70px;

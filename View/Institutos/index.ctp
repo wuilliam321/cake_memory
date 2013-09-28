@@ -34,14 +34,18 @@
 					<li><a href="#" class="link-icon24 link-icon24-4">128</a></li>
 				</ul>
 			</div>
+			<h4>Unidades de Investigacion</h4>
+			<?php if (empty($instituto['Unidadinvestigacione'])): ?>
+				<p>El instituto no posee unidades de investigación registradas</p>
+			<?php endif; ?>
 			<ul>
-				<li><?php echo $autore['Autore']['email_primario']; ?></li>
-				<li><?php echo $autore['Autore']['telefono_primario']; ?></li>
-				<li><?php echo $autore['Autore']['linea_investigacion']; ?></li>
+				<?php foreach($instituto['Unidadinvestigacione'] as $unidadinvestigacione): ?>
+					<li><?php echo $unidadinvestigacione['nombre']; ?></li>
+				<?php endforeach; ?>
 			</ul>
-			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $autore['Autore']['id'])); ?>
-			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $autore['Autore']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $autore['Autore']['id']), null, __('¿Está seguro(a) que desea eliminar este registro?')); ?>
+			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $instituto['Instituto']['id'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $instituto['Instituto']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $instituto['Instituto']['id']), null, __('¿Está seguro(a) que desea eliminar este registro?')); ?>
 		</article>
 		<?php if ($i == sizeof($institutos) - 1): ?>
 			</div>
@@ -49,40 +53,6 @@
 		<?php $i++; ?>
 	<?php endforeach; ?>
 	
-	<div class="paging-block">
-		<p>
-			<?php
-				echo $this->Paginator->counter(array(
-					'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-				));
-			?>
-		</p>
-		<div class="pager">
-			<?php echo $this->Paginator->prev(__('Anterior'), array('class' => 'button previous'), null, array('class' => 'button previous disabled')); ?>
-			<div class="pages">
-				<?php echo $this->Paginator->numbers(array('separator' => '', 'currentClass' => 'active', 'currentTag' => 'a', 'tag' => 'span')); ?>
-			</div>
-			<?php echo $this->Paginator->next(__('Siguiente'), array('class' => 'button next'), null, array('class' => 'button next disabled')); ?>
-		</div>
-	</div>
-	<table cellpadding="0" cellspacing="0">
-		<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-		</tr>
-		<?php foreach ($institutos as $instituto): ?>
-			<tr>
-				<td><?php echo h($instituto['Instituto']['id']); ?>&nbsp;</td>
-				<td><?php echo h($instituto['Instituto']['nombre']); ?>&nbsp;</td>
-				<td class="actions">
-					<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $instituto['Instituto']['id'])); ?>
-					<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $instituto['Instituto']['id'])); ?>
-					<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $instituto['Instituto']['id']), null, __('¿Está seguro(a) que desea eliminar este registro?')); ?>
-				</td>
-			</tr>
-		<?php endforeach; ?>
-	</table>
 	<div class="paging-block">
 		<p>
 			<?php

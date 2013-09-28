@@ -11,6 +11,9 @@
 			<div class="row-fluid">
 				<?php echo $this->Form->input('nombre', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
 			</div>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('direccion', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+			</div>
 		</fieldset>
 		<div class="form-actions">
 			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => false, 'class' => 'btn btn-primary btn-large')); ?>

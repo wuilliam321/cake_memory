@@ -13,7 +13,7 @@ class InstitutosController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Instituto->recursive = 0;
+		$this->Instituto->recursive = 1;
 		$this->set('institutos', $this->paginate());
 	}
 

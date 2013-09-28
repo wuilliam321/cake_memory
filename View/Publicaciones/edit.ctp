@@ -33,7 +33,7 @@
 			</div>
 			<div class="row-fluid">
 				<div class="span12">
-					<?php echo $this->Form->label('Recursomultimedia'); ?>
+					<h3><?php echo __('Recursomultimedia'); ?></h3>
 					<?php if (empty($this->request->data['Recursomultimedia'])): ?>
 						<p>No hay Recursos Multimedia registrados, puede proceder a agregarlos.</p>
 					<?php endif; ?>

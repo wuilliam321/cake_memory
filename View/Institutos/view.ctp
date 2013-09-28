@@ -20,6 +20,11 @@
 			<?php echo h($instituto['Instituto']['nombre']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Direccion'); ?></dt>
+		<dd>
+			<?php echo h($instituto['Instituto']['direccion']); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="related">
