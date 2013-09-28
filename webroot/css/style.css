@@ -153,17 +153,6 @@
 	{
 	}
 	
-		form input,
-		form select,
-		form textarea
-		{
-			border-radius: 0.4em;
-			-webkit-appearance: none;
-			border: solid 1px #ddd;
-			padding: 0.5em;
-			width: 100%;
-		}
-
 		form input:focus,
 		form textarea:focus
 		{
@@ -587,7 +576,7 @@
 				display: block;
 				position: absolute;
 				right: 4px;
-				margin-top: -31px;
+				margin-top: -36px;
 				width: 24px;
 				height: 24px;
 				background-image: url('img/sprites.png');
@@ -698,6 +687,8 @@
 		#sidebar form textarea
 		{
 			border: 0;
+			width: 100%;
+			padding: 14px 5px;
 		}
 
 		#sidebar section,

@@ -1,4 +1,4 @@
-<div id="content-inner" class="container autoresPublicaciones form is-post">
+<div id="content-inner" class="autoresPublicaciones form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'autoresPublicaciones', 'action' => 'index')); ?></li>
@@ -15,9 +15,9 @@
 				<?php echo $this->Form->input('autore_id', array('class' => 'span12')); ?>
 			</div>
 		</fieldset>
-		<div class="submit-block">
-			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>
-			<?php echo $this->Html->link(__('Cancel'), array('controller' => 'autoresPublicaciones', 'action' => 'index'), array('class' => 'cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>
+		<div class="form-actions">
+			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => false, 'class' => 'btn btn-primary')); ?>
+			<?php echo $this->Html->link(__('Cancel'), array('controller' => 'publicaciones', 'action' => 'index'), array('div' => false, 'class' => 'btn cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>
 		</div>
 	<?php echo $this->Form->end(); ?>
 </div>

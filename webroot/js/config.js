@@ -70,6 +70,3 @@ window._skel_panels_config = {
 		}
 	}
 };
-$( document ).ready( function() {
-	$( 'textarea.editor' ).ckeditor();
-} );

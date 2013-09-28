@@ -37,19 +37,19 @@ class RecursomultimediaController extends AppController {
  *
  * @return void
  */
-	public function add() {
+	public function add($pubicacione_id = null) {
 		if ($this->request->is('post')) {
 			$this->Recursomultimedia->create();
 			if ($this->Recursomultimedia->save($this->request->data)) {
 				$this->Session->setFlash(__('The recursomultimedia has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('controller' => 'publicaciones', 'action' => 'edit', $this->request->data['Recursomultimedia']['publicacione_id']));
 			} else {
 				$this->Session->setFlash(__('The recursomultimedia could not be saved. Please, try again.'));
 			}
 		}
 		$recursomultimediatipos = $this->Recursomultimedia->Recursomultimediatipo->find('list');
-		$publicaciones = $this->Recursomultimedia->Publicacione->find('list');
-		$this->set(compact('recursomultimediatipos', 'publicaciones'));
+		$publicacione = $this->Recursomultimedia->Publicacione->findById($pubicacione_id);
+		$this->set(compact('recursomultimediatipos', 'publicacione'));
 	}
 
 /**

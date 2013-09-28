@@ -107,3 +107,5 @@ dd {
 .highlight {
 	background-color: #FFFF88;
 }
+input[type="radio"], input[type="checkbox"] { margin: 8px 0 0 0; }
+.is-search .btn { font-size: 1.5em }

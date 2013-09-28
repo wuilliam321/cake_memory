@@ -1,4 +1,4 @@
-<div id="content-inner" class="container otroestudios form is-post">
+<div id="content-inner" class="otroestudios form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'otroestudios', 'action' => 'index')); ?></li>
@@ -18,9 +18,9 @@
 				<?php echo $this->Form->input('nombre', array('class' => 'span12')); ?>
 			</div>
 		</fieldset>
-		<div class="submit-block">
-			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>
-			<?php echo $this->Html->link(__('Cancel'), array('controller' => 'otroestudios', 'action' => 'index'), array('class' => 'cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>
+		<div class="form-actions">
+			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => false, 'class' => 'btn btn-primary')); ?>
+			<?php echo $this->Html->link(__('Cancel'), array('controller' => 'publicaciones', 'action' => 'index'), array('div' => false, 'class' => 'btn cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>
 		</div>
 	<?php echo $this->Form->end(); ?>
 </div>

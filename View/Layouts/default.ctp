@@ -33,7 +33,7 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
 		<?php echo $this->Html->meta('icon'); ?>
 		<?php echo $this->Html->css(array('bootstrap.min', 'bootstrap-responsive.min', 'main')); ?>
-		<?php echo $this->Html->script(array('jquery.min', 'config', 'skel.min', 'skel-panels.min', 'jquery.highlight', 'ckeditor', 'adapters/jquery', 'config_ck', 'styles', 'lang/es', 'bootstrap.min')); ?>
+		<?php echo $this->Html->script(array('jquery.min', 'config', 'skel.min', 'skel-panels.min', 'jquery.highlight', 'ckeditor', 'adapters/jquery', 'config_ck', 'styles', 'lang/es', 'bootstrap.min', 'main')); ?>
 		<noscript>
 			<?php echo $this->Html->css(array('skel-noscript', 'style', 'style-desktop', 'style-wide')); ?>
 		</noscript>
@@ -66,7 +66,7 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 		<div id="wrapper">
 
 			<!-- Content -->
-				<div id="content">
+				<div id="content" class="container">
 					<?php echo $this->Session->flash(); ?>
 					<?php echo $this->fetch('content'); ?>
 				</div>

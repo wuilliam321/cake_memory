@@ -11,6 +11,6 @@
             echo $this->Form->input('etiqueta', array('type' => 'text', 'label' => false, 'required' => false, 'placeholder' => 'Por Etiqueta'));
             //echo $this->Form->input('contenido', array('div' => false, 'required' => false));
             //echo $this->Form->input('username', array('div' => false, 'required' => false));
-        echo $this->Form->end("Buscar");
     ?>
+    <?php echo $this->Form->end(array('label' => __('Buscar'), 'div' => false, 'class' => 'btn btn-primary')); ?>
 </section>

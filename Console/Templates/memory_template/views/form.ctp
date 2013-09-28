@@ -17,7 +17,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-<div id="content-inner" class="container <?php echo $pluralVar; ?> form is-post">
+<div id="content-inner" class="<?php echo $pluralVar; ?> form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo "<?php echo \$this->Html->link(__('Listado'), array('controller' => '$pluralVar', 'action' => 'index')); ?>"; ?></li>
@@ -39,22 +39,22 @@
 				continue;
 			} elseif (!in_array($field, array('created', 'modified', 'updated'))) {
 				echo "\t\t\t<div class=\"row-fluid\">\n";
-				echo "\t\t\t\t<?php echo \$this->Form->input('{$field}', array('class' => 'span12')); ?>\n";
+				echo "\t\t\t\t<?php echo \$this->Form->input('{$field}', array('class' => 'span12', 'div' => array('class' => 'span5'))); ?>\n";
 				echo "\t\t\t</div>\n";
 			}
 		}
 		if (!empty($associations['hasAndBelongsToMany'])) {
 			foreach ($associations['hasAndBelongsToMany'] as $assocName => $assocData) {
 				echo "\t\t\t<div class=\"row-fluid\">\n";
-				echo "\t\t\t\t<?php echo \$this->Form->input('{$assocName}', array('class' => 'span12')); ?>\n";
+				echo "\t\t\t\t<?php echo \$this->Form->input('{$assocName}', array('class' => 'span12', 'div' => array('class' => 'span5'))); ?>\n";
 				echo "\t\t\t</div>\n";
 			}
 		}
 ?>
 		</fieldset>
-		<div class="submit-block">
-			<?php echo "<?php echo \$this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>\n"; ?>
-			<?php echo "<?php echo \$this->Html->link(__('Cancel'), array('controller' => '$pluralVar', 'action' => 'index'), array('class' => 'cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>\n"; ?>
+		<div class="form-actions">
+			<?php echo "<?php echo \$this->Form->end(array('label' => __('Submit'), 'div' => false, 'class' => 'btn btn-primary')); ?>\n"; ?>
+			<?php echo "<?php echo \$this->Html->link(__('Cancel'), array('controller' => 'publicaciones', 'action' => 'index'), array('div' => false, 'class' => 'btn cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>\n"; ?>
 		</div>
 <?php
 	echo "\t<?php echo \$this->Form->end(); ?>\n";

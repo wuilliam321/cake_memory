@@ -1,4 +1,4 @@
-<div id="content-inner" class="container recursomultimedia form is-post">
+<div id="content-inner" class="recursomultimedia form is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'recursomultimedia', 'action' => 'index')); ?></li>
@@ -9,24 +9,23 @@
 		<fieldset>
 			<h2><?php echo __('Add Recursomultimedia'); ?></h2>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('recursomultimediatipo_id', array('class' => 'span12')); ?>
+				<h3><?php echo $publicacione['Publicacione']['titulo']; ?></h3>
+				<?php echo $this->Form->input('publicacione_id', array('type' => 'hidden', 'value' => $publicacione['Publicacione']['id'])); ?>
 			</div>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('publicacione_id', array('class' => 'span12')); ?>
+				<?php echo $this->Form->input('recursomultimediatipo_id', array('class' => 'span12', 'div' => array('class' => 'span3'))); ?>
+				<?php echo $this->Form->input('nombre', array('class' => 'span12', 'rows' => 1, 'div' => array('class' => 'span9'))); ?>
 			</div>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('ruta', array('class' => 'span12')); ?>
+				<?php echo $this->Form->input('ruta', array('class' => 'span12', 'rows' => 2)); ?>
 			</div>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('nombre', array('class' => 'span12')); ?>
-			</div>
-			<div class="row-fluid">
-				<?php echo $this->Form->input('descripcion', array('class' => 'span12')); ?>
+				<?php echo $this->Form->input('descripcion', array('class' => 'span12', 'rows' => 4)); ?>
 			</div>
 		</fieldset>
-		<div class="submit-block">
-			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => array('class' => 'submit-btn'))); ?>
-			<?php echo $this->Html->link(__('Cancel'), array('controller' => 'recursomultimedia', 'action' => 'index'), array('class' => 'cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>
+		<div class="form-actions">
+			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => false, 'class' => 'btn btn-primary')); ?>
+			<?php echo $this->Html->link(__('Cancel'), array('controller' => 'publicaciones', 'action' => 'index'), array('div' => false, 'class' => 'btn cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>
 		</div>
 	<?php echo $this->Form->end(); ?>
 </div>

@@ -58,7 +58,7 @@ class PublicacionesController extends AppController {
 			$this->Publicacione->create();
 			if ($this->Publicacione->save($this->request->data)) {
 				$this->Session->setFlash(__('The publicacione has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('action' => 'edit', $this->Publicacione->getLastInsertID()));
 			} else {
 				$this->Session->setFlash(__('The publicacione could not be saved. Please, try again.'));
 			}
@@ -80,7 +80,7 @@ class PublicacionesController extends AppController {
 			throw new NotFoundException(__('Invalid publicacione'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Publicacione->save($this->request->data)) {
+			if ($this->Publicacione->saveAll($this->request->data)) {
 				$this->Session->setFlash(__('The publicacione has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
@@ -92,7 +92,8 @@ class PublicacionesController extends AppController {
 		}
 		$autores = $this->Publicacione->Autore->find('list');
 		$etiquetas = $this->Publicacione->Etiqueta->find('list');
-		$this->set(compact('autores', 'etiquetas'));
+		$recursomultimediatipos = $this->Publicacione->Recursomultimedia->Recursomultimediatipo->find('list');
+		$this->set(compact('autores', 'etiquetas', 'recursomultimediatipos'));
 	}
 
 /**

@@ -1,4 +1,4 @@
-<div id="content-inner" class="container profesiones view is-post">
+<div id="content-inner" class="profesiones view is-post">
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'profesiones', 'action' => 'index')); ?></li>
