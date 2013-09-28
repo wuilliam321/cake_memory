@@ -42,7 +42,7 @@ class ComentariosController extends AppController {
 			$this->Comentario->create();
 			if ($this->Comentario->save($this->request->data)) {
 				$this->Session->setFlash(__('The comentario has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('controller' => 'publicaciones', 'action' => 'view', $this->request->data['Comentario']['publicacione_id']));
 			} else {
 				$this->Session->setFlash(__('The comentario could not be saved. Please, try again.'));
 			}

@@ -32,58 +32,67 @@
 		</dd>
 	</dl>
 </div>
-<div class="related">
-	<h3><?php echo __('Related Autores'); ?></h3>
+	<div class="related">
+		<h3><?php echo __('Related Autores'); ?></h3>
 	<?php if (!empty($user['Autore'])): ?>
-		<table cellpadding = "0" cellspacing = "0">
-			<tr>
-				<th><?php echo __('Id'); ?></th>
-				<th><?php echo __('User Id'); ?></th>
-				<th><?php echo __('Unidadinvestigacione Id'); ?></th>
-				<th><?php echo __('Profesione Id'); ?></th>
-				<th><?php echo __('Nombres'); ?></th>
-				<th><?php echo __('Apellidos'); ?></th>
-				<th><?php echo __('Email Primario'); ?></th>
-				<th><?php echo __('Telefono Primario'); ?></th>
-				<th><?php echo __('Email Secundario'); ?></th>
-				<th><?php echo __('Telefono Secundario'); ?></th>
-				<th><?php echo __('Telefono Otro'); ?></th>
-				<th><?php echo __('Linea Investigacion'); ?></th>
-				<th class="actions"><?php echo __('Actions'); ?></th>
-			</tr>
-			<?php
-			$i = 0;
-			foreach ($user['Autore'] as $autore): ?>
-				<tr>
-					<td><?php echo $autore['id']; ?></td>
-					<td><?php echo $autore['user_id']; ?></td>
-					<td><?php echo $autore['unidadinvestigacione_id']; ?></td>
-					<td><?php echo $autore['profesione_id']; ?></td>
-					<td><?php echo $autore['nombres']; ?></td>
-					<td><?php echo $autore['apellidos']; ?></td>
-					<td><?php echo $autore['email_primario']; ?></td>
-					<td><?php echo $autore['telefono_primario']; ?></td>
-					<td><?php echo $autore['email_secundario']; ?></td>
-					<td><?php echo $autore['telefono_secundario']; ?></td>
-					<td><?php echo $autore['telefono_otro']; ?></td>
-					<td><?php echo $autore['linea_investigacion']; ?></td>
-					<td class="actions">
-						<?php echo $this->Html->link(__('View'), array('controller' => 'autores', 'action' => 'view', $autore['id'])); ?>
-						<?php echo $this->Html->link(__('Edit'), array('controller' => 'autores', 'action' => 'edit', $autore['id'])); ?>
-						<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'autores', 'action' => 'delete', $autore['id']), null, __('Are you sure you want to delete # %s?', $autore['id'])); ?>
-					</td>
-				</tr>
-			<?php endforeach; ?>
-		</table>
+		<dl>
+			<dt><?php echo __('Id'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['id']; ?>
+&nbsp;</dd>
+		<dt><?php echo __('User Id'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['user_id']; ?>
+&nbsp;</dd>
+		<dt><?php echo __('Unidadinvestigacione Id'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['unidadinvestigacione_id']; ?>
+&nbsp;</dd>
+		<dt><?php echo __('Profesione Id'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['profesione_id']; ?>
+&nbsp;</dd>
+		<dt><?php echo __('Nombres'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['nombres']; ?>
+&nbsp;</dd>
+		<dt><?php echo __('Apellidos'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['apellidos']; ?>
+&nbsp;</dd>
+		<dt><?php echo __('Email Primario'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['email_primario']; ?>
+&nbsp;</dd>
+		<dt><?php echo __('Telefono Primario'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['telefono_primario']; ?>
+&nbsp;</dd>
+		<dt><?php echo __('Email Secundario'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['email_secundario']; ?>
+&nbsp;</dd>
+		<dt><?php echo __('Telefono Secundario'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['telefono_secundario']; ?>
+&nbsp;</dd>
+		<dt><?php echo __('Telefono Otro'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['telefono_otro']; ?>
+&nbsp;</dd>
+		<dt><?php echo __('Linea Investigacion'); ?></dt>
+		<dd>
+	<?php echo $user['Autore']['linea_investigacion']; ?>
+&nbsp;</dd>
+		</dl>
 	<?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('Agregar Autore'), array('controller' => 'autores', 'action' => 'add')); ?> </li>
-		</ul>
+		<div class="actions">
+			<ul>
+				<li><?php echo $this->Html->link(__('Edit Autore'), array('controller' => 'autores', 'action' => 'edit', $user['Autore']['id'])); ?></li>
+			</ul>
+		</div>
 	</div>
-</div>
-<div class="related">
+	<div class="related">
 	<h3><?php echo __('Related Comentarios'); ?></h3>
 	<?php if (!empty($user['Comentario'])): ?>
 		<table cellpadding = "0" cellspacing = "0">

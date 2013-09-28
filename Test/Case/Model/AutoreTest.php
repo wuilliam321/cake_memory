@@ -15,11 +15,19 @@ class AutoreTest extends CakeTestCase {
 	public $fixtures = array(
 		'app.autore',
 		'app.user',
+		'app.group',
+		'app.comentario',
+		'app.publicacione',
+		'app.recursomultimedia',
+		'app.recursomultimediatipo',
+		'app.autores_publicacione',
+		'app.etiqueta',
+		'app.etiquetas_publicacione',
 		'app.unidadinvestigacione',
+		'app.instituto',
 		'app.profesione',
 		'app.otroestudio',
-		'app.publicacione',
-		'app.autores_publicacione'
+		'app.otroestudiotipo'
 	);
 
 /**

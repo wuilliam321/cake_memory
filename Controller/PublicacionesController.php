@@ -41,12 +41,14 @@ class PublicacionesController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-		$this->Publicacione->recursive = 2;
+		$this->Publicacione->recursive = 3;
 		if (!$this->Publicacione->exists($id)) {
 			throw new NotFoundException(__('Invalid publicacione'));
 		}
 		$options = array('conditions' => array('Publicacione.' . $this->Publicacione->primaryKey => $id));
-		$this->set('publicacione', $this->Publicacione->find('first', $options));
+		$publicacione = $this->Publicacione->find('first', $options);
+		$users = $this->Publicacione->Comentario->User->find("list");
+		$this->set(compact('publicacione', 'users'));
 	}
 
 /**

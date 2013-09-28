@@ -42,148 +42,92 @@
 	</article>
 </div>
 <div class="related row-fluid">
+	<h3><?php echo __('Related Recursomultimedia'); ?></h3>
+	<div class="span12">
+		<?php if (!$publicacione['Recursomultimedia']): ?>
+			<p>No hay Recursos Multimedia registrados en esta publicación</p>
+		<?php endif; ?>
+		<ul>
+			<?php
+			$i = 0;
+			foreach ($publicacione['Recursomultimedia'] as $recursomultimedia): ?>
+				<li>
+					<?php echo $this->Html->link($recursomultimedia['nombre'], array('controller' => 'recursomultimedia', 'action' => 'view', $recursomultimedia['id'])); ?>
+					<?php echo $recursomultimedia['descripcion']; ?>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+</div>
+<div class="related row-fluid">
+	<h3>Etiquetas</h3>
+	<div class="span12">
+		<?php if (!$publicacione['Etiqueta']): ?>
+			<p>Esta publicación no posee ninguna etiqueta.</p>
+		<?php endif; ?>
+		<?php
+		$i = 0;
+		foreach ($publicacione['Etiqueta'] as $etiqueta): ?>
+				<?php echo $this->Html->link($etiqueta['nombre'], array('controller' => 'etiquetas', 'action' => 'view', $etiqueta['id'])); ?>
+		<?php endforeach; ?>
+	</div>
+</div>
+<div class="related row-fluid">
+	<h3>Autores</h3>
+	<div class="span12">
+		<?php if (!$publicacione['Autore']): ?>
+			<p>Esta publicación no posee un autor definido.</p>
+		<?php endif; ?>
+		<ul>
+			<?php
+			$i = 0;
+			foreach ($publicacione['Autore'] as $autore): ?>
+				<li>
+					<?php echo $this->Html->link("{$autore['nombre_completo']}", array('controller' => 'autores', 'action' => 'view', $autore['id'])); ?>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+</div>
+<div class="related row-fluid">
 	<h3><?php echo __('Comentarios'); ?></h3>
 	<?php if (!empty($publicacione['Comentario'])): ?>
 		<?php
 		$i = 0;
-		foreach ($publicacione['Comentario'] as $comentario):  print_r($comentario); ?>
+		foreach ($publicacione['Comentario'] as $comentario): ?>
 			<div class="span10 offset1 well">
+				<div class="comment-details">
+					<span><strong><?php echo $comentario['User']['Autore']['nombre_completo']; ?></strong> Dijo:</span>
+				</div>
 				<p><?php echo $comentario['texto']; ?></p>
 				<div class="comment-details">
-					<span>Por: <?php echo $comentario['Autore']['nombre_completo']; ?></span>
 					<?php echo $this->Html->link(__('Edit'), array('controller' => 'comentarios', 'action' => 'edit', $comentario['id'])); ?>
 					<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'comentarios', 'action' => 'delete', $comentario['id']), null, __('Are you sure you want to delete # %s?', $comentario['id'])); ?>
 				</div>
 			</div>
 		<?php endforeach; ?>
 	<?php else: ?>
-		<p>No hay comentarios, en esta publicación</p>
+		<div class="span12">
+			<p>No hay comentarios, en esta publicación</p>
+		</div>
 	<?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('Agregar Comentario'), array('controller' => 'comentarios', 'action' => 'add', $publicacione['Publicacione']['id'])); ?> </li>
-		</ul>
-	</div>
-</div>
-<div class="related">
-	<h3><?php echo __('Related Recursomultimedia'); ?></h3>
-	<?php if (!empty($publicacione['Recursomultimedia'])): ?>
-		<table cellpadding = "0" cellspacing = "0">
-			<tr>
-				<th><?php echo __('Id'); ?></th>
-				<th><?php echo __('Recursomultimediatipo Id'); ?></th>
-				<th><?php echo __('Publicacione Id'); ?></th>
-				<th><?php echo __('Ruta'); ?></th>
-				<th><?php echo __('Nombre'); ?></th>
-				<th><?php echo __('Descripcion'); ?></th>
-				<th class="actions"><?php echo __('Actions'); ?></th>
-			</tr>
-			<?php
-			$i = 0;
-			foreach ($publicacione['Recursomultimedia'] as $recursomultimedia): ?>
-				<tr>
-					<td><?php echo $recursomultimedia['id']; ?></td>
-					<td><?php echo $recursomultimedia['recursomultimediatipo_id']; ?></td>
-					<td><?php echo $recursomultimedia['publicacione_id']; ?></td>
-					<td><?php echo $recursomultimedia['ruta']; ?></td>
-					<td><?php echo $recursomultimedia['nombre']; ?></td>
-					<td><?php echo $recursomultimedia['descripcion']; ?></td>
-					<td class="actions">
-						<?php echo $this->Html->link(__('View'), array('controller' => 'recursomultimedia', 'action' => 'view', $recursomultimedia['id'])); ?>
-						<?php echo $this->Html->link(__('Edit'), array('controller' => 'recursomultimedia', 'action' => 'edit', $recursomultimedia['id'])); ?>
-						<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'recursomultimedia', 'action' => 'delete', $recursomultimedia['id']), null, __('Are you sure you want to delete # %s?', $recursomultimedia['id'])); ?>
-					</td>
-				</tr>
-			<?php endforeach; ?>
-		</table>
-	<?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('Agregar Recursomultimedia'), array('controller' => 'recursomultimedia', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
-</div>
-<div class="related">
-	<h3><?php echo __('Related Autores'); ?></h3>
-	<?php if (!empty($publicacione['Autore'])): ?>
-		<table cellpadding = "0" cellspacing = "0">
-			<tr>
-				<th><?php echo __('Id'); ?></th>
-				<th><?php echo __('User Id'); ?></th>
-				<th><?php echo __('Unidadinvestigacione Id'); ?></th>
-				<th><?php echo __('Profesione Id'); ?></th>
-				<th><?php echo __('Nombres'); ?></th>
-				<th><?php echo __('Apellidos'); ?></th>
-				<th><?php echo __('Email Primario'); ?></th>
-				<th><?php echo __('Telefono Primario'); ?></th>
-				<th><?php echo __('Email Secundario'); ?></th>
-				<th><?php echo __('Telefono Secundario'); ?></th>
-				<th><?php echo __('Telefono Otro'); ?></th>
-				<th><?php echo __('Linea Investigacion'); ?></th>
-				<th class="actions"><?php echo __('Actions'); ?></th>
-			</tr>
-			<?php
-			$i = 0;
-			foreach ($publicacione['Autore'] as $autore): ?>
-				<tr>
-					<td><?php echo $autore['id']; ?></td>
-					<td><?php echo $autore['user_id']; ?></td>
-					<td><?php echo $autore['unidadinvestigacione_id']; ?></td>
-					<td><?php echo $autore['profesione_id']; ?></td>
-					<td><?php echo $autore['nombres']; ?></td>
-					<td><?php echo $autore['apellidos']; ?></td>
-					<td><?php echo $autore['email_primario']; ?></td>
-					<td><?php echo $autore['telefono_primario']; ?></td>
-					<td><?php echo $autore['email_secundario']; ?></td>
-					<td><?php echo $autore['telefono_secundario']; ?></td>
-					<td><?php echo $autore['telefono_otro']; ?></td>
-					<td><?php echo $autore['linea_investigacion']; ?></td>
-					<td class="actions">
-						<?php echo $this->Html->link(__('View'), array('controller' => 'autores', 'action' => 'view', $autore['id'])); ?>
-						<?php echo $this->Html->link(__('Edit'), array('controller' => 'autores', 'action' => 'edit', $autore['id'])); ?>
-						<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'autores', 'action' => 'delete', $autore['id']), null, __('Are you sure you want to delete # %s?', $autore['id'])); ?>
-					</td>
-				</tr>
-			<?php endforeach; ?>
-		</table>
-	<?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('Agregar Autore'), array('controller' => 'autores', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
-</div>
-<div class="related">
-	<h3><?php echo __('Related Etiquetas'); ?></h3>
-	<?php if (!empty($publicacione['Etiqueta'])): ?>
-		<table cellpadding = "0" cellspacing = "0">
-			<tr>
-				<th><?php echo __('Id'); ?></th>
-				<th><?php echo __('Nombre'); ?></th>
-				<th class="actions"><?php echo __('Actions'); ?></th>
-			</tr>
-			<?php
-			$i = 0;
-			foreach ($publicacione['Etiqueta'] as $etiqueta): ?>
-				<tr>
-					<td><?php echo $etiqueta['id']; ?></td>
-					<td><?php echo $etiqueta['nombre']; ?></td>
-					<td class="actions">
-						<?php echo $this->Html->link(__('View'), array('controller' => 'etiquetas', 'action' => 'view', $etiqueta['id'])); ?>
-						<?php echo $this->Html->link(__('Edit'), array('controller' => 'etiquetas', 'action' => 'edit', $etiqueta['id'])); ?>
-						<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'etiquetas', 'action' => 'delete', $etiqueta['id']), null, __('Are you sure you want to delete # %s?', $etiqueta['id'])); ?>
-					</td>
-				</tr>
-			<?php endforeach; ?>
-		</table>
-	<?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('Agregar Etiqueta'), array('controller' => 'etiquetas', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
+	<?php echo $this->Form->create('Comentario', array('controller' => 'comentarios', 'action' => 'add')); ?>
+		<fieldset>
+			<h2><?php echo __('Add Comentario'); ?></h2>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('publicacione_id', array('type' => 'hidden', 'class' => 'span12', 'value' => $publicacione['Publicacione']['id'],'div' => array('class' => 'span12'))); ?>
+			</div>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('user_id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+			</div>
+			<div class="row-fluid">
+				<?php echo $this->Form->input('texto', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+			</div>
+		</fieldset>
+		<div class="form-actions">
+			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => false, 'class' => 'btn btn-primary btn-large')); ?>
+			<?php echo $this->Html->link(__('Cancel'), array('controller' => 'publicaciones', 'action' => 'index'), array('div' => false, 'class' => 'btn cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>
+		</div>
+	<?php echo $this->Form->end(); ?>
 </div>
