@@ -1,16 +1,17 @@
 <div id="content-inner" class="etiquetas form is-post">
 	<div class="top-menu">
 		<ul>
-			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'etiquetas', 'action' => 'index')); ?></li>
-			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'etiquetas', 'action' => 'add'), array('class' => 'active')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'etiquetas', 'action' => 'add', ($publicacione['Publicacione']['id']) ? $publicacione['Publicacione']['id'] : ''), array('class' => 'active')); ?></li>
 		</ul>
 	</div>
 	<?php echo $this->Form->create('Etiqueta'); ?>
 		<fieldset>
 			<h2><?php echo __('Add Etiqueta'); ?></h2>
 			<div class="row-fluid">
-				<h3><?php echo $publicacione['Publicacione']['titulo']; ?></h3>
-				<?php echo $this->Form->input('Publicacione', array('type' => 'hidden', 'value' => $publicacione['Publicacione']['id'])); ?>
+				<?php if ($publicacione['Publicacione']['id']): ?>
+					<h3>Publicación: <?php echo $publicacione['Publicacione']['titulo']; ?></h3>
+					<?php echo $this->Form->input('Publicacione', array('type' => 'hidden', 'value' => $publicacione['Publicacione']['id'])); ?>
+				<?php endif; ?>
 			</div>
 			<div class="row-fluid">
 				<?php echo $this->Form->input('nombre', array('class' => 'span12', 'rows' => 1, 'div' => array('class' => 'span12'))); ?>

@@ -38,6 +38,9 @@ class RecursomultimediaController extends AppController {
  * @return void
  */
 	public function add($pubicacione_id = null) {
+		if (!$pubicacione_id) {
+			$this->redirect(array('action' => 'index'));
+		}
 		if ($this->request->is('post')) {
 			$this->Recursomultimedia->create();
 			if ($this->Recursomultimedia->save($this->request->data)) {
@@ -75,7 +78,7 @@ class RecursomultimediaController extends AppController {
 			$this->request->data = $this->Recursomultimedia->find('first', $options);
 		}
 		$recursomultimediatipos = $this->Recursomultimedia->Recursomultimediatipo->find('list');
-		$publicacione = $this->Recursomultimedia->Publicacione->findById($pubicacione_id);
+		$publicacione = $this->Recursomultimedia->Publicacione->findById($this->request->data['Recursomultimedia']['publicacione_id']);
 		$this->set(compact('recursomultimediatipos', 'publicacione'));
 	}
 

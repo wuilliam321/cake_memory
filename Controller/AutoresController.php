@@ -66,7 +66,7 @@ class AutoresController extends AppController {
 			throw new NotFoundException(__('Invalid autore'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Autore->save($this->request->data)) {
+			if ($this->Autore->saveAll($this->request->data)) {
 				$this->Session->setFlash(__('The autore has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
@@ -80,7 +80,8 @@ class AutoresController extends AppController {
 		$unidadinvestigaciones = $this->Autore->Unidadinvestigacione->find('list');
 		$profesiones = $this->Autore->Profesione->find('list');
 		$publicaciones = $this->Autore->Publicacione->find('list');
-		$this->set(compact('users', 'unidadinvestigaciones', 'profesiones', 'publicaciones'));
+		$otroestudiotipos = $this->Autore->Otroestudio->Otroestudiotipo->find('list');
+		$this->set(compact('users', 'unidadinvestigaciones', 'profesiones', 'publicaciones', 'otroestudiotipos'));
 	}
 
 /**

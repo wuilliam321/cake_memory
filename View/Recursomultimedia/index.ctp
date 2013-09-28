@@ -25,7 +25,7 @@
 				<span class="byline"><?php echo $recurso['Recursomultimedia']['descripcion']; ?></span>
 			</header>
 			<div class="info">
-				<span class="date"><?php echo $recurso['Recursomultimediatipo']['nombre']; ?>
+				<span class="date"><?php echo $recurso['Recursomultimediatipo']['nombre']; ?></span>
 				<ul class="stats">
 					<li><a href="#" class="link-icon24 link-icon24-1">16</a></li>
 					<li><a href="#" class="link-icon24 link-icon24-2">32</a></li>

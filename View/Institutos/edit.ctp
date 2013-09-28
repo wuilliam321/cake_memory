@@ -7,16 +7,12 @@
 		</ul>
 	</div>
 	<?php echo $this->Form->create('Instituto'); ?>
+		<?php echo $this->Form->input('id'); ?>
 		<fieldset>
 			<h2><?php echo __('Edit Instituto'); ?></h2>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
-			</div>
-			<div class="row-fluid">
-				<?php echo $this->Form->input('nombre', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
-			</div>
-			<div class="row-fluid">
-				<?php echo $this->Form->input('direccion', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+				<?php echo $this->Form->input('nombre', array('class' => 'span12', 'rows' => 2, 'div' => array('class' => 'span5'))); ?>
+				<?php echo $this->Form->input('direccion', array('class' => 'span12', 'rows' => 2, 'div' => array('class' => 'span7'))); ?>
 			</div>
 		</fieldset>
 		<div class="form-actions">

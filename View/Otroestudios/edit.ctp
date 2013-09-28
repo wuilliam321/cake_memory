@@ -7,19 +7,18 @@
 		</ul>
 	</div>
 	<?php echo $this->Form->create('Otroestudio'); ?>
+		<?php echo $this->Form->input('id'); ?>
 		<fieldset>
 			<h2><?php echo __('Edit Otroestudio'); ?></h2>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
 			</div>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('autore_id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+				<h3>Autor: <?php echo $autore['Autore']['nombre_completo']; ?></h3>
+				<?php echo $this->Form->input('autore_id', array('type' => 'hidden')); ?>
 			</div>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('otroestudiotipo_id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
-			</div>
-			<div class="row-fluid">
-				<?php echo $this->Form->input('nombre', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+				<?php echo $this->Form->input('otroestudiotipo_id', array('class' => 'span12', 'div' => array('class' => 'span6'))); ?>
+				<?php echo $this->Form->input('nombre', array('rows' => 2, 'class' => 'span12', 'div' => array('class' => 'span6'))); ?>
 			</div>
 		</fieldset>
 		<div class="form-actions">

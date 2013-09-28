@@ -2,30 +2,27 @@
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'recursomultimedia', 'action' => 'index')); ?></li>
-			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'recursomultimedia', 'action' => 'add')); ?></li>
+			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'recursomultimedia', 'action' => 'add', $publicacione['Publicacione']['id'])); ?></li>
 			<li><?php echo $this->Html->link(__('Editar'), array('controller' => 'recursomultimedia', 'action' => 'edit', $this->request->data['Recursomultimedia']['id']), array('class' => 'active')); ?></li>
 		</ul>
 	</div>
 	<?php echo $this->Form->create('Recursomultimedia'); ?>
+		<?php echo $this->Form->input('id'); ?>
 		<fieldset>
 			<h2><?php echo __('Edit Recursomultimedia'); ?></h2>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+				<h3>Publicación: <?php echo $publicacione['Publicacione']['titulo']; ?></h3>
+				<?php echo $this->Form->input('publicacione_id', array('type' => 'hidden', 'value' => $publicacione['Publicacione']['id'])); ?>
 			</div>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('recursomultimediatipo_id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+				<?php echo $this->Form->input('recursomultimediatipo_id', array('class' => 'span12', 'div' => array('class' => 'span3'))); ?>
+				<?php echo $this->Form->input('nombre', array('type' => 'text', 'class' => 'span12', 'div' => array('class' => 'span9'))); ?>
 			</div>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('publicacione_id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+				<?php echo $this->Form->input('ruta', array('class' => 'span12', 'rows' => 2, 'div' => array('class' => 'span12'))); ?>
 			</div>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('ruta', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
-			</div>
-			<div class="row-fluid">
-				<?php echo $this->Form->input('nombre', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
-			</div>
-			<div class="row-fluid">
-				<?php echo $this->Form->input('descripcion', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+				<?php echo $this->Form->input('descripcion', array('class' => 'span12', 'rows' => 4, 'div' => array('class' => 'span12'))); ?>
 			</div>
 		</fieldset>
 		<div class="form-actions">

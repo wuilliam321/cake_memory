@@ -9,7 +9,7 @@
 		<fieldset>
 			<h2><?php echo __('Add Otroestudiotipo'); ?></h2>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('nombre', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+				<?php echo $this->Form->input('nombre', array('type' => 'text', 'class' => 'span12', 'div' => array('class' => 'span12'))); ?>
 			</div>
 		</fieldset>
 		<div class="form-actions">

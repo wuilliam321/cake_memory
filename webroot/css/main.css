@@ -132,11 +132,15 @@ dd {
 }
 input[type="radio"], input[type="checkbox"] { margin: 8px 0 0 0; }
 .is-search .btn { font-size: 1.5em }
-article.autore {
+.well { margin-bottom: 20px}
+.well .row-fluid { padding-right: 15px;}
+.well, article.autore {
 	border-radius: 0.4em;
 	border-radius: 0.4em;
-	box-shadow: 1em 0 0 0 #fbfbfb, 0 0 1em 0em rgba(0,0,0,0.25);
-	padding-left:1em
+	box-shadow: 0.25em 0 0 0 #fbfbfb, 0 0 0.25em 0em rgba(0,0,0,0.25);
+	padding-left:1em;
+	padding-bottom: 1em;
+	background-color: #fff;
 }
 .autore.is-post h2 {
 	font-size:2em
@@ -146,7 +150,21 @@ article.autore {
 }
 .autore.is-post header {padding-left:0em;margin-bottom: 1em}
 .autore.is-post .info {
-	left: -90px;
-	top: 30px;
-	box-shadow: 0.25em 0.25em 0.25em 0.25em #fbfbfb, 0 0 1em 0em rgba(0,0,0,0.25);
+	left: -67px;
+	top: 10px;
+	box-shadow: 0.25em 0.25em 0.25em 0.25em #fbfbfb, 0 0 0.25em 0em rgba(0,0,0,0.25);
+	z-index: -1;
+}
+.autore.is-post .info .date {
+	font-size: 0.8em;
+}
+a.btn  {
+	text-decoration: none;
+}
+form h3 {
+	margin-top: 10px !important;
+}
+div.required label:after {
+	content: '*';
+	color:red;
 }

@@ -18,10 +18,17 @@
 				<?php echo $this->Form->input('contenido', array('class' => 'span12 editor', 'div' => array('class' => 'span12'))); ?>
 			</div>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('Autore', array('class' => 'span12 checkbox', 'multiple' => 'checkbox', 'div' => array('class' => 'span6'))); ?>
-				<?php echo $this->Form->input('Etiqueta', array('class' => 'span12 checkbox', 'multiple' => 'checkbox', 'div' => array('class' => 'span6'))); ?>
+				<div class="span6">
+					<?php echo $this->Form->input('Autore', array('class' => 'span12 checkbox', 'multiple' => 'checkbox', 'div' => false)); ?>
+					<?php echo $this->Html->link('Agregar Autor', array('controller' => 'autores', 'action' => 'add'), array('class' => 'btn btn-primary btn-small')); ?>
+				</div>
+				<div class="span6">
+					<?php echo $this->Form->input('Etiqueta', array('class' => 'span12 checkbox', 'multiple' => 'checkbox', 'div' => false)); ?>
+					<?php echo $this->Html->link('Agregar Etiqueta', array('controller' => 'etiquetas', 'action' => 'add'), array('class' => 'btn btn-primary btn-small')); ?>
+				</div>
 			</div>
 			<div class="row-fluid">
+				<h3><?php echo __('Recursomultimedia'); ?></h3>
 				<?php echo $this->Form->button('Agregar Recurso Multimedia', array('class' => 'btn btn-primary btn-small disabled')); ?>
 				<p>Para agregar recursos multimedia debe guardar la publicación</p>
 			</div>

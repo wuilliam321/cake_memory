@@ -23,7 +23,7 @@
 					need a byline.
 				-->
 				<h2><?php echo $this->Html->link($autore['Autore']['nombre_completo'], array('controller' => 'autores', 'action' => 'view', $autore['Autore']['id'])); ?></h2>
-				<span class="byline"><?php echo $this->Html->link($autore['Unidadinvestigacione']['nombre'], array('controller' => 'unidadinvestigaciones', 'action' => 'view', $autore['Unidadinvestigacione']['id'])); ?></span>
+				<span class="byline"><?php echo $autore['Unidadinvestigacione']['nombre']; //echo $this->Html->link($autore['Unidadinvestigacione']['nombre'], array('controller' => 'unidadinvestigaciones', 'action' => 'view', $autore['Unidadinvestigacione']['id'])); ?></span>
 			</header>
 			<div class="info">
 				<ul class="stats">

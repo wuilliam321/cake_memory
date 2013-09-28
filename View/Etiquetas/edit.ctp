@@ -13,7 +13,7 @@
 				<?php echo $this->Form->input('id'); ?>
 			</div>
 			<div class="row-fluid">
-				<h3><?php echo $publicacione['Publicacione']['titulo']; ?></h3>
+				<h3>Publicación: <?php echo $publicacione['Publicacione']['titulo']; ?></h3>
 				<?php echo $this->Form->input('Publicacione', array('type' => 'hidden')); ?>
 			</div>
 			<div class="row-fluid">

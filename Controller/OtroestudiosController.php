@@ -37,19 +37,22 @@ class OtroestudiosController extends AppController {
  *
  * @return void
  */
-	public function add() {
+	public function add($autore_id = null) {
+		if (!$autore_id) {
+			$this->redirect($this->referer());
+		}
 		if ($this->request->is('post')) {
 			$this->Otroestudio->create();
 			if ($this->Otroestudio->save($this->request->data)) {
 				$this->Session->setFlash(__('The otroestudio has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('controller' => 'autores', 'action' => 'edit', $this->request->data['Otroestudio']['autore_id']));
 			} else {
 				$this->Session->setFlash(__('The otroestudio could not be saved. Please, try again.'));
 			}
 		}
-		$autores = $this->Otroestudio->Autore->find('list');
+		$autore = $this->Otroestudio->Autore->findById($autore_id);
 		$otroestudiotipos = $this->Otroestudio->Otroestudiotipo->find('list');
-		$this->set(compact('autores', 'otroestudiotipos'));
+		$this->set(compact('autore', 'otroestudiotipos'));
 	}
 
 /**
@@ -74,9 +77,9 @@ class OtroestudiosController extends AppController {
 			$options = array('conditions' => array('Otroestudio.' . $this->Otroestudio->primaryKey => $id));
 			$this->request->data = $this->Otroestudio->find('first', $options);
 		}
-		$autores = $this->Otroestudio->Autore->find('list');
+		$autore = $this->Otroestudio->Autore->findById($this->request->data['Otroestudio']['autore_id']);
 		$otroestudiotipos = $this->Otroestudio->Otroestudiotipo->find('list');
-		$this->set(compact('autores', 'otroestudiotipos'));
+		$this->set(compact('autore', 'otroestudiotipos'));
 	}
 
 /**
