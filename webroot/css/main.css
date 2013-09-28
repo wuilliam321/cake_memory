@@ -128,3 +128,21 @@ dd {
 }
 input[type="radio"], input[type="checkbox"] { margin: 8px 0 0 0; }
 .is-search .btn { font-size: 1.5em }
+article.autore {
+	border-radius: 0.4em;
+	border-radius: 0.4em;
+	box-shadow: 1em 0 0 0 #fbfbfb, 0 0 1em 0em rgba(0,0,0,0.25);
+	padding-left:1em
+}
+.autore.is-post h2 {
+	font-size:2em
+}
+.autore.is-post .byline {
+	font-size:1.7em;
+}
+.autore.is-post header {padding-left:0em;margin-bottom: 1em}
+.autore.is-post .info {
+	left: -90px;
+	top: 30px;
+	box-shadow: 0.25em 0.25em 0.25em 0.25em #fbfbfb, 0 0 1em 0em rgba(0,0,0,0.25);
+}

@@ -64,7 +64,7 @@
 			padding: 1.5em 1em 1.5em 1em;
 			border-top-left-radius: 0.4em;
 			border-bottom-left-radius: 0.4em;
-			box-shadow: 0.25em 0 0 0 #fbfbfb, 0 0 0.25em 0em rgba(0,0,0,0.25);
+			box-shadow: 0.25em 0.25em 0.25em 0.25em #fbfbfb, 0 0 0.25em 0em rgba(0,0,0,0.25);
 		}
 
 			.is-post .info:after
