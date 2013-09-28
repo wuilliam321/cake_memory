@@ -75,8 +75,8 @@ class RecursomultimediaController extends AppController {
 			$this->request->data = $this->Recursomultimedia->find('first', $options);
 		}
 		$recursomultimediatipos = $this->Recursomultimedia->Recursomultimediatipo->find('list');
-		$publicaciones = $this->Recursomultimedia->Publicacione->find('list');
-		$this->set(compact('recursomultimediatipos', 'publicaciones'));
+		$publicacione = $this->Recursomultimedia->Publicacione->findById($pubicacione_id);
+		$this->set(compact('recursomultimediatipos', 'publicacione'));
 	}
 
 /**

@@ -64,6 +64,19 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 	<body class="left-sidebar">
 		<!-- Wrapper -->
 		<div id="wrapper">
+				<div id="header">
+					<div class="container">
+						<ul>
+							<li<?php echo ($this->request['controller'] == 'users') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Usuarios'), array('controller' => 'users', 'action' => 'index')); ?></li>
+							<li<?php echo ($this->request['controller'] == 'groups') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Grupos'), array('controller' => 'groups', 'action' => 'index')); ?></li>
+							<li<?php echo ($this->request['controller'] == 'unidadinvestigaciones') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Unidades de Investigación'), array('controller' => 'unidadinvestigaciones', 'action' => 'index')); ?></li>
+							<li<?php echo ($this->request['controller'] == 'profesiones') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Profesiones'), array('controller' => 'profesiones', 'action' => 'index')); ?></li>
+							<li<?php echo ($this->request['action'] == 'respaldo') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Respaldo'), array('controller' => 'security', 'action' => 'respaldo')); ?></li>
+							<li<?php echo ($this->request['action'] == 'recuperacion') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Recuperacion'), array('controller' => 'security', 'action' => 'recuperacion')); ?></li>
+							<li<?php echo ($this->request['controller'] == 'ayudas') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Ayudas (?)'), array('controller' => 'ayudas', 'action' => 'index')); ?></li>
+						</li<>
+					</div>
+				</div>
 
 			<!-- Content -->
 				<div id="content" class="container">

@@ -39,21 +39,21 @@
 				continue;
 			} elseif (!in_array($field, array('created', 'modified', 'updated'))) {
 				echo "\t\t\t<div class=\"row-fluid\">\n";
-				echo "\t\t\t\t<?php echo \$this->Form->input('{$field}', array('class' => 'span12', 'div' => array('class' => 'span5'))); ?>\n";
+				echo "\t\t\t\t<?php echo \$this->Form->input('{$field}', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>\n";
 				echo "\t\t\t</div>\n";
 			}
 		}
 		if (!empty($associations['hasAndBelongsToMany'])) {
 			foreach ($associations['hasAndBelongsToMany'] as $assocName => $assocData) {
 				echo "\t\t\t<div class=\"row-fluid\">\n";
-				echo "\t\t\t\t<?php echo \$this->Form->input('{$assocName}', array('class' => 'span12', 'div' => array('class' => 'span5'))); ?>\n";
+				echo "\t\t\t\t<?php echo \$this->Form->input('{$assocName}', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>\n";
 				echo "\t\t\t</div>\n";
 			}
 		}
 ?>
 		</fieldset>
 		<div class="form-actions">
-			<?php echo "<?php echo \$this->Form->end(array('label' => __('Submit'), 'div' => false, 'class' => 'btn btn-primary')); ?>\n"; ?>
+			<?php echo "<?php echo \$this->Form->end(array('label' => __('Submit'), 'div' => false, 'class' => 'btn btn-primary btn-large')); ?>\n"; ?>
 			<?php echo "<?php echo \$this->Html->link(__('Cancel'), array('controller' => 'publicaciones', 'action' => 'index'), array('div' => false, 'class' => 'btn cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>\n"; ?>
 		</div>
 <?php

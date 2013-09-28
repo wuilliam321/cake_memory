@@ -22,7 +22,7 @@
 		</dd>
 		<dt><?php echo __('Autore'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($autoresPublicacione['Autore']['nombres'], array('controller' => 'autores', 'action' => 'view', $autoresPublicacione['Autore']['id'])); ?>
+			<?php echo $this->Html->link($autoresPublicacione['Autore']['nombre_completo'], array('controller' => 'autores', 'action' => 'view', $autoresPublicacione['Autore']['id'])); ?>
 			&nbsp;
 		</dd>
 	</dl>

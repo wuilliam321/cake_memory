@@ -1,3 +1,8 @@
+#header {
+	background-color:#2B2B2B;
+	padding-left:70px;
+}
+
 /** Tables **/
 table {
 	border-right:0;
@@ -51,13 +56,27 @@ div.paging-block {
 	background-color: #F8F8F8;
 	font-size: 1.4em;
 }
+#header ul,
 .top-menu ul {
 	list-style: none;
 }
+#header ul {
+	margin-top:12px
+}
+#header ul li,
 .top-menu ul li {
 	margin: 0 6px;
 	padding: 0;
 	display: inline-block;
+}
+#logo h1 a,
+#header a {
+	color:#fff;
+	text-decoration:none;
+}
+#header li.current_page_item {
+	text-decoration:underline;
+	font-weight:bold;
 }
 .top-menu ul li a.active {
 	font-weight: bold;

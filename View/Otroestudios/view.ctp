@@ -17,7 +17,7 @@
 		</dd>
 		<dt><?php echo __('Autore'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($otroestudio['Autore']['nombres'], array('controller' => 'autores', 'action' => 'view', $otroestudio['Autore']['id'])); ?>
+			<?php echo $this->Html->link($otroestudio['Autore']['nombre_completo'], array('controller' => 'autores', 'action' => 'view', $otroestudio['Autore']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Otroestudiotipo'); ?></dt>

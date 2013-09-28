@@ -18,7 +18,7 @@
 			<tr>
 				<td><?php echo h($otroestudio['Otroestudio']['id']); ?>&nbsp;</td>
 				<td>
-			<?php echo $this->Html->link($otroestudio['Autore']['nombres'], array('controller' => 'autores', 'action' => 'view', $otroestudio['Autore']['id'])); ?>
+			<?php echo $this->Html->link($otroestudio['Autore']['nombre_completo'], array('controller' => 'autores', 'action' => 'view', $otroestudio['Autore']['id'])); ?>
 		</td>
 				<td>
 			<?php echo $this->Html->link($otroestudio['Otroestudiotipo']['nombre'], array('controller' => 'otroestudiotipos', 'action' => 'view', $otroestudio['Otroestudiotipo']['id'])); ?>

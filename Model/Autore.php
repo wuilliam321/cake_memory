@@ -10,12 +10,15 @@ App::uses('AppModel', 'Model');
  * @property Publicacione $Publicacione
  */
 class Autore extends AppModel {
+    public $virtualFields = array(
+        'nombre_completo' => 'CONCAT(Autore.nombres, " ", Autore.apellidos)'
+    );
 /**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'nombres';
+	public $displayField = 'nombre_completo';
 
 /**
  * Validation rules

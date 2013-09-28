@@ -17,14 +17,14 @@
 				<?php echo $this->Form->input('nombre', array('class' => 'span12', 'rows' => 1, 'div' => array('class' => 'span9'))); ?>
 			</div>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('ruta', array('class' => 'span12', 'rows' => 2)); ?>
+				<?php echo $this->Form->input('ruta', array('class' => 'span12', 'rows' => 2, 'div' => array('class' => 'span12'))); ?>
 			</div>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('descripcion', array('class' => 'span12', 'rows' => 4)); ?>
+				<?php echo $this->Form->input('descripcion', array('class' => 'span12', 'rows' => 4, 'div' => array('class' => 'span12'))); ?>
 			</div>
 		</fieldset>
 		<div class="form-actions">
-			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => false, 'class' => 'btn btn-primary')); ?>
+			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => false, 'class' => 'btn btn-primary btn-large')); ?>
 			<?php echo $this->Html->link(__('Cancel'), array('controller' => 'publicaciones', 'action' => 'index'), array('div' => false, 'class' => 'btn cancel-btn'), __('¿Está seguro(a) que desea cancelar la operación?')); ?>
 		</div>
 	<?php echo $this->Form->end(); ?>

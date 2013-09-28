@@ -3,7 +3,7 @@
 
     <!-- Logo -->
         <div id="logo">
-            <h1>Memoria</h1>
+            <h1><?php echo $this->Html->link(__('Memoria'), '/'); ?></h1>
         </div>
 
     <!-- Nav -->

@@ -39,18 +39,18 @@ class EtiquetasController extends AppController {
  *
  * @return void
  */
-	public function add() {
+	public function add($publicacione_id = null) {
 		if ($this->request->is('post')) {
 			$this->Etiqueta->create();
 			if ($this->Etiqueta->save($this->request->data)) {
 				$this->Session->setFlash(__('The etiqueta has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('controller' => 'publicaciones', 'action' => 'edit', $this->request->data['Publicacione']['Publicacione']));
 			} else {
 				$this->Session->setFlash(__('The etiqueta could not be saved. Please, try again.'));
 			}
 		}
-		$publicaciones = $this->Etiqueta->Publicacione->find('list');
-		$this->set(compact('publicaciones'));
+		$publicacione = $this->Etiqueta->Publicacione->findById($publicacione_id);
+		$this->set(compact('publicacione'));
 	}
 
 /**
@@ -75,8 +75,8 @@ class EtiquetasController extends AppController {
 			$options = array('conditions' => array('Etiqueta.' . $this->Etiqueta->primaryKey => $id));
 			$this->request->data = $this->Etiqueta->find('first', $options);
 		}
-		$publicaciones = $this->Etiqueta->Publicacione->find('list');
-		$this->set(compact('publicaciones'));
+		$publicacione = $this->Etiqueta->Publicacione->findById($publicacione_id);
+		$this->set(compact('publicacione'));
 	}
 
 /**
