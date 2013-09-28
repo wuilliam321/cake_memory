@@ -46,7 +46,7 @@
 	<?php if (!empty($publicacione['Comentario'])): ?>
 		<?php
 		$i = 0;
-		foreach ($publicacione['Comentario'] as $comentario): ?>
+		foreach ($publicacione['Comentario'] as $comentario):  print_r($comentario); ?>
 			<div class="span10 offset1 well">
 				<p><?php echo $comentario['texto']; ?></p>
 				<div class="comment-details">
