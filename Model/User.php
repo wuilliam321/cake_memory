@@ -3,11 +3,12 @@ App::uses('AppModel', 'Model');
 /**
  * User Model
  *
- * @property Group $Group
  * @property Autore $Autore
+ * @property Group $Group
  * @property Comentario $Comentario
  */
 class User extends AppModel {
+
 /**
  * Display field
  *
@@ -56,6 +57,21 @@ class User extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
+ * hasOne associations
+ *
+ * @var array
+ */
+	public $hasOne = array(
+		'Autore' => array(
+			'className' => 'Autore',
+			'foreignKey' => 'user_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
+
+/**
  * belongsTo associations
  *
  * @var array
@@ -76,19 +92,6 @@ class User extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Autore' => array(
-			'className' => 'Autore',
-			'foreignKey' => 'user_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
 		'Comentario' => array(
 			'className' => 'Comentario',
 			'foreignKey' => 'user_id',

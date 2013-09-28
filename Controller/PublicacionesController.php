@@ -41,6 +41,7 @@ class PublicacionesController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->Publicacione->recursive = 2;
 		if (!$this->Publicacione->exists($id)) {
 			throw new NotFoundException(__('Invalid publicacione'));
 		}
