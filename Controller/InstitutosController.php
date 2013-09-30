@@ -25,6 +25,7 @@ class InstitutosController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->Instituto->recursive = 1;
 		if (!$this->Instituto->exists($id)) {
 			throw new NotFoundException(__('Invalid instituto'));
 		}

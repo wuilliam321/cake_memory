@@ -8,13 +8,8 @@
 			<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $recursomultimedia['Recursomultimedia']['id']), null, __('¿Está seguro(a) que desea eliminar este registro?')); ?></li>
 		</ul>
 	</div>
-		<h2><?php echo __('Recursomultimedia'); ?></h2>
+	<h2><?php echo __('Recursomultimedia'); ?></h2>
 	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($recursomultimedia['Recursomultimedia']['id']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Recursomultimediatipo'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($recursomultimedia['Recursomultimediatipo']['nombre'], array('controller' => 'recursomultimediatipos', 'action' => 'view', $recursomultimedia['Recursomultimediatipo']['id'])); ?>

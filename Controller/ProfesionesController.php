@@ -25,6 +25,7 @@ class ProfesionesController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->Profesione->recursive = 2;
 		if (!$this->Profesione->exists($id)) {
 			throw new NotFoundException(__('Invalid profesione'));
 		}

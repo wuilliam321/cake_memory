@@ -15,18 +15,20 @@ class UnidadinvestigacioneTest extends CakeTestCase {
 	public $fixtures = array(
 		'app.unidadinvestigacione',
 		'app.instituto',
+		'app.unidadinvestigaciontipo',
 		'app.autore',
 		'app.user',
-		'app.profesione',
-		'app.otroestudio',
-		'app.otroestudiotipo',
-		'app.publicacione',
+		'app.group',
 		'app.comentario',
+		'app.publicacione',
 		'app.recursomultimedia',
 		'app.recursomultimediatipo',
 		'app.autores_publicacione',
 		'app.etiqueta',
-		'app.etiquetas_publicacione'
+		'app.etiquetas_publicacione',
+		'app.profesione',
+		'app.otroestudio',
+		'app.otroestudiotipo'
 	);
 
 /**

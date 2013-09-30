@@ -25,6 +25,7 @@ class OtroestudiotiposController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->Otroestudiotipo->recursive = 2;
 		if (!$this->Otroestudiotipo->exists($id)) {
 			throw new NotFoundException(__('Invalid otroestudiotipo'));
 		}

@@ -15,6 +15,7 @@ class UnidadinvestigacionesControllerTest extends ControllerTestCase {
 	public $fixtures = array(
 		'app.unidadinvestigacione',
 		'app.instituto',
+		'app.unidadinvestigaciontipo',
 		'app.autore',
 		'app.user',
 		'app.group',

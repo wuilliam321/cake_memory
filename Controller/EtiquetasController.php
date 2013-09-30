@@ -6,9 +6,6 @@ App::uses('AppController', 'Controller');
  * @property Etiqueta $Etiqueta
  */
 class EtiquetasController extends AppController {
-	public $paginate = array(
-        'limit' => 1
-    );
 /**
  * index method
  *
@@ -27,6 +24,7 @@ class EtiquetasController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->Etiqueta->recursive = 2;
 		if (!$this->Etiqueta->exists($id)) {
 			throw new NotFoundException(__('Invalid etiqueta'));
 		}

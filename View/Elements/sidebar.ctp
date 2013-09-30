@@ -13,6 +13,7 @@
                 <li<?php echo ($this->request['controller'] == 'institutos') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Institutos'), array('controller' => 'institutos', 'action' => 'index')); ?></li>
                 <li<?php echo ($this->request['controller'] == 'autores') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Autores'), array('controller' => 'autores', 'action' => 'index')); ?></li>
                 <li<?php echo ($this->request['controller'] == 'recursomultimedia') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Recursos Multimedios'), array('controller' => 'recursomultimedia', 'action' => 'index')); ?></li>
+                <li<?php echo ($this->request['controller'] == 'etiquetas') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Etiquetas'), array('controller' => 'etiquetas', 'action' => 'index')); ?></li>
             </ul>
         </nav>
         

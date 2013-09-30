@@ -25,6 +25,7 @@ class RecursomultimediatiposController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->Recursomultimediatipo->recursive = 2;
 		if (!$this->Recursomultimediatipo->exists($id)) {
 			throw new NotFoundException(__('Invalid recursomultimediatipo'));
 		}

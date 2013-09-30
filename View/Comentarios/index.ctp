@@ -8,7 +8,6 @@
 	<h2><?php echo __('Comentarios'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 		<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('publicacione_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('texto'); ?></th>
@@ -16,7 +15,6 @@
 		</tr>
 		<?php foreach ($comentarios as $comentario): ?>
 			<tr>
-				<td><?php echo h($comentario['Comentario']['id']); ?>&nbsp;</td>
 				<td>
 			<?php echo $this->Html->link($comentario['Publicacione']['titulo'], array('controller' => 'publicaciones', 'action' => 'view', $comentario['Publicacione']['id'])); ?>
 		</td>

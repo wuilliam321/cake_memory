@@ -8,13 +8,11 @@
 	<h2><?php echo __('Profesiones'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 		<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 		</tr>
 		<?php foreach ($profesiones as $profesione): ?>
 			<tr>
-				<td><?php echo h($profesione['Profesione']['id']); ?>&nbsp;</td>
 				<td><?php echo h($profesione['Profesione']['nombre']); ?>&nbsp;</td>
 				<td class="actions">
 					<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $profesione['Profesione']['id'])); ?>

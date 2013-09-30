@@ -31,10 +31,6 @@
 				<?php echo $this->Form->input('telefono_secundario', array('class' => 'span12', 'div' => array('class' => 'span4'))); ?>
 				<?php echo $this->Form->input('telefono_otro', array('class' => 'span12', 'div' => array('class' => 'span4'))); ?>
 			</div>
-			<h3><?php echo __('Publicaciones en las que participa'); ?></h3>
-			<div class="row-fluid">
-				<?php echo $this->Form->input('Publicacione', array('class' => 'span12 checkbox', 'label' => false, 'multiple' => 'checkbox', 'div' => array('class' => 'span12'))); ?>
-			</div>
 		</fieldset>
 		<div class="form-actions">
 			<?php echo $this->Form->end(array('label' => __('Submit'), 'div' => false, 'class' => 'btn btn-primary btn-large')); ?>
