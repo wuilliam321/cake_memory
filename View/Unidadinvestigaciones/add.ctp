@@ -9,7 +9,12 @@
 		<fieldset>
 			<h2><?php echo __('Add Unidadinvestigacione'); ?></h2>
 			<div class="row-fluid">
-				<?php echo $this->Form->input('instituto_id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+				<?php if (!empty($instituto)): ?>
+					<h4>Instituto: <?php echo $instituto['Instituto']['nombre']; ?></h4>
+					<?php echo $this->Form->input('instituto_id', array('type' => 'hidden', 'value' => $instituto['Instituto']['id'])); ?>
+				<?php else: ?>
+					<?php echo $this->Form->input('instituto_id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+				<?php endif; ?>
 			</div>
 			<div class="row-fluid">
 				<?php echo $this->Form->input('unidadinvestigaciontipo_id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>

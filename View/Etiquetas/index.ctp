@@ -1,10 +1,4 @@
 <div id="content-inner" class="etiquetas index is-post">
-	<div class="top-menu">
-		<ul>
-			<li><?php echo $this->Html->link(__('Listado'), array('controller' => 'etiquetas', 'action' => 'index'), array('class' => 'active')); ?></li>
-			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'etiquetas', 'action' => 'add')); ?></li>
-		</ul>
-	</div>
 	<h2><?php echo __('Etiquetas'); ?></h2>
 	<script type="application/x-javascript">
 		$(function () {

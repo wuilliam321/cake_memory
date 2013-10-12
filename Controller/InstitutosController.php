@@ -55,7 +55,7 @@ class InstitutosController extends AppController {
 			$this->Instituto->create();
 			if ($this->Instituto->save($this->request->data)) {
 				$this->Session->setFlash(__('The instituto has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('action' => 'edit', $this->Instituto->getLastInsertID()));
 			} else {
 				$this->Session->setFlash(__('The instituto could not be saved. Please, try again.'));
 			}
@@ -74,7 +74,7 @@ class InstitutosController extends AppController {
 			throw new NotFoundException(__('Invalid instituto'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Instituto->save($this->request->data)) {
+			if ($this->Instituto->saveAll($this->request->data)) {
 				$this->Session->setFlash(__('The instituto has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
@@ -84,6 +84,8 @@ class InstitutosController extends AppController {
 			$options = array('conditions' => array('Instituto.' . $this->Instituto->primaryKey => $id));
 			$this->request->data = $this->Instituto->find('first', $options);
 		}
+		$unidadinvestigaciontipos = $this->Instituto->Unidadinvestigacione->Unidadinvestigaciontipo->find("list");
+		$this->set(compact('unidadinvestigaciontipos'));
 	}
 
 /**

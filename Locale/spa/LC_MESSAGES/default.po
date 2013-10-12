@@ -1,0 +1,1170 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-10-12 22:22+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/AutoresController.php:42;79;110
+msgid "Invalid autore"
+msgstr ""
+
+#: Controller/AutoresController.php:57;83
+msgid "The autore has been saved"
+msgstr ""
+
+#: Controller/AutoresController.php:60;86
+msgid "The autore could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/AutoresController.php:114
+msgid "Autore deleted"
+msgstr ""
+
+#: Controller/AutoresController.php:117
+msgid "Autore was not deleted"
+msgstr ""
+
+#: Controller/ComentariosController.php:29;64;92
+msgid "Invalid comentario"
+msgstr ""
+
+#: Controller/ComentariosController.php:44;68
+msgid "The comentario has been saved"
+msgstr ""
+
+#: Controller/ComentariosController.php:47;71
+msgid "The comentario could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ComentariosController.php:96
+msgid "Comentario deleted"
+msgstr ""
+
+#: Controller/ComentariosController.php:99
+msgid "Comentario was not deleted"
+msgstr ""
+
+#: Controller/EtiquetasController.php:43;83;110
+msgid "Invalid etiqueta"
+msgstr ""
+
+#: Controller/EtiquetasController.php:58;87
+msgid "The etiqueta has been saved"
+msgstr ""
+
+#: Controller/EtiquetasController.php:64;90
+msgid "The etiqueta could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/EtiquetasController.php:114
+msgid "Etiqueta deleted"
+msgstr ""
+
+#: Controller/EtiquetasController.php:117
+msgid "Etiqueta was not deleted"
+msgstr ""
+
+#: Controller/GroupsController.php:30;62;87
+msgid "Invalid group"
+msgstr ""
+
+#: Controller/GroupsController.php:45;66
+msgid "The group has been saved"
+msgstr ""
+
+#: Controller/GroupsController.php:48;69
+msgid "The group could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/GroupsController.php:91
+msgid "Group deleted"
+msgstr ""
+
+#: Controller/GroupsController.php:94
+msgid "Group was not deleted"
+msgstr ""
+
+#: Controller/InstitutosController.php:42;74;99
+msgid "Invalid instituto"
+msgstr ""
+
+#: Controller/InstitutosController.php:57;78
+msgid "The instituto has been saved"
+msgstr ""
+
+#: Controller/InstitutosController.php:60;81
+msgid "The instituto could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/InstitutosController.php:103
+msgid "Instituto deleted"
+msgstr ""
+
+#: Controller/InstitutosController.php:106
+msgid "Instituto was not deleted"
+msgstr ""
+
+#: Controller/OtroestudiosController.php:29;67;95
+msgid "Invalid otroestudio"
+msgstr ""
+
+#: Controller/OtroestudiosController.php:47;71
+msgid "The otroestudio has been saved"
+msgstr ""
+
+#: Controller/OtroestudiosController.php:50;74
+msgid "The otroestudio could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/OtroestudiosController.php:99
+msgid "Otroestudio deleted"
+msgstr ""
+
+#: Controller/OtroestudiosController.php:102
+msgid "Otroestudio was not deleted"
+msgstr ""
+
+#: Controller/OtroestudiotiposController.php:30;62;87
+msgid "Invalid otroestudiotipo"
+msgstr ""
+
+#: Controller/OtroestudiotiposController.php:45;66
+msgid "The otroestudiotipo has been saved"
+msgstr ""
+
+#: Controller/OtroestudiotiposController.php:48;69
+msgid "The otroestudiotipo could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/OtroestudiotiposController.php:91
+msgid "Otroestudiotipo deleted"
+msgstr ""
+
+#: Controller/OtroestudiotiposController.php:94
+msgid "Otroestudiotipo was not deleted"
+msgstr ""
+
+#: Controller/ProfesionesController.php:30;62;87
+msgid "Invalid profesione"
+msgstr ""
+
+#: Controller/ProfesionesController.php:45;66
+msgid "The profesione has been saved"
+msgstr ""
+
+#: Controller/ProfesionesController.php:48;69
+msgid "The profesione could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ProfesionesController.php:91
+msgid "Profesione deleted"
+msgstr ""
+
+#: Controller/ProfesionesController.php:94
+msgid "Profesione was not deleted"
+msgstr ""
+
+#: Controller/PublicacionesController.php:46;83;112
+msgid "Invalid publicacione"
+msgstr ""
+
+#: Controller/PublicacionesController.php:63;87
+msgid "The publicacione has been saved"
+msgstr ""
+
+#: Controller/PublicacionesController.php:66;90
+msgid "The publicacione could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PublicacionesController.php:116
+msgid "Publicacione deleted"
+msgstr ""
+
+#: Controller/PublicacionesController.php:119
+msgid "Publicacione was not deleted"
+msgstr ""
+
+#: Controller/RecursomultimediaController.php:41;79;107
+msgid "Invalid recursomultimedia"
+msgstr ""
+
+#: Controller/RecursomultimediaController.php:59;83
+msgid "The recursomultimedia has been saved"
+msgstr ""
+
+#: Controller/RecursomultimediaController.php:62;86
+msgid "The recursomultimedia could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/RecursomultimediaController.php:111
+msgid "Recursomultimedia deleted"
+msgstr ""
+
+#: Controller/RecursomultimediaController.php:114
+msgid "Recursomultimedia was not deleted"
+msgstr ""
+
+#: Controller/RecursomultimediatiposController.php:30;62;87
+msgid "Invalid recursomultimediatipo"
+msgstr ""
+
+#: Controller/RecursomultimediatiposController.php:45;66
+msgid "The recursomultimediatipo has been saved"
+msgstr ""
+
+#: Controller/RecursomultimediatiposController.php:48;69
+msgid "The recursomultimediatipo could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/RecursomultimediatiposController.php:91
+msgid "Recursomultimediatipo deleted"
+msgstr ""
+
+#: Controller/RecursomultimediatiposController.php:94
+msgid "Recursomultimediatipo was not deleted"
+msgstr ""
+
+#: Controller/UnidadinvestigacionesController.php:30;65;93
+msgid "Invalid unidadinvestigacione"
+msgstr ""
+
+#: Controller/UnidadinvestigacionesController.php:45;69
+msgid "The unidadinvestigacione has been saved"
+msgstr ""
+
+#: Controller/UnidadinvestigacionesController.php:48;72
+msgid "The unidadinvestigacione could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UnidadinvestigacionesController.php:97
+msgid "Unidadinvestigacione deleted"
+msgstr ""
+
+#: Controller/UnidadinvestigacionesController.php:100
+msgid "Unidadinvestigacione was not deleted"
+msgstr ""
+
+#: Controller/UnidadinvestigaciontiposController.php:30;62;87
+msgid "Invalid unidadinvestigaciontipo"
+msgstr ""
+
+#: Controller/UnidadinvestigaciontiposController.php:45;66
+msgid "The unidadinvestigaciontipo has been saved"
+msgstr ""
+
+#: Controller/UnidadinvestigaciontiposController.php:48;69
+msgid "The unidadinvestigaciontipo could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UnidadinvestigaciontiposController.php:91
+msgid "Unidadinvestigaciontipo deleted"
+msgstr ""
+
+#: Controller/UnidadinvestigaciontiposController.php:94
+msgid "Unidadinvestigaciontipo was not deleted"
+msgstr ""
+
+#: Controller/UsersController.php:30;64;91
+msgid "Invalid user"
+msgstr ""
+
+#: Controller/UsersController.php:45;68
+msgid "The user has been saved"
+msgstr ""
+
+#: Controller/UsersController.php:48;71
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:95
+msgid "User deleted"
+msgstr ""
+
+#: Controller/UsersController.php:98
+msgid "User was not deleted"
+msgstr ""
+
+#: View/Autores/add.ctp:4
+#: View/Autores/edit.ctp:4
+#: View/Autores/view.ctp:4
+#: View/Comentarios/add.ctp:4
+#: View/Comentarios/edit.ctp:4
+#: View/Comentarios/index.ctp:4
+#: View/Comentarios/view.ctp:4
+#: View/Etiquetas/edit.ctp:4
+#: View/Etiquetas/index.ctp:4
+#: View/Etiquetas/view.ctp:4
+#: View/Groups/add.ctp:4
+#: View/Groups/edit.ctp:4
+#: View/Groups/index.ctp:4
+#: View/Groups/view.ctp:4
+#: View/Institutos/add.ctp:4
+#: View/Institutos/edit.ctp:4
+#: View/Institutos/view.ctp:4
+#: View/Otroestudios/edit.ctp:4
+#: View/Otroestudiotipos/add.ctp:4
+#: View/Otroestudiotipos/edit.ctp:4
+#: View/Otroestudiotipos/index.ctp:4
+#: View/Otroestudiotipos/view.ctp:4
+#: View/Profesiones/add.ctp:4
+#: View/Profesiones/edit.ctp:4
+#: View/Profesiones/index.ctp:4
+#: View/Profesiones/view.ctp:4
+#: View/Publicaciones/add.ctp:4
+#: View/Publicaciones/edit.ctp:4
+#: View/Publicaciones/view.ctp:4
+#: View/Recursomultimedia/add.ctp:4
+#: View/Recursomultimedia/edit.ctp:4
+#: View/Recursomultimedia/view.ctp:4
+#: View/Recursomultimediatipos/add.ctp:4
+#: View/Recursomultimediatipos/edit.ctp:4
+#: View/Recursomultimediatipos/index.ctp:4
+#: View/Recursomultimediatipos/view.ctp:4
+#: View/Unidadinvestigaciones/add.ctp:4
+#: View/Unidadinvestigaciones/edit.ctp:4
+#: View/Unidadinvestigaciones/index.ctp:4
+#: View/Unidadinvestigaciones/view.ctp:4
+#: View/Unidadinvestigaciontipos/add.ctp:4
+#: View/Unidadinvestigaciontipos/edit.ctp:4
+#: View/Unidadinvestigaciontipos/index.ctp:4
+#: View/Unidadinvestigaciontipos/view.ctp:4
+#: View/Users/add.ctp:4
+#: View/Users/edit.ctp:4
+#: View/Users/index.ctp:4
+#: View/Users/view.ctp:4
+msgid "Listado"
+msgstr ""
+
+#: View/Autores/add.ctp:5
+#: View/Autores/edit.ctp:5
+#: View/Autores/find.ctp:5
+#: View/Autores/view.ctp:5
+#: View/Comentarios/add.ctp:5
+#: View/Comentarios/edit.ctp:5
+#: View/Comentarios/index.ctp:5
+#: View/Comentarios/view.ctp:5
+#: View/Etiquetas/add.ctp:3
+#: View/Etiquetas/edit.ctp:5
+#: View/Etiquetas/index.ctp:5
+#: View/Etiquetas/view.ctp:5
+#: View/Groups/add.ctp:5
+#: View/Groups/edit.ctp:5
+#: View/Groups/index.ctp:5
+#: View/Groups/view.ctp:5
+#: View/Institutos/add.ctp:5
+#: View/Institutos/edit.ctp:5
+#: View/Institutos/find.ctp:5
+#: View/Institutos/view.ctp:5
+#: View/Otroestudios/add.ctp:4
+#: View/Otroestudios/edit.ctp:5
+#: View/Otroestudiotipos/add.ctp:5
+#: View/Otroestudiotipos/edit.ctp:5
+#: View/Otroestudiotipos/index.ctp:5
+#: View/Otroestudiotipos/view.ctp:5
+#: View/Profesiones/add.ctp:5
+#: View/Profesiones/edit.ctp:5
+#: View/Profesiones/index.ctp:5
+#: View/Profesiones/view.ctp:5
+#: View/Publicaciones/add.ctp:5
+#: View/Publicaciones/edit.ctp:5
+#: View/Publicaciones/find.ctp:5
+#: View/Publicaciones/recientes.ctp:4
+#: View/Publicaciones/view.ctp:5
+#: View/Recursomultimedia/add.ctp:5
+#: View/Recursomultimedia/edit.ctp:5
+#: View/Recursomultimedia/view.ctp:5
+#: View/Recursomultimediatipos/add.ctp:5
+#: View/Recursomultimediatipos/edit.ctp:5
+#: View/Recursomultimediatipos/index.ctp:5
+#: View/Recursomultimediatipos/view.ctp:5
+#: View/Unidadinvestigaciones/add.ctp:5
+#: View/Unidadinvestigaciones/edit.ctp:5
+#: View/Unidadinvestigaciones/index.ctp:5
+#: View/Unidadinvestigaciones/view.ctp:5
+#: View/Unidadinvestigaciontipos/add.ctp:5
+#: View/Unidadinvestigaciontipos/edit.ctp:5
+#: View/Unidadinvestigaciontipos/index.ctp:5
+#: View/Unidadinvestigaciontipos/view.ctp:5
+#: View/Users/add.ctp:5
+#: View/Users/edit.ctp:5
+#: View/Users/index.ctp:5
+#: View/Users/view.ctp:5
+msgid "Agregar"
+msgstr ""
+
+#: View/Autores/add.ctp:10
+#: View/Publicaciones/add.ctp:23
+#: View/Publicaciones/edit.ctp:27
+msgid "Add Autore"
+msgstr ""
+
+#: View/Autores/add.ctp:11
+#: View/Autores/edit.ctp:13
+msgid "Datos Institucionales"
+msgstr ""
+
+#: View/Autores/add.ctp:19
+#: View/Autores/edit.ctp:21
+msgid "Datos Personales"
+msgstr ""
+
+#: View/Autores/add.ctp:36
+#: View/Autores/edit.ctp:77
+#: View/Comentarios/add.ctp:22
+#: View/Comentarios/edit.ctp:26
+#: View/Etiquetas/add.ctp:20
+#: View/Etiquetas/edit.ctp:24
+#: View/Groups/add.ctp:16
+#: View/Groups/edit.ctp:20
+#: View/Institutos/add.ctp:17
+#: View/Institutos/edit.ctp:19
+#: View/Otroestudios/add.ctp:20
+#: View/Otroestudios/edit.ctp:25
+#: View/Otroestudiotipos/add.ctp:16
+#: View/Otroestudiotipos/edit.ctp:20
+#: View/Profesiones/add.ctp:16
+#: View/Profesiones/edit.ctp:20
+#: View/Publicaciones/add.ctp:37
+#: View/Publicaciones/edit.ctp:79
+#: View/Publicaciones/view.ctp:129
+#: View/Recursomultimedia/add.ctp:27
+#: View/Recursomultimedia/edit.ctp:29
+#: View/Recursomultimediatipos/add.ctp:16
+#: View/Recursomultimediatipos/edit.ctp:20
+#: View/Unidadinvestigaciones/add.ctp:22
+#: View/Unidadinvestigaciones/edit.ctp:26
+#: View/Unidadinvestigaciontipos/add.ctp:16
+#: View/Unidadinvestigaciontipos/edit.ctp:20
+#: View/Users/add.ctp:22
+#: View/Users/edit.ctp:26
+msgid "Submit"
+msgstr ""
+
+#: View/Autores/add.ctp:37
+#: View/Autores/edit.ctp:78
+#: View/Comentarios/add.ctp:23
+#: View/Comentarios/edit.ctp:27
+#: View/Etiquetas/add.ctp:21
+#: View/Etiquetas/edit.ctp:25
+#: View/Groups/add.ctp:17
+#: View/Groups/edit.ctp:21
+#: View/Institutos/add.ctp:18
+#: View/Institutos/edit.ctp:20
+#: View/Otroestudios/add.ctp:21
+#: View/Otroestudios/edit.ctp:26
+#: View/Otroestudiotipos/add.ctp:17
+#: View/Otroestudiotipos/edit.ctp:21
+#: View/Profesiones/add.ctp:17
+#: View/Profesiones/edit.ctp:21
+#: View/Publicaciones/add.ctp:38
+#: View/Publicaciones/edit.ctp:80
+#: View/Publicaciones/view.ctp:130
+#: View/Recursomultimedia/add.ctp:28
+#: View/Recursomultimedia/edit.ctp:30
+#: View/Recursomultimediatipos/add.ctp:17
+#: View/Recursomultimediatipos/edit.ctp:21
+#: View/Unidadinvestigaciones/add.ctp:23
+#: View/Unidadinvestigaciones/edit.ctp:27
+#: View/Unidadinvestigaciontipos/add.ctp:17
+#: View/Unidadinvestigaciontipos/edit.ctp:21
+#: View/Users/add.ctp:23
+#: View/Users/edit.ctp:27
+msgid "Cancel"
+msgstr ""
+
+#: View/Autores/add.ctp:37
+#: View/Autores/edit.ctp:78
+#: View/Comentarios/add.ctp:23
+#: View/Comentarios/edit.ctp:27
+#: View/Etiquetas/add.ctp:21
+#: View/Etiquetas/edit.ctp:25
+#: View/Groups/add.ctp:17
+#: View/Groups/edit.ctp:21
+#: View/Institutos/add.ctp:18
+#: View/Institutos/edit.ctp:20
+#: View/Otroestudios/add.ctp:21
+#: View/Otroestudios/edit.ctp:26
+#: View/Otroestudiotipos/add.ctp:17
+#: View/Otroestudiotipos/edit.ctp:21
+#: View/Profesiones/add.ctp:17
+#: View/Profesiones/edit.ctp:21
+#: View/Publicaciones/add.ctp:38
+#: View/Publicaciones/edit.ctp:80
+#: View/Publicaciones/view.ctp:130
+#: View/Recursomultimedia/add.ctp:28
+#: View/Recursomultimedia/edit.ctp:30
+#: View/Recursomultimediatipos/add.ctp:17
+#: View/Recursomultimediatipos/edit.ctp:21
+#: View/Unidadinvestigaciones/add.ctp:23
+#: View/Unidadinvestigaciones/edit.ctp:27
+#: View/Unidadinvestigaciontipos/add.ctp:17
+#: View/Unidadinvestigaciontipos/edit.ctp:21
+#: View/Users/add.ctp:23
+#: View/Users/edit.ctp:27
+msgid "¿Está seguro(a) que desea cancelar la operación?"
+msgstr ""
+
+#: View/Autores/edit.ctp:6
+#: View/Autores/find.ctp:42
+#: View/Autores/view.ctp:6
+#: View/Comentarios/edit.ctp:6
+#: View/Comentarios/index.ctp:27
+#: View/Comentarios/view.ctp:6
+#: View/Etiquetas/edit.ctp:6
+#: View/Etiquetas/view.ctp:6
+#: View/Groups/edit.ctp:6
+#: View/Groups/index.ctp:19
+#: View/Groups/view.ctp:6
+#: View/Institutos/edit.ctp:6
+#: View/Institutos/find.ctp:47
+#: View/Institutos/view.ctp:6
+#: View/Otroestudios/edit.ctp:6
+#: View/Otroestudiotipos/edit.ctp:6
+#: View/Otroestudiotipos/index.ctp:19
+#: View/Otroestudiotipos/view.ctp:6
+#: View/Profesiones/edit.ctp:6
+#: View/Profesiones/index.ctp:19
+#: View/Profesiones/view.ctp:6
+#: View/Publicaciones/edit.ctp:6
+#: View/Publicaciones/view.ctp:6
+#: View/Recursomultimedia/edit.ctp:6
+#: View/Recursomultimedia/find.ctp:37
+#: View/Recursomultimedia/view.ctp:6
+#: View/Recursomultimediatipos/edit.ctp:6
+#: View/Recursomultimediatipos/index.ctp:19
+#: View/Recursomultimediatipos/view.ctp:6
+#: View/Unidadinvestigaciones/edit.ctp:6
+#: View/Unidadinvestigaciones/index.ctp:27
+#: View/Unidadinvestigaciones/view.ctp:6
+#: View/Unidadinvestigaciontipos/edit.ctp:6
+#: View/Unidadinvestigaciontipos/index.ctp:19
+#: View/Unidadinvestigaciontipos/view.ctp:6
+#: View/Users/edit.ctp:6
+#: View/Users/index.ctp:25
+#: View/Users/view.ctp:6
+msgid "Editar"
+msgstr ""
+
+#: View/Autores/edit.ctp:12
+msgid "Edit Autore"
+msgstr ""
+
+#: View/Autores/edit.ctp:38
+msgid "Otroestudios"
+msgstr ""
+
+#: View/Autores/edit.ctp:71
+msgid "Publicaciones en las que participa"
+msgstr ""
+
+#: View/Autores/find.ctp:8
+#: View/Elements/sidebar.ctp:14
+#: View/Publicaciones/view.ctp:76
+msgid "Autores"
+msgstr ""
+
+#: View/Autores/find.ctp:41
+#: View/Autores/view.ctp:7
+#: View/Comentarios/index.ctp:26
+#: View/Comentarios/view.ctp:7
+#: View/Etiquetas/view.ctp:7
+#: View/Groups/index.ctp:18
+#: View/Groups/view.ctp:7
+#: View/Institutos/find.ctp:46
+#: View/Institutos/view.ctp:7
+#: View/Otroestudiotipos/index.ctp:18
+#: View/Otroestudiotipos/view.ctp:7
+#: View/Profesiones/index.ctp:18
+#: View/Profesiones/view.ctp:7
+#: View/Publicaciones/view.ctp:7
+#: View/Recursomultimedia/find.ctp:36
+#: View/Recursomultimedia/view.ctp:7
+#: View/Recursomultimediatipos/index.ctp:18
+#: View/Recursomultimediatipos/view.ctp:7
+#: View/Unidadinvestigaciones/index.ctp:26
+#: View/Unidadinvestigaciones/view.ctp:7
+#: View/Unidadinvestigaciontipos/index.ctp:18
+#: View/Unidadinvestigaciontipos/view.ctp:7
+#: View/Users/index.ctp:24
+#: View/Users/view.ctp:7
+msgid "Ver"
+msgstr ""
+
+#: View/Autores/find.ctp:43
+#: View/Autores/view.ctp:8
+#: View/Comentarios/index.ctp:28
+#: View/Comentarios/view.ctp:8
+#: View/Etiquetas/view.ctp:8
+#: View/Groups/index.ctp:20
+#: View/Groups/view.ctp:8
+#: View/Institutos/find.ctp:48
+#: View/Institutos/view.ctp:8
+#: View/Otroestudiotipos/index.ctp:20
+#: View/Otroestudiotipos/view.ctp:8
+#: View/Profesiones/index.ctp:20
+#: View/Profesiones/view.ctp:8
+#: View/Publicaciones/view.ctp:8
+#: View/Recursomultimedia/find.ctp:38
+#: View/Recursomultimedia/view.ctp:8
+#: View/Recursomultimediatipos/index.ctp:20
+#: View/Recursomultimediatipos/view.ctp:8
+#: View/Unidadinvestigaciones/index.ctp:28
+#: View/Unidadinvestigaciones/view.ctp:8
+#: View/Unidadinvestigaciontipos/index.ctp:20
+#: View/Unidadinvestigaciontipos/view.ctp:8
+#: View/Users/index.ctp:26
+#: View/Users/view.ctp:8
+msgid "Eliminar"
+msgstr ""
+
+#: View/Autores/find.ctp:43
+#: View/Autores/view.ctp:8
+#: View/Comentarios/index.ctp:28
+#: View/Comentarios/view.ctp:8
+#: View/Etiquetas/view.ctp:8
+#: View/Groups/index.ctp:20
+#: View/Groups/view.ctp:8
+#: View/Institutos/find.ctp:48
+#: View/Institutos/view.ctp:8
+#: View/Otroestudiotipos/index.ctp:20
+#: View/Otroestudiotipos/view.ctp:8
+#: View/Profesiones/index.ctp:20
+#: View/Profesiones/view.ctp:8
+#: View/Publicaciones/view.ctp:8
+#: View/Recursomultimedia/view.ctp:8
+#: View/Recursomultimediatipos/index.ctp:20
+#: View/Recursomultimediatipos/view.ctp:8
+#: View/Unidadinvestigaciones/index.ctp:28
+#: View/Unidadinvestigaciones/view.ctp:8
+#: View/Unidadinvestigaciontipos/index.ctp:20
+#: View/Unidadinvestigaciontipos/view.ctp:8
+#: View/Users/index.ctp:26
+#: View/Users/view.ctp:8
+msgid "¿Está seguro(a) que desea eliminar este registro?"
+msgstr ""
+
+#: View/Autores/find.ctp:55
+#: View/Comentarios/index.ctp:37
+#: View/Groups/index.ctp:29
+#: View/Institutos/find.ctp:60
+#: View/Otroestudiotipos/index.ctp:29
+#: View/Profesiones/index.ctp:29
+#: View/Publicaciones/find.ctp:47
+#: View/Publicaciones/recientes.ctp:46
+#: View/Recursomultimedia/find.ctp:50
+#: View/Recursomultimediatipos/index.ctp:29
+#: View/Unidadinvestigaciones/index.ctp:37
+#: View/Unidadinvestigaciontipos/index.ctp:29
+#: View/Users/index.ctp:35
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr ""
+
+#: View/Autores/find.ctp:60
+#: View/Comentarios/index.ctp:42
+#: View/Groups/index.ctp:34
+#: View/Institutos/find.ctp:65
+#: View/Otroestudiotipos/index.ctp:34
+#: View/Profesiones/index.ctp:34
+#: View/Publicaciones/find.ctp:52
+#: View/Publicaciones/recientes.ctp:51
+#: View/Recursomultimedia/find.ctp:55
+#: View/Recursomultimediatipos/index.ctp:34
+#: View/Unidadinvestigaciones/index.ctp:42
+#: View/Unidadinvestigaciontipos/index.ctp:34
+#: View/Users/index.ctp:40
+msgid "Anterior"
+msgstr ""
+
+#: View/Autores/find.ctp:64
+#: View/Comentarios/index.ctp:46
+#: View/Groups/index.ctp:38
+#: View/Institutos/find.ctp:69
+#: View/Otroestudiotipos/index.ctp:38
+#: View/Profesiones/index.ctp:38
+#: View/Publicaciones/find.ctp:56
+#: View/Publicaciones/recientes.ctp:55
+#: View/Recursomultimedia/find.ctp:59
+#: View/Recursomultimediatipos/index.ctp:38
+#: View/Unidadinvestigaciones/index.ctp:46
+#: View/Unidadinvestigaciontipos/index.ctp:38
+#: View/Users/index.ctp:44
+msgid "Siguiente"
+msgstr ""
+
+#: View/Autores/view.ctp:11
+#: View/Groups/view.ctp:26
+#: View/Otroestudios/add.ctp:11
+#: View/Otroestudios/edit.ctp:16
+#: View/Otroestudiotipos/view.ctp:25
+#: View/Users/index.ctp:13
+msgid "Autore"
+msgstr ""
+
+#: View/Autores/view.ctp:13
+#: View/Comentarios/view.ctp:18
+#: View/Users/view.ctp:11
+msgid "User"
+msgstr ""
+
+#: View/Autores/view.ctp:18
+#: View/Unidadinvestigaciones/view.ctp:11
+msgid "Unidadinvestigacione"
+msgstr ""
+
+#: View/Autores/view.ctp:23
+#: View/Profesiones/view.ctp:11
+msgid "Profesione"
+msgstr ""
+
+#: View/Autores/view.ctp:28
+msgid "Nombres"
+msgstr ""
+
+#: View/Autores/view.ctp:33
+msgid "Apellidos"
+msgstr ""
+
+#: View/Autores/view.ctp:38
+msgid "Email Primario"
+msgstr ""
+
+#: View/Autores/view.ctp:43
+msgid "Telefono Primario"
+msgstr ""
+
+#: View/Autores/view.ctp:48
+msgid "Email Secundario"
+msgstr ""
+
+#: View/Autores/view.ctp:53
+msgid "Telefono Secundario"
+msgstr ""
+
+#: View/Autores/view.ctp:58
+msgid "Telefono Otro"
+msgstr ""
+
+#: View/Autores/view.ctp:63
+msgid "Linea Investigacion"
+msgstr ""
+
+#: View/Autores/view.ctp:71
+#: View/Otroestudiotipos/view.ctp:21
+msgid "Related Otroestudios"
+msgstr ""
+
+#: View/Autores/view.ctp:75
+#: View/Otroestudiotipos/view.ctp:11
+msgid "Otroestudiotipo"
+msgstr ""
+
+#: View/Autores/view.ctp:76
+#: View/Etiquetas/view.ctp:13
+#: View/Institutos/view.ctp:13;30
+#: View/Otroestudiotipos/view.ctp:13;26
+#: View/Profesiones/view.ctp:13
+#: View/Recursomultimedia/view.ctp:28
+#: View/Recursomultimediatipos/view.ctp:13;26
+#: View/Unidadinvestigaciones/view.ctp:23
+#: View/Unidadinvestigaciontipos/view.ctp:13;26
+msgid "Nombre"
+msgstr ""
+
+#: View/Autores/view.ctp:90
+#: View/Etiquetas/view.ctp:21
+msgid "Related Publicaciones"
+msgstr ""
+
+#: View/Autores/view.ctp:94
+#: View/Etiquetas/view.ctp:25
+msgid "Titulo"
+msgstr ""
+
+#: View/Comentarios/add.ctp:10
+#: View/Publicaciones/view.ctp:117
+msgid "Add Comentario"
+msgstr ""
+
+#: View/Comentarios/edit.ctp:11
+msgid "Edit Comentario"
+msgstr ""
+
+#: View/Comentarios/index.ctp:8
+#: View/Publicaciones/view.ctp:93
+msgid "Comentarios"
+msgstr ""
+
+#: View/Comentarios/index.ctp:14
+#: View/Groups/index.ctp:12
+#: View/Otroestudiotipos/index.ctp:12
+#: View/Profesiones/index.ctp:12
+#: View/Recursomultimediatipos/index.ctp:12
+#: View/Unidadinvestigaciones/index.ctp:14
+#: View/Unidadinvestigaciontipos/index.ctp:12
+#: View/Users/index.ctp:14
+msgid "Actions"
+msgstr ""
+
+#: View/Comentarios/view.ctp:11
+msgid "Comentario"
+msgstr ""
+
+#: View/Comentarios/view.ctp:13
+#: View/Recursomultimedia/view.ctp:18
+#: View/Recursomultimediatipos/view.ctp:25
+#: View/Users/view.ctp:47
+msgid "Publicacione"
+msgstr ""
+
+#: View/Comentarios/view.ctp:23
+#: View/Users/view.ctp:48
+msgid "Texto"
+msgstr ""
+
+#: View/Elements/sidebar.ctp:6
+#: View/Layouts/default.ctp:20
+msgid "Memoria"
+msgstr ""
+
+#: View/Elements/sidebar.ctp:12
+msgid "Publicaciones"
+msgstr ""
+
+#: View/Elements/sidebar.ctp:13
+#: View/Institutos/find.ctp:8
+msgid "Institutos"
+msgstr ""
+
+#: View/Elements/sidebar.ctp:15
+msgid "Recursos Multimedios"
+msgstr ""
+
+#: View/Elements/sidebar.ctp:16
+#: View/Etiquetas/index.ctp:8
+msgid "Etiquetas"
+msgstr ""
+
+#: View/Etiquetas/add.ctp:8
+msgid "Add Etiqueta"
+msgstr ""
+
+#: View/Etiquetas/edit.ctp:11
+msgid "Edit Etiqueta"
+msgstr ""
+
+#: View/Etiquetas/view.ctp:11
+msgid "Etiqueta"
+msgstr ""
+
+#: View/Groups/add.ctp:10
+msgid "Add Group"
+msgstr ""
+
+#: View/Groups/edit.ctp:11
+msgid "Edit Group"
+msgstr ""
+
+#: View/Groups/index.ctp:8
+msgid "Groups"
+msgstr ""
+
+#: View/Groups/view.ctp:11
+#: View/Users/view.ctp:13
+msgid "Group"
+msgstr ""
+
+#: View/Groups/view.ctp:13
+msgid "Name"
+msgstr ""
+
+#: View/Groups/view.ctp:21
+msgid "Related Users"
+msgstr ""
+
+#: View/Groups/view.ctp:25
+#: View/Users/view.ctp:18
+msgid "Username"
+msgstr ""
+
+#: View/Institutos/add.ctp:10
+msgid "Add Instituto"
+msgstr ""
+
+#: View/Institutos/edit.ctp:12
+msgid "Edit Instituto"
+msgstr ""
+
+#: View/Institutos/view.ctp:11
+#: View/Unidadinvestigaciones/view.ctp:13
+#: View/Unidadinvestigaciontipos/view.ctp:25
+msgid "Instituto"
+msgstr ""
+
+#: View/Institutos/view.ctp:18
+msgid "Direccion"
+msgstr ""
+
+#: View/Institutos/view.ctp:26
+#: View/Unidadinvestigaciontipos/view.ctp:21
+msgid "Related Unidadinvestigaciones"
+msgstr ""
+
+#: View/Layouts/default.ctp:91
+msgid "Ayudas (?)"
+msgstr ""
+
+#: View/Layouts/default.ctp:98
+msgid "Usuarios"
+msgstr ""
+
+#: View/Layouts/default.ctp:99
+msgid "Grupos"
+msgstr ""
+
+#: View/Layouts/default.ctp:100
+msgid "Unidades de Investigación"
+msgstr ""
+
+#: View/Layouts/default.ctp:101
+msgid "Tipos de Unidad de Investigación"
+msgstr ""
+
+#: View/Layouts/default.ctp:102
+#: View/Profesiones/index.ctp:8
+msgid "Profesiones"
+msgstr ""
+
+#: View/Layouts/default.ctp:103
+msgid "Tipos de Estudios"
+msgstr ""
+
+#: View/Layouts/default.ctp:104
+msgid "Respaldo"
+msgstr ""
+
+#: View/Layouts/default.ctp:105
+msgid "Recuperacion"
+msgstr ""
+
+#: View/Otroestudios/add.ctp:9
+msgid "Add Otroestudio"
+msgstr ""
+
+#: View/Otroestudios/edit.ctp:12
+msgid "Edit Otroestudio"
+msgstr ""
+
+#: View/Otroestudiotipos/add.ctp:10
+msgid "Add Otroestudiotipo"
+msgstr ""
+
+#: View/Otroestudiotipos/edit.ctp:11
+msgid "Edit Otroestudiotipo"
+msgstr ""
+
+#: View/Otroestudiotipos/index.ctp:8
+msgid "Otroestudiotipos"
+msgstr ""
+
+#: View/Profesiones/add.ctp:10
+msgid "Add Profesione"
+msgstr ""
+
+#: View/Profesiones/edit.ctp:11
+msgid "Edit Profesione"
+msgstr ""
+
+#: View/Profesiones/view.ctp:21
+#: View/Unidadinvestigaciones/view.ctp:31
+#: View/Users/view.ctp:31
+msgid "Related Autores"
+msgstr ""
+
+#: View/Profesiones/view.ctp:25
+#: View/Unidadinvestigaciones/view.ctp:35
+#: View/Users/view.ctp:34
+msgid "Nombre Completo"
+msgstr ""
+
+#: View/Publicaciones/add.ctp:10
+msgid "Add Publicacione"
+msgstr ""
+
+#: View/Publicaciones/add.ctp:31
+#: View/Publicaciones/edit.ctp:36
+#: View/Recursomultimedia/find.ctp:3
+#: View/Recursomultimedia/view.ctp:11
+msgid "Recursomultimedia"
+msgstr ""
+
+#: View/Publicaciones/edit.ctp:11
+msgid "Edit Publicacione"
+msgstr ""
+
+#: View/Publicaciones/view.ctp:45
+#: View/Recursomultimediatipos/view.ctp:21
+msgid "Related Recursomultimedia"
+msgstr ""
+
+#: View/Publicaciones/view.ctp:104
+msgid "Edit"
+msgstr ""
+
+#: View/Publicaciones/view.ctp:105
+msgid "Delete"
+msgstr ""
+
+#: View/Publicaciones/view.ctp:105
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: View/Recursomultimedia/add.ctp:10
+msgid "Add Recursomultimedia"
+msgstr ""
+
+#: View/Recursomultimedia/edit.ctp:12
+msgid "Edit Recursomultimedia"
+msgstr ""
+
+#: View/Recursomultimedia/find.ctp:38
+msgid "�Est� seguro(a) que desea eliminar este registro?"
+msgstr ""
+
+#: View/Recursomultimedia/view.ctp:13
+#: View/Recursomultimediatipos/view.ctp:11
+msgid "Recursomultimediatipo"
+msgstr ""
+
+#: View/Recursomultimedia/view.ctp:23
+msgid "Ruta"
+msgstr ""
+
+#: View/Recursomultimedia/view.ctp:33
+#: View/Recursomultimediatipos/view.ctp:27
+msgid "Descripcion"
+msgstr ""
+
+#: View/Recursomultimediatipos/add.ctp:10
+msgid "Add Recursomultimediatipo"
+msgstr ""
+
+#: View/Recursomultimediatipos/edit.ctp:11
+msgid "Edit Recursomultimediatipo"
+msgstr ""
+
+#: View/Recursomultimediatipos/index.ctp:8
+msgid "Recursomultimediatipos"
+msgstr ""
+
+#: View/Unidadinvestigaciones/add.ctp:10
+msgid "Add Unidadinvestigacione"
+msgstr ""
+
+#: View/Unidadinvestigaciones/edit.ctp:11
+msgid "Edit Unidadinvestigacione"
+msgstr ""
+
+#: View/Unidadinvestigaciones/index.ctp:8
+msgid "Unidadinvestigaciones"
+msgstr ""
+
+#: View/Unidadinvestigaciones/view.ctp:18
+#: View/Unidadinvestigaciontipos/view.ctp:11
+msgid "Unidadinvestigaciontipo"
+msgstr ""
+
+#: View/Unidadinvestigaciontipos/add.ctp:10
+msgid "Add Unidadinvestigaciontipo"
+msgstr ""
+
+#: View/Unidadinvestigaciontipos/edit.ctp:11
+msgid "Edit Unidadinvestigaciontipo"
+msgstr ""
+
+#: View/Unidadinvestigaciontipos/index.ctp:8
+msgid "Unidadinvestigaciontipos"
+msgstr ""
+
+#: View/Users/add.ctp:10
+msgid "Add User"
+msgstr ""
+
+#: View/Users/edit.ctp:11
+msgid "Edit User"
+msgstr ""
+
+#: View/Users/index.ctp:8
+msgid "Users"
+msgstr ""
+
+#: View/Users/view.ctp:23
+msgid "Password"
+msgstr ""
+
+#: View/Users/view.ctp:43
+msgid "Related Comentarios"
+msgstr ""
+
+#: Model/Autore.php:validation for field user_id;validation for field unidadinvestigacione_id;validation for field profesione_id
+#: Model/AutoresPublicacione.php:validation for field publicacione_id;validation for field autore_id
+#: Model/Comentario.php:validation for field publicacione_id;validation for field user_id
+#: Model/EtiquetasPublicacione.php:validation for field etiqueta_id;validation for field publicacione_id
+#: Model/Otroestudio.php:validation for field autore_id;validation for field otroestudiotipo_id
+#: Model/Recursomultimedia.php:validation for field recursomultimediatipo_id;validation for field publicacione_id
+#: Model/Unidadinvestigacione.php:validation for field instituto_id;validation for field unidadinvestigaciontipo_id
+#: Model/User.php:validation for field group_id
+msgid "numeric"
+msgstr ""
+
+#: Model/Autore.php:validation for field nombres;validation for field apellidos;validation for field email_primario;validation for field telefono_primario;validation for field linea_investigacion
+#: Model/Comentario.php:validation for field texto
+#: Model/Etiqueta.php:validation for field nombre
+#: Model/Group.php:validation for field name
+#: Model/Instituto.php:validation for field nombre;validation for field direccion
+#: Model/Otroestudio.php:validation for field nombre
+#: Model/Otroestudiotipo.php:validation for field nombre
+#: Model/Profesione.php:validation for field nombre
+#: Model/Publicacione.php:validation for field titulo;validation for field contenido
+#: Model/Recursomultimedia.php:validation for field ruta;validation for field nombre
+#: Model/Recursomultimediatipo.php:validation for field nombre
+#: Model/Unidadinvestigacione.php:validation for field nombre
+#: Model/Unidadinvestigaciontipo.php:validation for field nombre
+#: Model/User.php:validation for field username;validation for field password
+msgid "notempty"
+msgstr ""
+
+#: Plugin/search/Controller/Component/PrgComponent.php:403
+msgid "Please correct the errors below."
+msgstr ""
+
+#: View/Errors/error400.ctp:22
+#: View/Errors/error500.ctp:22
+msgid "Error"
+msgstr ""
+
+#: View/Errors/error400.ctp:24
+msgid "The requested address %s was not found on this server."
+msgstr ""
+
+#: View/Errors/error500.ctp:23
+msgid "An Internal Error Has Occurred."
+msgstr ""
+
+#: View/Layouts/error.ctp:20
+msgid "CakePHP: the rapid development php framework"
+msgstr ""
+
+#: webroot/test.php:95
+msgid "Debug setting does not allow access to this url."
+msgstr ""
+

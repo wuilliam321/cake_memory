@@ -38,19 +38,23 @@ class UnidadinvestigacionesController extends AppController {
  *
  * @return void
  */
-	public function add() {
+	public function add($instituto_id = null) {
 		if ($this->request->is('post')) {
 			$this->Unidadinvestigacione->create();
 			if ($this->Unidadinvestigacione->save($this->request->data)) {
 				$this->Session->setFlash(__('The unidadinvestigacione has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('controller' => 'institutos', 'action' => 'edit', $this->request->data['Unidadinvestigacione']['instituto_id']));
 			} else {
 				$this->Session->setFlash(__('The unidadinvestigacione could not be saved. Please, try again.'));
 			}
 		}
+		$instituto = array();
+		if ($instituto_id) {
+			$instituto = $this->Unidadinvestigacione->Instituto->findById($instituto_id);
+		}
 		$institutos = $this->Unidadinvestigacione->Instituto->find('list');
 		$unidadinvestigaciontipos = $this->Unidadinvestigacione->Unidadinvestigaciontipo->find('list');
-		$this->set(compact('institutos', 'unidadinvestigaciontipos'));
+		$this->set(compact('institutos', 'unidadinvestigaciontipos', 'instituto'));
 	}
 
 /**
