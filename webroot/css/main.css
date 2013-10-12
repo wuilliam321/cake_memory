@@ -6,7 +6,7 @@ small {
 }
 .is-post label { font-weight:bold}
 #header {
-	background-color:#2B2B2B;
+	background-color:#3385C1;
 	padding-left:70px;
 }
 
@@ -55,6 +55,12 @@ table td.actions a {
 	padding:2px 5px !important;
 }
 
+.upper-menu ul li a {
+	color:#000;
+	font-weight: bold;
+	text-decoration: none;
+}
+.upper-menu,
 div.paging-block {
     text-align: center;
 }
@@ -63,6 +69,7 @@ div.paging-block {
 	background-color: #F8F8F8;
 	font-size: 1.4em;
 }
+.upper-menu ul,
 #header ul,
 .top-menu ul {
 	list-style: none;
@@ -70,11 +77,15 @@ div.paging-block {
 #header ul {
 	margin-top:12px
 }
+.upper-menu ul li,
 #header ul li,
 .top-menu ul li {
 	margin: 0 6px;
 	padding: 0;
 	display: inline-block;
+}
+.upper-menu ul li {
+	padding-left: 20px;
 }
 #logo h1 a,
 #header a {
@@ -82,6 +93,7 @@ div.paging-block {
 	text-decoration:none;
 	font-size:0.9em
 }
+#logo h1 a { color: #000 }
 #header li.current_page_item {
 	text-decoration:underline;
 	font-weight:bold;
@@ -112,7 +124,7 @@ div.clear {
 	background-color: #FFFF88;
 }
 input[type="radio"], input[type="checkbox"] { margin: 8px 0 0 0; }
-.is-search .btn { font-size: 1.5em }
+/*.is-search .btn { font-size: 1.5em }*/
 .well { margin-bottom: 20px}
 .well .row-fluid { padding-right: 15px;}
 .well, article.autore {
@@ -178,4 +190,10 @@ div.cintillo {
 }
 .text-justify {
 	text-align:justify;
+}
+.center-image img {
+	height: 200px;
+}
+.center-image {
+	text-align: center;
 }

@@ -32,8 +32,8 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 		<?php echo $this->Html->scriptBlock("var BASE_URL = '/cake_memory';"); ?>
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
 		<?php echo $this->Html->meta('icon'); ?>
-		<?php echo $this->Html->css(array('bootstrap.min', 'bootstrap-responsive.min', 'main')); ?>
-		<?php echo $this->Html->script(array('jquery.min', 'config', 'skel.min', 'skel-panels.min', 'jquery.highlight', 'ckeditor', 'adapters/jquery', 'config_ck', 'styles', 'lang/es', 'bootstrap.min', 'main')); ?>
+		<?php echo $this->Html->css(array('bootstrap.min', 'bootstrap-responsive.min', 'jqcloud', 'main')); ?>
+		<?php echo $this->Html->script(array('jquery.min', 'config', 'skel.min', 'skel-panels.min', 'jquery.highlight', 'ckeditor', 'adapters/jquery', 'config_ck', 'styles', 'lang/es', 'bootstrap.min', 'jqcloud-1.0.4.min', 'main')); ?>
 		<noscript>
 			<?php echo $this->Html->css(array('skel-noscript', 'style', 'style-desktop', 'style-wide')); ?>
 		</noscript>
@@ -47,9 +47,11 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 			$q = (isset($this->request['named']['q']) ? $this->request['named']['q'] : null);
 			$autor = (isset($this->request['named']['autor']) ? $this->request['named']['autor'] : null);
 			$etiqueta = (isset($this->request['named']['etiqueta']) ? $this->request['named']['etiqueta'] : null);
+			$unidadinvestigacione = (isset($this->request['named']['unidadinvestigacione']) ? $this->request['named']['unidadinvestigacione'] : null);
+			$profesione = (isset($this->request['named']['profesione']) ? $this->request['named']['profesione'] : null);
 			echo $this->Html->scriptBlock("
 				$(function () {
-					h = ['$q', '$autor', '$etiqueta'];
+					h = ['$q', '$autor', '$etiqueta', '$unidadinvestigacione', '$profesione'];
 					
 					$('article').highlight(h);
 				});
@@ -62,28 +64,50 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 		Set it to "right-sidebar" to, you guessed it, position it on the right.
 	-->
 	<body class="left-sidebar">
-		<div class="cintillo">
-			<?php echo $this->Html->image("cintillo.jpg"); ?>
-			<?php echo $this->Html->image("banner.jpg"); ?>
+		<div class="cintillo row-fluid">
+			<div class="span12">
+				<?php echo $this->Html->image("cintillo.jpg"); ?>
+			</div>
+		</div>
+		<div class="cintillo row-fluid">
+			<div class="span12">
+				<div class="row-fluid">
+					<div class="alpha span2 center-image">
+						<?php echo $this->Html->image("logo.jpg"); ?>
+					</div>
+					<div class="span10 omega">
+						<?php echo $this->Html->image("banner.jpg"); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="upper-menu">
+			<ul>
+				<li><?php echo $this->Html->link("¿Qué es la Memoria Organizacional?", array('controller' => 'pages', 'action' => 'display', 'nosotros')); ?></li>
+				<li><?php echo $this->Html->link("Trabaje con Nosotros", array('controller' => 'pages', 'action' => 'display', 'empleo')); ?></li>
+				<li><?php echo $this->Html->link("Solicitud de Información", array('controller' => 'pages', 'action' => 'display', 'solicitud')); ?></li>
+				<li><?php echo $this->Html->link("Publique sus Trabajos", array('controller' => 'publicaciones', 'action' => 'add')); ?></li>
+				<li><?php echo $this->Html->link("Suscríbase", array('controller' => 'pages', 'action' => 'display', 'suscripcion')); ?></li>
+				<li><?php echo $this->Html->link(__('Ayudas (?)'), array('controller' => 'pages', 'action' => 'display', 'ayudas')); ?></li>
+			</ul>
+		</div>
+
+		<div id="header">
+			<div class="container">
+				<ul>
+					<li<?php echo ($this->request['controller'] == 'users') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Usuarios'), array('controller' => 'users', 'action' => 'index')); ?></li>
+					<li<?php echo ($this->request['controller'] == 'groups') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Grupos'), array('controller' => 'groups', 'action' => 'index')); ?></li>
+					<li<?php echo ($this->request['controller'] == 'unidadinvestigaciones') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Unidades de Investigación'), array('controller' => 'unidadinvestigaciones', 'action' => 'index')); ?></li>
+					<li<?php echo ($this->request['controller'] == 'unidadinvestigaciontipos') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Tipos de Unidad de Investigación'), array('controller' => 'unidadinvestigaciontipos', 'action' => 'index')); ?></li>
+					<li<?php echo ($this->request['controller'] == 'profesiones') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Profesiones'), array('controller' => 'profesiones', 'action' => 'index')); ?></li>
+					<li<?php echo ($this->request['controller'] == 'otroestudiotipos') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Tipos de Estudios'), array('controller' => 'otroestudiotipos', 'action' => 'index')); ?></li>
+					<li<?php echo ($this->request['action'] == 'respaldo') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Respaldo'), array('controller' => 'security', 'action' => 'respaldo')); ?></li>
+					<li<?php echo ($this->request['action'] == 'recuperacion') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Recuperacion'), array('controller' => 'security', 'action' => 'recuperacion')); ?></li>
+				</li>
+			</div>
 		</div>
 		<!-- Wrapper -->
 		<div id="wrapper">
-				<div id="header">
-					<div class="container">
-						<ul>
-							<li<?php echo ($this->request['controller'] == 'users') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Usuarios'), array('controller' => 'users', 'action' => 'index')); ?></li>
-							<li<?php echo ($this->request['controller'] == 'groups') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Grupos'), array('controller' => 'groups', 'action' => 'index')); ?></li>
-							<li<?php echo ($this->request['controller'] == 'unidadinvestigaciones') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Unidades de Investigación'), array('controller' => 'unidadinvestigaciones', 'action' => 'index')); ?></li>
-							<li<?php echo ($this->request['controller'] == 'unidadinvestigaciontipos') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Tipos de Unidad de Investigación'), array('controller' => 'unidadinvestigaciontipos', 'action' => 'index')); ?></li>
-							<li<?php echo ($this->request['controller'] == 'profesiones') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Profesiones'), array('controller' => 'profesiones', 'action' => 'index')); ?></li>
-							<li<?php echo ($this->request['controller'] == 'otroestudiotipos') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Tipos de Estudios'), array('controller' => 'otroestudiotipos', 'action' => 'index')); ?></li>
-							<li<?php echo ($this->request['action'] == 'respaldo') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Respaldo'), array('controller' => 'security', 'action' => 'respaldo')); ?></li>
-							<li<?php echo ($this->request['action'] == 'recuperacion') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Recuperacion'), array('controller' => 'security', 'action' => 'recuperacion')); ?></li>
-							<li<?php echo ($this->request['controller'] == 'ayudas') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Ayudas (?)'), array('controller' => 'ayudas', 'action' => 'index')); ?></li>
-						</li<>
-					</div>
-				</div>
-
 			<!-- Content -->
 				<div id="content" class="container">
 					<?php echo $this->Session->flash(); ?>

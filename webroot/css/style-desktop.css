@@ -130,8 +130,6 @@
 
 	#logo
 	{
-		background-color: #c94663;
-		background-image: url('img/bg1.png');
 		padding: 1.75em 0.5em 1.75em 0.5em;
 		border-radius: 0.4em;
 		text-align: center;
@@ -142,7 +140,7 @@
 		{
 			font-family: 'Open Sans Condensed', sans-serif;
 			font-weight: 700;
-			color: #fff;
+			color: #000;
 			font-size: 2em;
 			letter-spacing: 0.1em;
 		}
@@ -176,7 +174,7 @@
 	{
 		position: absolute;
 		top: 0;
-		padding: 3em 1.35em 1em 1.15em;
+		padding: 0em 1.35em 1em 1.15em;
 		height: 100%;
 		min-height:1350px;
 		width: 14em; /* = whatever you want */

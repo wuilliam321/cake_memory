@@ -7,7 +7,7 @@ App::uses('AppModel', 'Model');
  * @property Publicacione $Publicacione
  */
 class Recursomultimedia extends AppModel {
-
+    public $actsAs = array('Search.Searchable');
 /**
  * Use table
  *
@@ -93,4 +93,19 @@ class Recursomultimedia extends AppModel {
 			'order' => ''
 		)
 	);
+    
+    public $filterArgs = array(
+        'q' => array('type' => 'like', 'field' => array('Recursomultimedia.nombre', 'Recursomultimedia.descripcion')),
+        'filter' => array('type' => 'query', 'method' => 'orConditions'),
+    );
+
+    public function orConditions($data = array()) {
+        $filter = $data['filter'];
+        $cond = array(
+            'OR' => array(
+                $this->alias . '.nombre ILIKE' => '%' . $filter . '%',
+                $this->alias . '.descripcion ILIKE' => '%' . $filter . '%',
+            ));
+        return $cond;
+    }
 }

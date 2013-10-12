@@ -6,6 +6,7 @@ App::uses('AppModel', 'Model');
  * @property Unidadinvestigacione $Unidadinvestigacione
  */
 class Instituto extends AppModel {
+    public $actsAs = array('Search.Searchable');
 /**
  * Display field
  *
@@ -63,5 +64,9 @@ class Instituto extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+    
+    public $filterArgs = array(
+        'q' => array('type' => 'like', 'field' => array('Instituto.nombre', 'Instituto.direccion')),
+    );
 
 }

@@ -6,6 +6,18 @@ App::uses('AppController', 'Controller');
  * @property Instituto $Instituto
  */
 class InstitutosController extends AppController {
+	public $components = array('Search.Prg');
+    public $presetVars = true; // using the model configuration
+	
+	public function find() {
+        $this->Prg->commonProcess();
+		$this->paginate = array(
+			'conditions' => $this->Instituto->parseCriteria($this->Prg->parsedParams()),
+			'limit' => 2,
+			'order' => 'Instituto.id DESC'
+		);
+        $this->set('institutos', $this->paginate());
+    }
 
 /**
  * index method

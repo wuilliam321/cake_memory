@@ -32,7 +32,7 @@
 
 	a
 	{
-		color: #c94663;
+		color: #005580;
 		text-decoration: underline;
 	}
 	
@@ -555,32 +555,37 @@
 			padding-bottom: 0;
 		}
 
-	.is-search
-	{
-	}
-
-		.is-search form
-		{
-			position: relative;
-		}
-	
-		.is-search input
-		{
-			position: relative;
-			padding-right: 34px;
-		}
-			.is-search form .input { margin: 0; padding: 0}
-			.is-search form .input:after
+	/*.is-search*/
+	/*{*/
+	/*}*/
+	/**/
+	/*	.is-search form*/
+	/*	{*/
+	/*		position: relative;*/
+	/*	}*/
+	/**/
+	/*	.is-search input*/
+	/*	{*/
+	/*		position: relative;*/
+	/*		padding-right: 34px;*/
+	/*	}*/
+	/*		.is-search form .input { margin: 0; padding: 0}*/
+			/*.is-search form .submit:after
 			{
 				content: '';
 				display: block;
 				position: absolute;
-				right: 4px;
-				margin-top: -36px;
+				right: 7px;
+				margin-top: -29px;
 				width: 24px;
 				height: 24px;
 				background-image: url('img/sprites.png');
-				background-position: -96px 0px;
+				background-position: -100px 0px;
+			}*/
+			.is-search form .submit input {
+background-image: url('img/sprites.png');
+background-position: -133px -3px;
+background-size: 176px;
 			}
 
 	.is-text-style1
@@ -707,7 +712,7 @@
 	
 		#sidebar strong, #sidebar b
 		{
-			color: #fff;
+			color: #0065B3;
 		}
 	
 		#sidebar a
@@ -721,7 +726,7 @@
 		#sidebar h5,
 		#sidebar h6
 		{
-			color: #fff;
+			color: #0065B3;
 		}
 
 		#sidebar header
@@ -732,7 +737,6 @@
 		#sidebar section,
 		#sidebar nav
 		{
-			margin: 2em 0 0 0;
 			font-size: 0.9em;
 		}
 		

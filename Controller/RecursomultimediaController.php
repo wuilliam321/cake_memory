@@ -6,6 +6,18 @@ App::uses('AppController', 'Controller');
  * @property Recursomultimedia $Recursomultimedia
  */
 class RecursomultimediaController extends AppController {
+	public $components = array('Search.Prg');
+	public $presetVars = true; // using the model configuration
+	
+	public function find() {
+        $this->Prg->commonProcess();
+		$this->paginate = array(
+			'conditions' => $this->Recursomultimedia->parseCriteria($this->Prg->parsedParams()),
+			'limit' => 2,
+			'order' => 'Recursomultimedia.id DESC'
+		);
+        $this->set('recursomultimedia', $this->paginate());
+    }
 
 /**
  * index method

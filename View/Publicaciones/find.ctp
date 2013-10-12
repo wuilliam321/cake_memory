@@ -1,4 +1,5 @@
 <div id="content-inner" class="publicaciones index is-post">
+	<?php echo $this->element('buscar'); ?>
 	<div class="top-menu">
 		<ul>
 			<li><?php echo $this->Html->link(__('Agregar'), array('controller' => 'publicaciones', 'action' => 'add')); ?></li>

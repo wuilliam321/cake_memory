@@ -13,7 +13,21 @@ class EtiquetasController extends AppController {
  */
 	public function index() {
 		$this->Etiqueta->recursive = 0;
-		$this->set('etiquetas', $this->paginate());
+		$conditions = array(
+			'joins' => array(
+				array(
+					'alias' => 'EtiquetasPublicacione',
+					'table' => 'etiquetas_publicaciones',
+					'type' => 'LEFT',
+					'conditions' => 'Etiqueta.id = EtiquetasPublicacione.etiqueta_id'
+				),
+			),
+			'fields' => 'COUNT(EtiquetasPublicacione.etiqueta_id) as Etiqueta__count, Etiqueta.nombre, Etiqueta.id',
+			'group' => 'EtiquetasPublicacione.etiqueta_id'
+		);
+		$this->Etiqueta->virtualFields['count'] = 0;
+		$etiquetas = $this->Etiqueta->find("all", $conditions);
+		$this->set(compact('etiquetas'));
 	}
 
 /**

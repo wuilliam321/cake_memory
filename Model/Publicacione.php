@@ -135,7 +135,7 @@ class Publicacione extends AppModel {
         $this->AutoresPublicacione->Behaviors->attach('Containable', array('autoFields' => false));
         $this->AutoresPublicacione->Behaviors->attach('Search.Searchable');
         $query = $this->AutoresPublicacione->getQuery('all', array(
-            'conditions' => array('or' => array('Autore.nombres LIKE'  => '%' . $data['autor'] . '%', 'Autore.apellidos LIKE'  => '%' . $data['autor'] . '%', 'Autore.linea_investigacion LIKE'  => '%' . $data['autor'] . '%')),
+            'conditions' => array('or' => array('Autore.nombres ILIKE'  => '%' . $data['autor'] . '%', 'Autore.apellidos ILIKE'  => '%' . $data['autor'] . '%', 'Autore.linea_investigacion LIKE'  => '%' . $data['autor'] . '%')),
             'fields' => array('AutoresPublicacione.publicacione_id'),
             'contain' => array('Autore')
         ));
@@ -146,7 +146,7 @@ class Publicacione extends AppModel {
         $this->EtiquetasPublicacione->Behaviors->attach('Containable', array('autoFields' => false));
         $this->EtiquetasPublicacione->Behaviors->attach('Search.Searchable');
         $query = $this->EtiquetasPublicacione->getQuery('all', array(
-            'conditions' => array('Etiqueta.nombre LIKE'  => '%' . $data['etiqueta'] . '%'),
+            'conditions' => array('Etiqueta.nombre ILIKE'  => '%' . $data['etiqueta'] . '%'),
             'fields' => array('EtiquetasPublicacione.publicacione_id'),
             'contain' => array('Etiqueta')
         ));

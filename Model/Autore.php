@@ -10,6 +10,7 @@ App::uses('AppModel', 'Model');
  * @property Publicacione $Publicacione
  */
 class Autore extends AppModel {
+    public $actsAs = array('Search.Searchable');
     public $virtualFields = array(
         'nombre_completo' => 'CONCAT(Autore.nombres, " ", Autore.apellidos)'
     );
@@ -181,5 +182,11 @@ class Autore extends AppModel {
 			'finderQuery' => '',
 		)
 	);
+    
+    public $filterArgs = array(
+        'q' => array('type' => 'like', 'field' => array('Autore.nombres', 'Autore.apellidos', 'Autore.email_primario', 'Autore.linea_investigacion')),
+        'unidadinvestigacione' => array('type' => 'like', 'field' => array('Unidadinvestigacione.nombre')),
+        'profesione' => array('type' => 'like', 'field' => array('Profesione.nombre')),
+    );
 
 }
