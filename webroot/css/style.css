@@ -26,7 +26,7 @@
 
 	body
 	{
-		background-color: #e8e8e8;
+		background-color: #0065B3
 		background-image: url('img/bg2.png');
 	}
 
@@ -604,6 +604,7 @@
 	#wrapper
 	{
 		position: relative;
+		background-color: #0065B3;
 	}
 
 /*********************************************************************************/
@@ -663,13 +664,12 @@
 			background-color: rgba(0,0,0,0.15) !important;
 			box-shadow: 0 0 0 1px rgba(255,255,255,0.05), inset 0 0 0.25em 0 rgba(0,0,0,0.25);
 			font-weight: 700;
-			color: #fff;
+			color: #0066B3;
 		}
 
 		#nav li:hover a
 		{
 			background-color: rgba(200,225,255,0.1);
-			color: #fff;
 		}
 
 /*********************************************************************************/
@@ -678,8 +678,8 @@
 
 	#sidebar
 	{
-		color: #929da4;
-		text-shadow: -1px -1px 0px rgba(0,0,0,0.5);
+		color: #75ACD5;
+		/*text-shadow: -1px -1px 0px rgba(0,0,0,0.5);*/
 	}
 
 		#sidebar form input,
@@ -701,10 +701,6 @@
 			#sidebar nav:before
 			{
 				content: '';
-				border-top: solid 1px;
-				border-bottom: solid 1px;
-				border-color: #171E29;
-				border-color: rgba(0,0,0,0.25);
 				box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.075), 0px 1px 0px 0px rgba(255,255,255,0.075);
 				display: block;
 			}
@@ -716,7 +712,7 @@
 	
 		#sidebar a
 		{
-			color: #d4dde0;
+			color: #0066B3;
 		}
 		
 		#sidebar h2,
