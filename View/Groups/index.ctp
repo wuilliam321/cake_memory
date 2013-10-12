@@ -8,13 +8,11 @@
 	<h2><?php echo __('Groups'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 		<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 		</tr>
 		<?php foreach ($groups as $group): ?>
 			<tr>
-				<td><?php echo h($group['Group']['id']); ?>&nbsp;</td>
 				<td><?php echo h($group['Group']['name']); ?>&nbsp;</td>
 				<td class="actions">
 					<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $group['Group']['id'])); ?>

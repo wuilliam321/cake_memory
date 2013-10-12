@@ -1,11 +1,11 @@
 <?php
-App::uses('Unidadinvestigacione', 'Model');
+App::uses('Unidadinvestigaciontipo', 'Model');
 
 /**
- * Unidadinvestigacione Test Case
+ * Unidadinvestigaciontipo Test Case
  *
  */
-class UnidadinvestigacioneTest extends CakeTestCase {
+class UnidadinvestigaciontipoTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -13,9 +13,9 @@ class UnidadinvestigacioneTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'app.unidadinvestigaciontipo',
 		'app.unidadinvestigacione',
 		'app.instituto',
-		'app.unidadinvestigaciontipo',
 		'app.autore',
 		'app.user',
 		'app.group',
@@ -38,7 +38,7 @@ class UnidadinvestigacioneTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->Unidadinvestigacione = ClassRegistry::init('Unidadinvestigacione');
+		$this->Unidadinvestigaciontipo = ClassRegistry::init('Unidadinvestigaciontipo');
 	}
 
 /**
@@ -47,7 +47,7 @@ class UnidadinvestigacioneTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->Unidadinvestigacione);
+		unset($this->Unidadinvestigaciontipo);
 
 		parent::tearDown();
 	}

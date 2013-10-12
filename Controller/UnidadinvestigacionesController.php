@@ -26,6 +26,7 @@ class UnidadinvestigacionesController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Unidadinvestigacione->exists($id)) {
+		$this->Unidadinvestigacione->recursive = 2;
 			throw new NotFoundException(__('Invalid unidadinvestigacione'));
 		}
 		$options = array('conditions' => array('Unidadinvestigacione.' . $this->Unidadinvestigacione->primaryKey => $id));
@@ -48,7 +49,8 @@ class UnidadinvestigacionesController extends AppController {
 			}
 		}
 		$institutos = $this->Unidadinvestigacione->Instituto->find('list');
-		$this->set(compact('institutos'));
+		$unidadinvestigaciontipos = $this->Unidadinvestigacione->Unidadinvestigaciontipo->find('list');
+		$this->set(compact('institutos', 'unidadinvestigaciontipos'));
 	}
 
 /**
@@ -74,7 +76,8 @@ class UnidadinvestigacionesController extends AppController {
 			$this->request->data = $this->Unidadinvestigacione->find('first', $options);
 		}
 		$institutos = $this->Unidadinvestigacione->Instituto->find('list');
-		$this->set(compact('institutos'));
+		$unidadinvestigaciontipos = $this->Unidadinvestigacione->Unidadinvestigaciontipo->find('list');
+		$this->set(compact('institutos', 'unidadinvestigaciontipos'));
 	}
 
 /**

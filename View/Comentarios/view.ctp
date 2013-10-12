@@ -8,13 +8,8 @@
 			<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $comentario['Comentario']['id']), null, __('¿Está seguro(a) que desea eliminar este registro?')); ?></li>
 		</ul>
 	</div>
-		<h2><?php echo __('Comentario'); ?></h2>
+	<h2><?php echo __('Comentario'); ?></h2>
 	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($comentario['Comentario']['id']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Publicacione'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($comentario['Publicacione']['titulo'], array('controller' => 'publicaciones', 'action' => 'view', $comentario['Publicacione']['id'])); ?>

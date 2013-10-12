@@ -62,6 +62,10 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 		Set it to "right-sidebar" to, you guessed it, position it on the right.
 	-->
 	<body class="left-sidebar">
+		<div class="cintillo">
+			<?php echo $this->Html->image("cintillo.jpg"); ?>
+			<?php echo $this->Html->image("banner.jpg"); ?>
+		</div>
 		<!-- Wrapper -->
 		<div id="wrapper">
 				<div id="header">
@@ -70,6 +74,7 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 							<li<?php echo ($this->request['controller'] == 'users') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Usuarios'), array('controller' => 'users', 'action' => 'index')); ?></li>
 							<li<?php echo ($this->request['controller'] == 'groups') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Grupos'), array('controller' => 'groups', 'action' => 'index')); ?></li>
 							<li<?php echo ($this->request['controller'] == 'unidadinvestigaciones') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Unidades de Investigación'), array('controller' => 'unidadinvestigaciones', 'action' => 'index')); ?></li>
+							<li<?php echo ($this->request['controller'] == 'unidadinvestigaciontipos') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Tipos de Unidad de Investigación'), array('controller' => 'unidadinvestigaciontipos', 'action' => 'index')); ?></li>
 							<li<?php echo ($this->request['controller'] == 'profesiones') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Profesiones'), array('controller' => 'profesiones', 'action' => 'index')); ?></li>
 							<li<?php echo ($this->request['controller'] == 'otroestudiotipos') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Tipos de Estudios'), array('controller' => 'otroestudiotipos', 'action' => 'index')); ?></li>
 							<li<?php echo ($this->request['action'] == 'respaldo') ? ' class="current_page_item"' : ''; ?>><?php echo $this->Html->link(__('Respaldo'), array('controller' => 'security', 'action' => 'respaldo')); ?></li>

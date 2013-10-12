@@ -25,6 +25,7 @@ class AutoresController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->Autore->recursive = 2;
 		if (!$this->Autore->exists($id)) {
 			throw new NotFoundException(__('Invalid autore'));
 		}

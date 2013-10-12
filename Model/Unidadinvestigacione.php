@@ -4,9 +4,11 @@ App::uses('AppModel', 'Model');
  * Unidadinvestigacione Model
  *
  * @property Instituto $Instituto
+ * @property Unidadinvestigaciontipo $Unidadinvestigaciontipo
  * @property Autore $Autore
  */
 class Unidadinvestigacione extends AppModel {
+
 /**
  * Display field
  *
@@ -21,6 +23,16 @@ class Unidadinvestigacione extends AppModel {
  */
 	public $validate = array(
 		'instituto_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'unidadinvestigaciontipo_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -53,6 +65,13 @@ class Unidadinvestigacione extends AppModel {
 		'Instituto' => array(
 			'className' => 'Instituto',
 			'foreignKey' => 'instituto_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Unidadinvestigaciontipo' => array(
+			'className' => 'Unidadinvestigaciontipo',
+			'foreignKey' => 'unidadinvestigaciontipo_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

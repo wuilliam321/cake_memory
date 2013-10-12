@@ -1,11 +1,11 @@
 <?php
-App::uses('UnidadinvestigacionesController', 'Controller');
+App::uses('UnidadinvestigaciontiposController', 'Controller');
 
 /**
- * UnidadinvestigacionesController Test Case
+ * UnidadinvestigaciontiposController Test Case
  *
  */
-class UnidadinvestigacionesControllerTest extends ControllerTestCase {
+class UnidadinvestigaciontiposControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,9 +13,9 @@ class UnidadinvestigacionesControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'app.unidadinvestigaciontipo',
 		'app.unidadinvestigacione',
 		'app.instituto',
-		'app.unidadinvestigaciontipo',
 		'app.autore',
 		'app.user',
 		'app.group',

@@ -13,7 +13,7 @@
 			<div class="row-fluid">
 			</div>
 			<div class="row-fluid">
-				<h3>Autor: <?php echo $autore['Autore']['nombre_completo']; ?></h3>
+				<h3><?php echo __('Autore'); ?>: <?php echo $autore['Autore']['nombre_completo']; ?></h3>
 				<?php echo $this->Form->input('autore_id', array('type' => 'hidden')); ?>
 			</div>
 			<div class="row-fluid">

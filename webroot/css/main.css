@@ -19,40 +19,40 @@ table {
 	width: 100%;
 }
 th {
-	border:0;
-	border-bottom:1px solid #555;
-	text-align: left;
-	padding:4px;
-    font-weight: bold
+	border:0 !important;
+	border-bottom:1px solid #555 !important;
+	text-align: left !important;
+	padding:4px !important;
+    font-weight: bold !important
 }
 th a {
-	display: block;
-	padding: 2px 4px;
-	text-decoration: none;
+	display: block !important;
+	padding: 2px 4px !important;
+	text-decoration: none !important;
 }
 th a.asc:after {
-	content: ' ⇣';
+	content: ' ⇣' !important;
 }
 th a.desc:after {
-	content: ' ⇡';
+	content: ' ⇡' !important;
 }
 table tr td {
-	padding: 0 6px;
-	text-align: left;
-	vertical-align: top;
-	border-bottom:1px solid #ddd;
+	padding: 0 6px !important;
+	text-align: left !important;
+	vertical-align: top !important;
+	border-bottom:1px solid #ddd !important;
 }
 table tr:nth-child(even) {
-	background: #f9f9f9;
+	background: #f9f9f9 !important;
 }
 td.actions {
-	text-align: center;
-	white-space: nowrap;
-	width: 1%;
+	text-align: center !important;
+	white-space: nowrap !important;
+	width: 1% !important;
 }
 table td.actions a {
-	margin: 0px 6px;
-	padding:2px 5px;
+	margin: 0px 6px !important;
+	padding:2px 5px !important;
 }
 
 div.paging-block {
@@ -80,6 +80,7 @@ div.paging-block {
 #header a {
 	color:#fff;
 	text-decoration:none;
+	font-size:0.9em
 }
 #header li.current_page_item {
 	text-decoration:underline;
@@ -106,29 +107,6 @@ div.input {
 /** Clear **/
 div.clear {
 	clear: both;
-}
-
-/** Scaffold View **/
-dl {
-	line-height: 2em;
-	margin: 0em 0em;
-	width: 60%;
-}
-dl dd:nth-child(4n+2),
-dl dt:nth-child(4n+1) {
-	background: #f4f4f4;
-}
-
-dt {
-	font-weight: bold;
-	padding-left: 4px;
-	vertical-align: top;
-	width: 10em;
-}
-dd {
-	margin-left: 10em;
-	margin-top: -2em;
-	vertical-align: top;
 }
 .highlight {
 	background-color: #FFFF88;
@@ -164,10 +142,40 @@ input[type="radio"], input[type="checkbox"] { margin: 8px 0 0 0; }
 a.btn  {
 	text-decoration: none;
 }
-form h3 {
-	margin-top: 10px !important;
+h3 {
+	margin-top: 2em !important;
 }
 div.required label:after {
 	content: '*';
 	color:red;
+}
+
+
+/** Scaffold View **/
+dl {
+	line-height: 2em !important;
+	margin: 0em 0em !important;
+	width: 100% !important;
+}
+dl dd:nth-child(4n+2),
+dl dt:nth-child(4n+1) {
+	background: #f4f4f4 !important;
+}
+
+dt {
+	font-weight: bold !important;
+	padding-left: 4px !important;
+	vertical-align: top !important;
+	width: 30% !important;
+}
+dd {
+	margin-left: 30% !important;
+	margin-top: -2em !important;
+	vertical-align: top !important;
+}
+div.cintillo {
+	background-color:#fff;
+}
+.text-justify {
+	text-align:justify;
 }

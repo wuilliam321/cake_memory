@@ -16,6 +16,9 @@
 				<?php echo $this->Form->input('instituto_id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
 			</div>
 			<div class="row-fluid">
+				<?php echo $this->Form->input('unidadinvestigaciontipo_id', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
+			</div>
+			<div class="row-fluid">
 				<?php echo $this->Form->input('nombre', array('class' => 'span12', 'div' => array('class' => 'span12'))); ?>
 			</div>
 		</fieldset>

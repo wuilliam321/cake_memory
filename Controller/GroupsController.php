@@ -25,6 +25,7 @@ class GroupsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->Group->recursive = 2;
 		if (!$this->Group->exists($id)) {
 			throw new NotFoundException(__('Invalid group'));
 		}

@@ -8,16 +8,18 @@
 	<h2><?php echo __('Unidadinvestigaciones'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 		<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('instituto_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('unidadinvestigaciontipo_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 		</tr>
 		<?php foreach ($unidadinvestigaciones as $unidadinvestigacione): ?>
 			<tr>
-				<td><?php echo h($unidadinvestigacione['Unidadinvestigacione']['id']); ?>&nbsp;</td>
 				<td>
 			<?php echo $this->Html->link($unidadinvestigacione['Instituto']['nombre'], array('controller' => 'institutos', 'action' => 'view', $unidadinvestigacione['Instituto']['id'])); ?>
+		</td>
+				<td>
+			<?php echo $this->Html->link($unidadinvestigacione['Unidadinvestigaciontipo']['nombre'], array('controller' => 'unidadinvestigaciontipos', 'action' => 'view', $unidadinvestigacione['Unidadinvestigaciontipo']['id'])); ?>
 		</td>
 				<td><?php echo h($unidadinvestigacione['Unidadinvestigacione']['nombre']); ?>&nbsp;</td>
 				<td class="actions">

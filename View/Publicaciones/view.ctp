@@ -73,7 +73,7 @@
 	</div>
 </div>
 <div class="related row-fluid">
-	<h3>Autores</h3>
+	<h3><?php echo __('Autores'); ?></h3>
 	<div class="span12">
 		<?php if (!$publicacione['Autore']): ?>
 			<p>Esta publicación no posee un autor definido.</p>

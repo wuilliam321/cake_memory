@@ -24,7 +24,7 @@
 			<div class="row-fluid">
 				<div class="span6">
 					<?php echo $this->Form->input('Autore', array('class' => 'span12 checkbox', 'multiple' => 'checkbox', 'div' => false)); ?>
-					<?php echo $this->Html->link('Agregar Autor', array('controller' => 'autores', 'action' => 'add', $this->request->data['Publicacione']['id']), array('class' => 'btn btn-primary btn-small')); ?>
+					<?php echo $this->Html->link(__('Add Autore'), array('controller' => 'autores', 'action' => 'add', $this->request->data['Publicacione']['id']), array('class' => 'btn btn-primary btn-small')); ?>
 				</div>
 				<div class="span6">
 					<?php echo $this->Form->input('Etiqueta', array('class' => 'span12 checkbox', 'multiple' => 'checkbox', 'div' => false)); ?>
