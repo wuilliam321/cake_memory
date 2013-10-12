@@ -6,7 +6,10 @@ App::uses('AppController', 'Controller');
  * @property User $User
  */
 class UsersController extends AppController {
-
+	public function beforeFilter() {
+	    parent::beforeFilter();
+	    $this->Auth->allow("*");
+	}
 /**
  * index method
  *
@@ -97,5 +100,18 @@ class UsersController extends AppController {
 		}
 		$this->Session->setFlash(__('User was not deleted'));
 		$this->redirect(array('action' => 'index'));
+	}
+	
+	public function login() {
+		if ($this->request->is('post')) {
+			if ($this->Auth->login()) {
+				return $this->redirect($this->Auth->redirect());
+			}
+			$this->Session->setFlash(__('Your username or password was incorrect.'));
+		}
+	}
+	
+	public function logout() {
+		//Leave empty for now.
 	}
 }

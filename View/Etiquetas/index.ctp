@@ -10,5 +10,5 @@
 			console.log(word_array);
 		})
 	</script>
-	<div id="example" style="width: 550px; height: 350px;"></div>
+	<div id="example" style="width: 100%; height: 450px;"></div>
 </div>
