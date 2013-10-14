@@ -78,15 +78,6 @@ $cakeDescription = __d('cake_dev', 'Memoria');
 				</div>
 			</div>
 		</div>
-		<div class="cintillo row-fluid">
-			<div class="span12">
-				<div class="row-fluid">
-					<div class="span4 offset4">
-						<?php echo $this->Html->image("banner.jpg"); ?>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="upper-menu">
 			<ul>
 				<li><?php echo $this->Html->link("¿Qué es la Memoria Organizacional?", array('controller' => 'pages', 'action' => 'display', 'nosotros')); ?></li>
